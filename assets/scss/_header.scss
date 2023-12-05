@@ -1,0 +1,112 @@
+/*--------------------------------------------------------------
+# Top Bar
+--------------------------------------------------------------*/
+#topbar {
+  background: #fff;
+  height: 40px;
+  font-size: 14px;
+  transition: all 0.5s;
+  z-index: 996;
+
+  &.topbar-scrolled {
+    top: -40px;
+  }
+
+  .contact-info {
+    a {
+      line-height: 1;
+      color: $default;
+      transition: 0.3s;
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    i {
+      color: $primary;
+      padding-right: 4px;
+      margin-left: 15px;
+      line-height: 0;
+    }
+
+    i:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .social-links {
+    a {
+      color: lighten($secondary, 15);
+      padding-left: 15px;
+      display: inline-block;
+      line-height: 1px;
+      transition: 0.3s;
+      &:hover {
+        color: $primary;
+      }
+      &:first-child {
+        border-left: 0;
+      }
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: #fff;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+  top: 40px;
+  box-shadow: 0px 2px 15px rgba($primary, 0.1);
+
+  &.header-scrolled {
+    top: 0;
+  }
+
+  .logo {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-family: $font-secondary;
+
+    a {
+      color: $secondary;
+    }
+
+    img {
+      max-height: 40px;
+    }
+  }
+
+}
+
+/**
+* Appointment Button *
+*/
+.appointment-btn {
+  margin-left: 25px;
+  background: $primary;
+  color: $white;
+  border-radius: 50px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  display: inline-block;
+  &:hover {
+    background: darken($primary, 5);
+    color: $white;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 15px 0 0;
+    padding: 6px 18px;
+  }
+
+}
