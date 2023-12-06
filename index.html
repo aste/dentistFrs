@@ -9,8 +9,10 @@
     <meta content="" name="keywords" />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" />
+    <link rel="manifest" href="assets/img/site.webmanifest" />
 
     <!-- Google Fonts -->
     <link
@@ -52,10 +54,15 @@
           ></a>
           <a
             href="https://dk.trustpilot.com/review/www.tandklinikken-frederikssund.dk"
-            class="trustpilot"
+            class="icon-link"
             target="_blank"
-            ><i class="bi bi-google"></i
-          ></a>
+          >
+            <img src="assets/img/trustpilot.svg" alt="Trustpilot" class="trustpilot-icon" />
+          </a>
+          <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> -->
+          <!-- <a href="#" class="facebook"><i class="bi bi-facebook"></i></a> -->
+          <!-- <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
+          <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a> -->
         </div>
       </div>
     </div>
@@ -629,12 +636,6 @@
                   <h4>Walter White</h4>
                   <span>Chief Medical Officer</span>
                   <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                  <div class="social">
-                    <a href=""><i class="ri-twitter-fill"></i></a>
-                    <a href=""><i class="ri-facebook-fill"></i></a>
-                    <a href=""><i class="ri-instagram-fill"></i></a>
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -648,12 +649,6 @@
                   <h4>Sarah Jhonson</h4>
                   <span>Anesthesiologist</span>
                   <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
-                  <div class="social">
-                    <a href=""><i class="ri-twitter-fill"></i></a>
-                    <a href=""><i class="ri-facebook-fill"></i></a>
-                    <a href=""><i class="ri-instagram-fill"></i></a>
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -667,12 +662,6 @@
                   <h4>William Anderson</h4>
                   <span>Cardiology</span>
                   <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                  <div class="social">
-                    <a href=""><i class="ri-twitter-fill"></i></a>
-                    <a href=""><i class="ri-facebook-fill"></i></a>
-                    <a href=""><i class="ri-instagram-fill"></i></a>
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -686,12 +675,6 @@
                   <h4>Amanda Jepson</h4>
                   <span>Neurosurgeon</span>
                   <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                  <div class="social">
-                    <a href=""><i class="ri-twitter-fill"></i></a>
-                    <a href=""><i class="ri-facebook-fill"></i></a>
-                    <a href=""><i class="ri-instagram-fill"></i></a>
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -1023,10 +1006,11 @@
         <div>
           <iframe
             style="border: 0; width: 100%; height: 350px"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3809.3462818017033!2d12.05144796015549!3d55.843129569133566!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46526923b6353445%3A0xb5a3b02ddffe0115!2sTandklinikken%20Frederikssund!5e0!3m2!1sen!2sdk!4v1703966601233!5m2!1sen!2sdk"
             frameborder="0"
             allowfullscreen
           ></iframe>
+          
         </div>
 
         <div class="container">
@@ -1035,20 +1019,20 @@
               <div class="info">
                 <div class="address">
                   <i class="bi bi-geo-alt"></i>
-                  <h4>Adresse:</h4>
+                  <h4>Adresse</h4>
                   <p>Færgeparken 22-23, 3600 Frederikssund</p>
                 </div>
 
                 <div class="email">
                   <i class="bi bi-envelope"></i>
-                  <h4>Mail:</h4>
+                  <h4>Mail</h4>
                   <p>info@tandklinikken-frederikssund.dk</p>
                 </div>
 
                 <div class="phone">
                   <i class="bi bi-phone"></i>
-                  <h4>Telefon:</h4>
-                  <p>+1 5589 55488 55s</p>
+                  <h4>Telefon</h4>
+                  <p>+45 47 31 04 42</p>
                 </div>
               </div>
             </div>
@@ -1062,7 +1046,7 @@
                       name="name"
                       class="form-control"
                       id="name"
-                      placeholder="Your Name"
+                      placeholder="Navn"
                       required
                     />
                   </div>
@@ -1072,7 +1056,7 @@
                       class="form-control"
                       name="email"
                       id="email"
-                      placeholder="Your Email"
+                      placeholder="e-mail"
                       required
                     />
                   </div>
@@ -1083,7 +1067,7 @@
                     class="form-control"
                     name="subject"
                     id="subject"
-                    placeholder="Subject"
+                    placeholder="Emne"
                     required
                   />
                 </div>
@@ -1092,7 +1076,7 @@
                     class="form-control"
                     name="message"
                     rows="5"
-                    placeholder="Message"
+                    placeholder="Besked"
                     required
                   ></textarea>
                 </div>
@@ -1101,7 +1085,7 @@
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
                 </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
+                <div class="text-center"><button type="submit">Send Besked</button></div>
               </form>
             </div>
           </div>
@@ -1117,13 +1101,16 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-6 footer-contact">
-              <h3>Medilab</h3>
+              <h3>Tandklinikken Frederikssund</h3>
               <p>
-                A108 Adam Street <br />
-                New York, NY 535022<br />
-                United States <br /><br />
-                <strong>Phone:</strong> +1 5589 55488 55<br />
-                <strong>Email:</strong> info@example.com<br />
+                Færgeparken 22-23 <br />
+                3600 Frederikssund<br />
+                Danmark<br /><br />
+                <strong>Telefon:</strong> +45 47 31 04 42<br />
+                <strong>Mail:</strong
+                ><a href="mailto:info@tandklinikken-frederikssund.dk" target="_blank">
+                  info@tandklinikken-frederikssund.dk</a
+                ><br />
               </p>
             </div>
 
@@ -1162,10 +1149,10 @@
 
       <div class="container d-md-flex py-4">
         <div class="me-md-auto text-center text-md-start">
-          <div class="copyright">
+          <!-- <div class="copyright">
             &copy; Copyright <strong><span>Medilab</span></strong
             >. All Rights Reserved
-          </div>
+          </div> -->
         </div>
         <div class="social-links text-center text-md-right pt-3 pt-md-0">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
