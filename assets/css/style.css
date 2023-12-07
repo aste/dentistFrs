@@ -1203,11 +1203,19 @@ section {
 
 .doctors .member .pic {
   overflow: hidden;
-  width: 180px;
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .doctors .member .pic img {
+  height: 100%;
+  width: auto;
+  min-width: 100%;
+  object-fit: cover;
   transition: ease-in-out 0.3s;
 }
 
