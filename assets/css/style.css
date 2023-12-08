@@ -63,7 +63,7 @@ h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid var(--color-dark-blue);
-  border-top-color: var(--color-light-blue);
+  border-top-color: #d1e6f9;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -1418,12 +1418,12 @@ section {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 0;
-  color: var(--color-grey);
+  color: var(--color-navy);
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: var(--color-grey;
+  color: var(--color-grey-blue);
   margin: 0;
 }
 
@@ -1520,7 +1520,7 @@ section {
   float: left;
   width: 44px;
   height: 44px;
-  background: var(--color-light-blue);
+  background: var(--color-white-blue);
   display: flex;
   justify-content: center;
   align-items: center;
