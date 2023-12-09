@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 :root {
   --color-white: #ffffff;
-  --color-grey: #50555b;
+  --color-grey: #595959;
 
   --color-white-blue: #f0f8fc;
   --color-grey-blue: #9abacc;
@@ -750,7 +750,7 @@ section {
 --------------------------------------------------------------*/
 .about .icon-boxes h4 {
   font-size: 18px;
-  color: turquoise;
+  color: var(--color-grey);
   margin-bottom: 15px;
 }
 
@@ -1528,7 +1528,7 @@ section {
   padding: 0 0 0 60px;
   margin-bottom: 0;
   font-size: 14px;
-  color: turquoise;
+  color: var(--color-grey);
 }
 
 .contact .info .email,
