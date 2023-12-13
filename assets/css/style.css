@@ -243,7 +243,6 @@ h6 {
   color: var(--color-white);
 }
 
-
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -587,7 +586,7 @@ h2[aria-hidden="true"] {
     margin-top: 35%;
   }
 
-  #hero .btn-get-started{
+  #hero .btn-get-started {
     margin-top: 1em;
   }
 
@@ -1339,6 +1338,13 @@ section {
 
 .doctors .member .social a + a {
   margin-left: 8px;
+}
+
+.employee-separator {
+  height: 1px;
+  background-color: var(--color-white-blue);
+  width: 80%;
+  margin: 2rem auto 0.5rem;
 }
 
 /*--------------------------------------------------------------
