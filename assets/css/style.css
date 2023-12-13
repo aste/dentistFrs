@@ -182,9 +182,11 @@ h6 {
 
 .trustpilot-icon {
   height: 1.2em;
+  margin-bottom: 0.1em;
   width: auto;
   vertical-align: middle;
 }
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -229,6 +231,7 @@ h6 {
   color: var(--color-white);
   border-radius: 50px;
   padding: 8px 25px;
+  margin-right: 8px;
   white-space: nowrap;
   transition: 0.3s;
   font-size: 14px;
@@ -240,12 +243,6 @@ h6 {
   color: var(--color-white);
 }
 
-@media (max-width: 768px) {
-  .appointment-btn {
-    margin: 0 15px 0 0;
-    padding: 6px 18px;
-  }
-}
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -386,7 +383,7 @@ h6 {
   color: var(--color-white);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .mobile-nav-toggle {
     display: block;
   }
@@ -487,31 +484,28 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-#hero .container {
-  margin-top: 20%;
-}
-
 #hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.4); White color with 30% opacity
+  background-color: rgba(255, 255, 255, 0.4);
   z-index: 2;
 }
 
 #hero .container {
   position: relative;
+  margin-top: 5%;
   z-index: 3;
 }
-
 
 #hero {
   width: 100%;
   height: 80vh;
-  background: url("../img/grouppicture.png") center top;
+  /* background: url("../img/grouppicturebw.png") center top; */
+  background: url("../img/twobw.jpeg") center top;
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: -180px;
@@ -522,11 +516,9 @@ h6 {
 }
 
 .main-logo {
-  max-width: 60%;
-}
-
-#hero .container {
-  position: relative;
+  max-width: 50%;
+  margin: 0;
+  padding: 0;
 }
 
 #hero h1 {
@@ -570,6 +562,11 @@ h2[aria-hidden="true"] {
   background: var(--color-turquoise);
 }
 
+#hero .btn-get-started,
+#hero h2 {
+  margin-left: 18%;
+}
+
 #hero .btn-get-started:hover {
   scale: 1.1;
 }
@@ -583,11 +580,19 @@ h2[aria-hidden="true"] {
 @media (max-width: 992px) {
   #hero {
     margin-bottom: 0;
-    height: 100vh;
+    height: 60vh;
+  }
+
+  .main-logo {
+    margin-top: 35%;
+  }
+
+  #hero .btn-get-started{
+    margin-top: 1em;
   }
 
   #hero .container {
-    padding-bottom: 63px;
+    padding-bottom: 64px;
   }
 
   #hero h1 {
@@ -599,12 +604,13 @@ h2[aria-hidden="true"] {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+    margin-bottom: 1em;
   }
 }
 
 @media (max-height: 600px) {
   #hero {
-    height: 110vh;
+    height: 100vh;
   }
 }
 
@@ -725,10 +731,9 @@ section {
 /*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/
-.top-of-overlay{
-  z-index: 1;
+.top-of-overlay {
+  z-index: 3;
 }
-
 
 .why-us .content {
   padding: 30px;
@@ -749,7 +754,7 @@ section {
 
 .why-us .content .more-btn {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--color-turquoise);
   padding: 6px 30px 8px 30px;
   color: var(--color-white);
   border-radius: 50px;
@@ -763,6 +768,7 @@ section {
 .why-us .content .more-btn:hover {
   color: var(--color-dark-blue);
   background: var(--color-white);
+  scale: 1.1;
 }
 
 .why-us .icon-boxes .icon-box {
@@ -1249,7 +1255,6 @@ section {
 
 .doctors .member .pic {
   overflow: hidden;
-  height: 150px;
   width: 150px;
   border-radius: 50%;
   display: flex;
@@ -1502,7 +1507,7 @@ section {
   background-color: var(--color-dark-blue);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .testimonials .testimonial-wrap {
     padding-left: 0;
   }
