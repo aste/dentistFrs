@@ -63,7 +63,7 @@ h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid var(--color-dark-blue);
-  border-top-color: #d1e6f9;
+  border-top-color: var(--color-light-blue);
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -90,7 +90,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: var(--color-dark-blue);
+  background: var(--color-turquoise);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -104,7 +104,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #298ce5;
+  scale: 1.1;
   color: var(--color-white);
 }
 
@@ -154,7 +154,7 @@ h6 {
 }
 
 #topbar .social-links a {
-  color: #437099;
+  color: var(--color-navy);
   padding-left: 15px;
   display: inline-block;
   line-height: 1px;
@@ -162,7 +162,7 @@ h6 {
 }
 
 #topbar .social-links a:hover {
-  color: var(--color-dark-blue);
+  scale: 1.1;
 }
 
 #topbar .social-links a:first-child {
@@ -171,17 +171,17 @@ h6 {
 
 .icon-link {
   display: inline-block;
-  font-size: 1em; /* Adjust size as needed */
-  color: inherit; /* for Bootstrap icons */
+  font-size: 1em;
+  color: inherit;
   text-decoration: none;
 }
 
 .icon-link:hover {
-  color: #007bff;
+  scale: 1.1;
 }
 
 .trustpilot-icon {
-  height: 1.25em;
+  height: 1.2em;
   width: auto;
   vertical-align: middle;
 }
@@ -236,7 +236,7 @@ h6 {
 }
 
 .appointment-btn:hover {
-  background: #166ab5;
+  scale: 1.1;
   color: var(--color-white);
 }
 
@@ -327,7 +327,7 @@ h6 {
   font-size: 14px;
   font-weight: 500;
   text-transform: none;
-  color: #082744;
+  color: var(--color-navy);
   border: none;
 }
 
@@ -508,6 +508,18 @@ h6 {
   color: var(--color-navy);
 }
 
+h1[aria-hidden="true"],
+h2[aria-hidden="true"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 #hero h2 {
   color: var(--color-navy);
   margin: 10px 0 0 0;
@@ -516,7 +528,7 @@ h6 {
 
 #hero .btn-get-started {
   font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -530,7 +542,7 @@ h6 {
 }
 
 #hero .btn-get-started:hover {
-  background: #3291e6;
+  scale: 1.1;
 }
 
 @media (min-width: 1024px) {
@@ -576,7 +588,7 @@ section {
 }
 
 .section-bg {
-  background-color: #f1f7fd;
+  background-color: var(--color-white-blue);
 }
 
 .section-title {
@@ -599,7 +611,7 @@ section {
   display: block;
   width: 120px;
   height: 1px;
-  background: #ddd;
+  background: var(--color-white-blue);
   bottom: 1px;
   left: calc(50% - 60px);
 }
@@ -624,7 +636,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 20px 0;
-  background-color: #f1f7fd;
+  background-color: var(--color-white-blue);
   min-height: 40px;
   margin-top: 120px;
 }
@@ -663,7 +675,7 @@ section {
 .breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
-  color: #6c757d;
+  color: var(--color-grey);
   content: "/";
 }
 
@@ -742,7 +754,7 @@ section {
 
 .why-us .icon-boxes .icon-box p {
   font-size: 15px;
-  color: #848484;
+  color: var(--color-grey);
 }
 
 /*--------------------------------------------------------------
@@ -772,7 +784,7 @@ section {
   justify-content: center;
   width: 64px;
   height: 64px;
-  border: 2px solid #8dc2f1;
+  border: 2px solid var(--color-blue);
   border-radius: 50px;
   transition: 0.5s;
 }
@@ -799,7 +811,7 @@ section {
 }
 
 .about .icon-box .title a {
-  color: #343a40;
+  color: var(--color-grey);
   transition: 0.3s;
 }
 
@@ -902,7 +914,7 @@ section {
 # Counts
 --------------------------------------------------------------*/
 .counts {
-  background: #f1f7fd;
+  background: var(--color-white-blue);
   padding: 70px 0 60px;
 }
 
@@ -934,7 +946,7 @@ section {
   font-size: 36px;
   display: block;
   font-weight: 600;
-  color: #082744;
+  color: var(--color-navy);
 }
 
 .counts .count-box p {
@@ -949,7 +961,7 @@ section {
 --------------------------------------------------------------*/
 .services .icon-box {
   text-align: center;
-  border: 1px solid #d5e1ed;
+  border: 1px solid var(--color-light-blue);
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
 }
@@ -1050,7 +1062,7 @@ section {
 .appointment .php-email-form .error-message {
   display: none;
   color: var(--color-white);
-  background: #ed3c0d;
+  background: var(--color-turquoise);
   text-align: left;
   padding: 15px;
   font-weight: 600;
@@ -1063,7 +1075,7 @@ section {
 .appointment .php-email-form .sent-message {
   display: none;
   color: var(--color-white);
-  background: orange;
+  background: var(--color-turquoise);
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -1083,8 +1095,8 @@ section {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid orange;
-  border-top-color: #eee;
+  border: 3px solid var(--color-turquoise);
+  border-top-color: var(--color-white-blue);
   animation: animate-loading 1s linear infinite;
 }
 
@@ -1142,7 +1154,7 @@ section {
   transition: 0.3s;
   color: var(--color-navy);
   border-radius: 0;
-  border-right: 2px solid #ebf1f6;
+  border-right: 2px solid var(--color-white-blue);
   font-weight: 600;
   font-size: 15px;
 }
@@ -1248,7 +1260,7 @@ section {
   display: block;
   width: 50px;
   height: 1px;
-  background: #b2c8dd;
+  background: var(--color-grey-blue);
   bottom: 0;
   left: 0;
 }
@@ -1273,7 +1285,7 @@ section {
   border-radius: 50px;
   width: 32px;
   height: 32px;
-  background: #a0bcd5;
+  background: var(--color-grey-blue);
 }
 
 .doctors .member .social a i {
@@ -1330,7 +1342,7 @@ section {
   position: absolute;
   right: 0;
   left: 20px;
-  color: #76b5ee;
+  color: var(--color-blue);
 }
 
 .faq .faq-list .icon-show,
@@ -1351,7 +1363,7 @@ section {
 }
 
 .faq .faq-list a.collapsed {
-  color: #343a40;
+  color: var(--color-grey);
 }
 
 .faq .faq-list a.collapsed:hover {
@@ -1406,18 +1418,18 @@ section {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 0;
-  color: #111;
+  color: var(--color-grey);
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: #999;
+  color: var(--color-grey;
   margin: 0;
 }
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: #badaf7;
+  color: var(--color-light-blue);
   font-size: 26px;
 }
 
@@ -1508,7 +1520,7 @@ section {
   float: left;
   width: 44px;
   height: 44px;
-  background: #d6e9fa;
+  background: var(--color-light-blue);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1568,7 +1580,7 @@ section {
 .contact .php-email-form .sent-message {
   display: none;
   color: var(--color-white);
-  background: orange;
+  background: var(--color-turquoise);
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -1588,8 +1600,8 @@ section {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid orange;
-  border-top-color: #eee;
+  border: 3px solid var(--color-turquoise);
+  border-top-color: var(--color-white-blue);
   animation: animate-loading 1s linear infinite;
 }
 
@@ -1637,7 +1649,7 @@ section {
 #footer {
   color: var(--color-navy);
   font-size: 14px;
-  background: #f1f7fd;
+  background: var(--color-white-blue);
 }
 
 #footer .footer-top {
@@ -1732,7 +1744,7 @@ section {
   position: relative;
   border-radius: 50px;
   text-align: left;
-  border: 1px solid #bfdcf7;
+  border: 1px solid var(--color-light-blue);
 }
 
 #footer .footer-newsletter form input[type="email"] {
