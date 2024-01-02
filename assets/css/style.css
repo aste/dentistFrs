@@ -1537,7 +1537,7 @@ section {
 /*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
-.gallery .gallery-item {
+/* .gallery .gallery-item {
   overflow: hidden;
   border-right: 3px solid var(--color-white);
   border-bottom: 3px solid var(--color-white);
@@ -1549,8 +1549,29 @@ section {
 
 .gallery .gallery-item:hover img {
   transform: scale(1.1);
+} */
+
+.gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-right: 3px solid var(--color-white);
+  border-bottom: 3px solid var(--color-white);
+  padding-top: 66.66%; /* For 16:9 Aspect Ratio */
 }
 
+.gallery .gallery-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will ensure the image covers the div and maintains aspect ratio */
+  transition: all ease-in-out 0.4s;
+}
+
+.gallery .gallery-item:hover img {
+  transform: scale(1.1);
+}
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
