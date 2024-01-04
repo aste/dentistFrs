@@ -502,7 +502,7 @@ h6 {
 
 #hero {
   width: 100%;
-  height: 80vh;
+  height: 72vh;
   /* background: url("../img/grouppicturebw.png") center top; */
   background: url("../img/twobw.jpeg") center top;
   background-size: cover;
@@ -785,6 +785,10 @@ section {
   margin-bottom: 30px;
 }
 
+.why-us .icon-boxes h4{
+  padding-top: 1rem;
+}
+
 .why-us .icon-boxes .icon-box h4 {
   font-size: 20px;
   font-weight: 700;
@@ -865,7 +869,7 @@ section {
 }
 
 .about .video-box {
-  background: url("../img/about.jpg") center center no-repeat;
+  background: url("../img/grouppicture.png") center center no-repeat;
   background-size: cover;
   min-height: 500px;
 }
@@ -952,47 +956,9 @@ section {
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
-.counts {
-  background: var(--color-white-blue);
+.doctors {
+  background-color: red;
   padding: 70px 0 60px;
-}
-
-.counts .count-box {
-  padding: 30px 30px 25px 30px;
-  width: 100%;
-  position: relative;
-  text-align: center;
-  background: var(--color-white);
-}
-
-.counts .count-box i {
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 20px;
-  background: var(--color-dark-blue);
-  color: var(--color-white);
-  border-radius: 50px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-}
-
-.counts .count-box span {
-  font-size: 36px;
-  display: block;
-  font-weight: 600;
-  color: var(--color-navy);
-}
-
-.counts .count-box p {
-  padding: 0;
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
 }
 
 /*--------------------------------------------------------------
@@ -1610,7 +1576,8 @@ section {
 }
 
 .contact .info .email,
-.contact .info .phone {
+.contact .info .phone,
+.contact .info .openingHours {
   margin-top: 40px;
 }
 
