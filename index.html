@@ -8,19 +8,19 @@
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
-    <!-- Favicons -->
+    <!-- Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" />
     <link rel="manifest" href="assets/img/site.webmanifest" />
 
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
       rel="stylesheet"
     />
 
-    <!-- Vendor CSS Files -->
+    <!-- CSS Files -->
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
     <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -30,7 +30,7 @@
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-    <!-- Template Main CSS File -->
+    <!-- Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
   </head>
 
@@ -72,9 +72,9 @@
     <header id="header" class="fixed-top">
       <div class="container d-flex align-items-center">
         <h2 aria-hidden="true" class="logo me-auto">
-          <a href="index.html">Tandklinikken Frederikssund</a>
+          <a href="#hero" class="scrollto">Tandklinikken Frederikssund</a>
         </h2>
-        <a href="index.html" class="logo me-auto"
+        <a href="#hero" class="logo me-auto scrollto"
           ><img
             src="assets/img/onlytextandlogo.png"
             alt="Tandklinikken Frederikssund Logo"
@@ -146,9 +146,7 @@
                 <h3>Ny Patient?</h3>
                 <p>
                   Hos Tandklinikken Frederikssund er alle nye smil velkomne.<br /><br />
-                  Det er hurtigt, nemt og gratis at skifte Tandlæge. Du skal blot bestille en tid så
-                  klarer vi det praktiske vedrørende tandlægeskiftet og indhentning af tidligere
-                  tandlægejournaler.<br /><br />
+                  Det er hurtigt, nemt og gratis at skifte Tandlæge. Du skal blot bestille en tid så klarer vi det praktiske vedrørende tandlægeskiftet og indhentning af tidligere tandlægejournaler.<br /><br />
 
                   Vi glæder os til at se dig.
                 </p>
@@ -401,7 +399,7 @@
                   name="name"
                   class="form-control"
                   id="name"
-                  placeholder="Your Name"
+                  placeholder="Navn"
                   data-rule="minlen:4"
                   data-msg="Please enter at least 4 chars"
                 />
@@ -413,7 +411,7 @@
                   class="form-control"
                   name="email"
                   id="email"
-                  placeholder="Your Email"
+                  placeholder="e-mail"
                   data-rule="email"
                   data-msg="Please enter a valid email"
                 />
@@ -425,7 +423,7 @@
                   class="form-control"
                   name="phone"
                   id="phone"
-                  placeholder="Your Phone"
+                  placeholder="Telefonnummer"
                   data-rule="minlen:4"
                   data-msg="Please enter at least 4 chars"
                 />
@@ -439,13 +437,25 @@
                   name="date"
                   class="form-control datepicker"
                   id="date"
-                  placeholder="Appointment Date"
+                  placeholder="Foretrukne dato"
                   data-rule="minlen:4"
                   data-msg="Please enter at least 4 chars"
                 />
                 <div class="validate"></div>
               </div>
               <div class="col-md-4 form-group mt-3">
+                <input
+                  type="datetime"
+                  name="date"
+                  class="form-control datepicker"
+                  id="date"
+                  placeholder="Foretrukne tidspunkt"
+                  data-rule="minlen:4"
+                  data-msg="Please enter at least 4 chars"
+                />
+                <div class="validate"></div>
+              </div>
+              <!-- <div class="col-md-4 form-group mt-3">
                 <select name="department" id="department" class="form-select">
                   <option value="">Select Department</option>
                   <option value="Department 1">Department 1</option>
@@ -453,13 +463,13 @@
                   <option value="Department 3">Department 3</option>
                 </select>
                 <div class="validate"></div>
-              </div>
+              </div> -->
               <div class="col-md-4 form-group mt-3">
                 <select name="doctor" id="doctor" class="form-select">
-                  <option value="">Select Doctor</option>
-                  <option value="Doctor 1">Doctor 1</option>
-                  <option value="Doctor 2">Doctor 2</option>
-                  <option value="Doctor 3">Doctor 3</option>
+                  <option value="">Behandler</option>
+                  <option value="Doctor 1">Marc, Tandlæge </option>
+                  <option value="Doctor 2">Annette, Tandlæge </option>
+                  <option value="Doctor 3">Louise, Tandplejer</option>
                 </select>
                 <div class="validate"></div>
               </div>
@@ -470,7 +480,7 @@
                 class="form-control"
                 name="message"
                 rows="5"
-                placeholder="Message (Optional)"
+                placeholder="Evt. besked"
               ></textarea>
               <div class="validate"></div>
             </div>
