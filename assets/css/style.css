@@ -1321,7 +1321,7 @@ section {
 
 .employee-separator {
   height: 1px;
-  background-color: var(--color-white-blue);
+  background-color: var(--color-light-blue);
   width: 80%;
   margin: 2rem auto 0.5rem;
 }
