@@ -1045,6 +1045,19 @@ section {
   color: var(--color-white);
 }
 
+.table thead th {
+  background-color: var(--color-navy); 
+  color: white; 
+}
+.table tbody td {
+  background-color: #f8f9fc; /* Baggrundsfarve for td elementer */
+  color: var(--color-grey); /* Tekstfarve for td elementer */
+}
+.table {
+  border-radius: 15px; /* Afrundede hjørner for tabellen */
+  overflow: hidden; /* Sørger for at indholdet ikke går ud over de afrundede hjørner */
+}
+
 /*--------------------------------------------------------------
 # Appointments
 --------------------------------------------------------------*/
