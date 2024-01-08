@@ -645,7 +645,7 @@ section {
   display: block;
   width: 120px;
   height: 1px;
-  background: var(--color-white-blue);
+  background: var(--color-light-blue);
   bottom: 1px;
   left: calc(50% - 60px);
 }
@@ -785,7 +785,7 @@ section {
   margin-bottom: 30px;
 }
 
-.why-us .icon-boxes h4{
+.why-us .icon-boxes h4 {
   padding-top: 1rem;
 }
 
@@ -1046,16 +1046,23 @@ section {
 }
 
 .table thead th {
-  background-color: var(--color-navy); 
-  color: white; 
+  background-color: var(--color-navy);
+  color: white;
 }
 .table tbody td {
-  background-color: #f8f9fc; /* Baggrundsfarve for td elementer */
-  color: var(--color-grey); /* Tekstfarve for td elementer */
+  background-color: #f8f9fc;
+  color: var(--color-grey);
 }
 .table {
-  border-radius: 15px; /* Afrundede hjørner for tabellen */
-  overflow: hidden; /* Sørger for at indholdet ikke går ud over de afrundede hjørner */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table tbody .table-group-title {
+  background-color: var(--color-white);
+  color: #495057;
+  font-weight: bold;
+
 }
 
 /*--------------------------------------------------------------
