@@ -3,6 +3,7 @@
 --------------------------------------------------------------*/
 :root {
   --color-white: #ffffff;
+  --color-light-grey: #eeeeee;
   --color-grey: #595959;
 
   --color-white-blue: #f0f8fc;
@@ -1050,7 +1051,7 @@ section {
   color: white;
 }
 .table tbody td {
-  background-color: #f8f9fc;
+  background-color: var(--color-white);
   color: var(--color-grey);
 }
 .table {
@@ -1059,7 +1060,7 @@ section {
 }
 
 .table tbody .table-group-title {
-  background-color: var(--color-white);
+  background-color: var(--color-light-grey);
   color: #495057;
   font-weight: bold;
 
