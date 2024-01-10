@@ -822,6 +822,10 @@ section {
   margin-bottom: 15px;
 }
 
+.about .icon-boxes h4 {
+ color: var(--color-dark-blue);
+}
+
 .about .icon-box {
   margin-top: 40px;
 }
