@@ -192,6 +192,10 @@ h6 {
   #topbar .contact-info a {
     font-size: 0.8rem;
   }
+
+  #header .logo{
+    max-width: 24%;
+  }
 }
 
 /*--------------------------------------------------------------
