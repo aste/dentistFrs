@@ -204,16 +204,30 @@ h6 {
     flex-direction: row;
   }
 
-  /* #header .contact-info .appointment-btn { */
-  /* max-width: 20px; */
-  /* } */
-
-  #hero {
-    height: 72vh;
+  #header .contact-info .appointment-btn {
+    max-width: 20px;
   }
 
   #header .logo {
     max-width: 36%;
+  }
+
+  #hero .container h2 {
+    font-size: 0.9rem;
+  }
+  
+  #hero .container .main-logo{
+    max-width: 64%;
+  }
+
+
+  #hero .container .btn-get-started,
+  #hero .container h2 {
+    margin-left: 22%;
+  }
+
+  #hero .btn-get-started:hover {
+    scale: 1.1;
   }
 }
 
@@ -454,13 +468,13 @@ h6 {
 }
 
 .navbar-mobile > ul > li {
-  padding: 0;
+  padding: 8px;
 }
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
   padding: 10px 20px;
-  font-size: 15px;
+  font-size: 20px;
   color: var(--color-navy);
   border: none;
 }
@@ -520,28 +534,24 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.6);
   z-index: 2;
-  height: 72vh;
 }
 
 #hero .container {
   position: relative;
-  margin-top: 5%;
+  /* margin-top: 5%; */
   z-index: 3;
 }
 
 #hero {
   width: 100%;
   height: 72vh;
+  margin-top: 90px;
   background: url("../img/twobw.jpeg") center top;
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: -180px;
-}
-
-#hero {
-  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .main-logo {
@@ -591,11 +601,8 @@ h2[aria-hidden="true"] {
   background: var(--color-turquoise);
 }
 
+#hero .btn-get-started,
 #hero h2 {
-  margin-left: 18%;
-}
-
-#hero .btn-get-started {
   margin-left: 18%;
 }
 
@@ -612,7 +619,6 @@ h2[aria-hidden="true"] {
 @media (max-width: 992px) {
   #hero {
     margin-bottom: 0;
-    height: 60vh;
   }
 
   .main-logo {
@@ -830,6 +836,12 @@ section {
 .why-us .maxwidth-wrapper {
   max-width: 240px;
   margin: auto;
+}
+
+@media (max-width: 992px) {
+  #why-us {
+    margin-top: -100px;
+  }
 }
 
 /*--------------------------------------------------------------
