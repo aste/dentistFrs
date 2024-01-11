@@ -45,6 +45,26 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Modal
+--------------------------------------------------------------*/
+#privatlivspolitik .modal-dialog,
+#operation .modal-dialog {
+  max-width: 620px;
+}
+
+#privatlivspolitik p,
+#operation p {
+  color: var(--color-navy);
+  margin: 0rem 0 2rem 0;
+}
+
+#privatlivspolitik h5,
+#operation h5 {
+  color: var(--color-dark-blue);
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
 #preloader {
@@ -215,11 +235,10 @@ h6 {
   #hero .container h2 {
     font-size: 0.9rem;
   }
-  
-  #hero .container .main-logo{
+
+  #hero .container .main-logo {
     max-width: 64%;
   }
-
 
   #hero .container .btn-get-started,
   #hero .container h2 {
@@ -413,6 +432,7 @@ h6 {
 /**
 * Mobile Navigation 
 */
+
 .mobile-nav-toggle {
   color: var(--color-navy);
   font-size: 28px;
@@ -534,7 +554,7 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.66);
   z-index: 2;
 }
 
