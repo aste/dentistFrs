@@ -189,12 +189,31 @@ h6 {
 }
 
 @media (max-width: 575px) {
-  #topbar .contact-info a {
-    font-size: 0.8rem;
+  #topbar .container {
+    flex-wrap: nowrap; /* Prevent flex items from wrapping */
   }
 
-  #header .logo{
-    max-width: 24%;
+  #topbar a,
+  #topbar i {
+    font-size: smaller;
+    white-space: nowrap;
+  }
+
+  #topbar .contact-info {
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  /* #header .contact-info .appointment-btn { */
+  /* max-width: 20px; */
+  /* } */
+
+  #hero {
+    height: 72vh;
+  }
+
+  #header .logo {
+    max-width: 36%;
   }
 }
 
@@ -572,8 +591,11 @@ h2[aria-hidden="true"] {
   background: var(--color-turquoise);
 }
 
-#hero .btn-get-started,
 #hero h2 {
+  margin-left: 18%;
+}
+
+#hero .btn-get-started {
   margin-left: 18%;
 }
 
@@ -615,12 +637,6 @@ h2[aria-hidden="true"] {
     line-height: 24px;
     margin-bottom: 30px;
     margin-bottom: 1em;
-  }
-}
-
-@media (max-height: 600px) {
-  #hero {
-    height: 100vh;
   }
 }
 
@@ -833,7 +849,7 @@ section {
 }
 
 .about .icon-boxes h4 {
- color: var(--color-dark-blue);
+  color: var(--color-dark-blue);
 }
 
 .about .icon-box {
