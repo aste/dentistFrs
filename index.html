@@ -87,6 +87,7 @@
             <li><a class="nav-link scrollto active" href="#hero">Forside</a></li>
             <li><a class="nav-link scrollto" href="#about">Om Os</a></li>
             <li><a class="nav-link scrollto" href="#services">Priser</a></li>
+            <li><a class="nav-link scrollto" href="#akut">Akut</a></li>
             <li><a class="nav-link scrollto" href="#contact">Kontakt</a></li>
             <li><a class="nav-link scrollto" href="#doctors">Personalet</a></li>
           </ul>
@@ -264,9 +265,7 @@
             <h2>Priser</h2>
             <p>
               I Tandklinikken Frederikssund forstår vi vigtigheden af klar kommunikation omkring
-              priser. Nedenfor finder du en oversigt over priserne for nogle af de mest almindelige
-              behandlinger. Det giver dig et klart billede af omkostningerne og de mulige tilskud
-              der ydes af Sygesikring Danmark, så du kan planlægge dit besøg hos os med ro i sindet.
+              priser. Nedenfor finder du en oversigt over priserne for nogle af de mest almindelige behandlinger og tilskud der ydes, så du kan planlægge dit besøg med ro i sindet.
             </p>
           </div>
 
@@ -668,6 +667,151 @@
       </section>
       <!-- End Testimonials Section -->
 
+      <!-- ======= Akut Section ======= -->
+      <section id="akut" class="akut section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Akut Behandling</h2>
+            <p>
+              Hvis du oplever akut tandpine eller andre forhold, der kræver hurtig behandling, bør du straks ringe til os på telefon <span class="mb-5"><a href="tel:47 31 04 42">47 31 04 42</a></span>. Vi anbefaler, at du kontakter os så tidligt på dagen som muligt, da det øger chancen for at vi kan behandle dig samme dag.
+            </p>
+            <div class="icon-boxes d-flex justify-content-center mt-3">
+              <div class="icon-box mt-4 slightlymt-xl-0 whitebox p-4 rounded shadow">
+                <i class="bi bi-telephone"></i>
+                <h4 class="m-2">Akuttelefon</h4>
+                <span class="mb-5"><a href="tel:47 31 04 42">47 31 04 42</a></span>
+                <p class="m-0 p-0"><br /></p>
+                <div class="d-flex justify-content-between maxwidth-wrapper">
+                  <span class="day long d-none d-xl-inline">man-tors</span>
+                  <span class="day short d-inline d-xl-none">mandag-torsdag</span>
+                  <span class="time mx-2">8.00-17.00</span>
+                </div>
+                <div class="d-flex justify-content-between maxwidth-wrapper">
+                  <span class="day">fredag</span>
+                  <span class="time mx-2">8.00-16.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Akut Section -->
+
+      <!-- ======= Contact Section ======= -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-title">
+            <h2>Kontakt Os</h2>
+            <p>
+              Du er altid velkommen til at kontakte os hvis du har spørgsmål eller andet vi kan være
+              behjælpelige med.
+            </p>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="info">
+                <div class="phone mt-0">
+                  <i class="bi bi-phone"></i>
+                  <h4>Telefon</h4>
+                  <p><a href="tel:47 31 04 42">47 31 04 42</a></p>
+                </div>
+
+                <div class="email mt-4 pt-3">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Mail</h4>
+                  <p>
+                    <a href="mailto:info@tandklinikken-frederikssund.dk" target="_blank">
+                      info@tandklinikken-frederikssund.dk</a
+                    >
+                  </p>
+                </div>
+
+                <div class="address mt-4 pt-3">
+                  <i class="bi bi-geo-alt"></i>
+                  <h4>Adresse</h4>
+                  <p>Færgeparken 23, 3600 Frederikssund</p>
+                </div>
+
+                <div class="openingHours mt-4 pt-3">
+                  <i class="bi bi-clock"></i>
+                  <h4>Åbningstider</h4>
+                  <p>
+                    mandag-torsdag &nbsp; 8.30-17.00<br />
+                    fredag
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.30-16.00
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-8 mt-5 mt-lg-0 mb-5">
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      id="name"
+                      placeholder="Navn"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email"
+                      placeholder="e-mail"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="subject"
+                    id="subject"
+                    placeholder="Emne"
+                    required
+                  />
+                </div>
+                <div class="form-group mt-3">
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    rows="6"
+                    placeholder="Besked"
+                    required
+                  ></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Sender</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Din besked er sendt</div>
+                </div>
+                <div class="text-center"><button type="submit">Send Besked</button></div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <iframe
+            style="border: 0; width: 100%; height: 350px"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3809.3462818017033!2d12.05144796015549!3d55.843129569133566!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46526923b6353445%3A0xb5a3b02ddffe0115!2sTandklinikken%20Frederikssund!5e0!3m2!1sen!2sdk!4v1703966601233!5m2!1sen!2sdk"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <!-- End Contact Section -->
+
       <!-- ======= Gallery Section ======= -->
       <section id="gallery" class="gallery section-bg">
         <div class="container">
@@ -749,121 +893,6 @@
         </div>
       </section>
       <!-- End Gallery Section -->
-
-      <!-- ======= Contact Section ======= -->
-      <section id="contact" class="contact">
-        <div class="container">
-          <div class="section-title">
-            <h2>Kontakt Os</h2>
-            <p>
-              Du er altid velkommen til at kontakte os hvis du har spørgsmål eller andet vi kan være
-              behjælpelige med.
-            </p>
-          </div>
-        </div>
-
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="info">
-                <div class="phone mt-0">
-                  <i class="bi bi-phone"></i>
-                  <h4>Telefon</h4>
-                  <p><a href="tel:47 31 04 42">47 31 04 42</a></p>
-                </div>
-
-                <div class="email mt-4 pt-3">
-                  <i class="bi bi-envelope"></i>
-                  <h4>Mail</h4>
-                  <p>
-                    <a href="mailto:info@tandklinikken-frederikssund.dk" target="_blank">
-                      info@tandklinikken-frederikssund.dk</a
-                    >
-                  </p>
-                </div>
-
-                <div class="address mt-4 pt-3">
-                  <i class="bi bi-geo-alt"></i>
-                  <h4>Adresse</h4>
-                  <p>Færgeparken 23, 3600 Frederikssund</p>
-                </div>
-
-                <div class="openingHours mt-4 pt-3">
-                  <i class="bi bi-clock"></i>
-                  <h4>Åbningstider</h4>
-                  <p>
-                    mandag-torsdag &nbsp; 8.30-17.00<br />
-                    fredag
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.30-16.00
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-8 mt-5 mt-lg-0">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                <div class="row">
-                  <div class="col-md-6 form-group">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      id="name"
-                      placeholder="Navn"
-                      required
-                    />
-                  </div>
-                  <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      placeholder="e-mail"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="form-group mt-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="subject"
-                    id="subject"
-                    placeholder="Emne"
-                    required
-                  />
-                </div>
-                <div class="form-group mt-3">
-                  <textarea
-                    class="form-control"
-                    name="message"
-                    rows="6"
-                    placeholder="Besked"
-                    required
-                  ></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Sender</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Din besked er sendt</div>
-                </div>
-                <div class="text-center"><button type="submit">Send Besked</button></div>
-              </form>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-5">
-          <iframe
-            style="border: 0; width: 100%; height: 350px"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3809.3462818017033!2d12.05144796015549!3d55.843129569133566!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46526923b6353445%3A0xb5a3b02ddffe0115!2sTandklinikken%20Frederikssund!5e0!3m2!1sen!2sdk!4v1703966601233!5m2!1sen!2sdk"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </section>
-      <!-- End Contact Section -->
 
       <!-- ======= Employee Section ======= -->
       <section id="doctors" class="doctors">

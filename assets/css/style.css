@@ -44,6 +44,12 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+h2 + p {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /*--------------------------------------------------------------
 # Modal
 --------------------------------------------------------------*/
@@ -148,8 +154,6 @@ h6 {
   transition: all 0.5s;
   z-index: 996;
 }
-
-
 
 #topbar .contact-info a {
   line-height: 1;
@@ -256,7 +260,6 @@ h6 {
   #topbar.topbar-scrolled {
     top: -40px;
   }
-
 }
 
 /*--------------------------------------------------------------
@@ -270,7 +273,6 @@ h6 {
   top: 40px;
   box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
 }
-
 
 #header .logo {
   font-size: 30px;
@@ -1757,6 +1759,23 @@ section {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.akut .whitebox {
+  background-color: var(--color-white);
+  max-width: 240px;
+  min-height: 200px;
+  border-radius: 5px;
+}
+
+.akut .icon-boxes .icon-box i {
+  font-size: 30px;
+  color: var(--color-dark-blue);
+  margin-bottom: 30px;
 }
 
 /*--------------------------------------------------------------
