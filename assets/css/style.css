@@ -16,10 +16,7 @@
 
   --color-turquoise: #1abc9c;
   --color-light-turquoise: #63dec5;
-
 }
-
-
 
 /*--------------------------------------------------------------
 # General
@@ -250,7 +247,6 @@ h2 + p {
   #hero .container h2 {
     margin-left: 22%;
   }
-
 }
 
 @media (min-width: 576px) {
@@ -1773,7 +1769,6 @@ section {
 }
 
 #akut .bi-telephone {
-  font-size: 40px;
   color: var(--color-dark-blue);
 }
 
