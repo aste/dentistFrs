@@ -1768,8 +1768,13 @@ section {
 # Footer
 --------------------------------------------------------------*/
 
-.akut .icon-container {
+#akut .icon-container {
   max-width: 300px;
+}
+
+#akut .bi-telephone {
+  font-size: 40px;
+  color: var(--color-dark-blue);
 }
 
 /*--------------------------------------------------------------
