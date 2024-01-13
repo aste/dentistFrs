@@ -15,7 +15,11 @@
   --color-navy: #00325a;
 
   --color-turquoise: #1abc9c;
+  --color-light-turquoise: #63dec5;
+
 }
+
+
 
 /*--------------------------------------------------------------
 # General
@@ -132,7 +136,7 @@ h2 + p {
 
 .back-to-top:hover {
   scale: 1.1;
-  color: var(--color-white);
+  background-color: var(--color-light-turquoise);
 }
 
 .back-to-top.active {
@@ -247,9 +251,6 @@ h2 + p {
     margin-left: 22%;
   }
 
-  #hero .btn-get-started:hover {
-    scale: 1.1;
-  }
 }
 
 @media (min-width: 576px) {
@@ -312,6 +313,7 @@ h2 + p {
 .appointment-btn:hover {
   scale: 1.1;
   color: var(--color-white);
+  background-color: var(--color-light-turquoise);
 }
 
 /*--------------------------------------------------------------
@@ -568,7 +570,6 @@ h2 + p {
 
 #hero .container {
   position: relative;
-  /* margin-top: 5%; */
   z-index: 3;
 }
 
@@ -635,6 +636,7 @@ h2[aria-hidden="true"] {
 }
 
 #hero .btn-get-started:hover {
+  background-color: var(--color-light-turquoise);
   scale: 1.1;
 }
 
@@ -826,8 +828,8 @@ section {
 }
 
 .why-us .content .more-btn:hover {
-  color: var(--color-dark-blue);
-  background: var(--color-white);
+  color: var(--color-white);
+  background: var(--color-light-turquoise);
   scale: 1.1;
 }
 
@@ -1227,6 +1229,7 @@ section {
 
 .appointment .php-email-form button[type="submit"]:hover {
   background: var(--color-blue);
+  scale: 1.1;
 }
 
 /*--------------------------------------------------------------
@@ -1748,6 +1751,7 @@ section {
 
 .contact .php-email-form button[type="submit"]:hover {
   background: var(--color-blue);
+  scale: 1.1;
 }
 
 @keyframes animate-loading {
@@ -1764,17 +1768,8 @@ section {
 # Footer
 --------------------------------------------------------------*/
 
-.akut .whitebox {
-  background-color: var(--color-white);
-  max-width: 240px;
-  min-height: 200px;
-  border-radius: 5px;
-}
-
-.akut .icon-boxes .icon-box i {
-  font-size: 30px;
-  color: var(--color-dark-blue);
-  margin-bottom: 30px;
+.akut .icon-container {
+  max-width: 300px;
 }
 
 /*--------------------------------------------------------------
