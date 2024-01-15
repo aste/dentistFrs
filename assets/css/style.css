@@ -1120,6 +1120,7 @@ section {
   color: var(--color-grey);
 }
 .table {
+  font-size: smaller;
   border-radius: 10px;
   overflow: hidden;
 }
