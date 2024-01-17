@@ -166,15 +166,15 @@ h2 + p {
   color: var(--color-dark-blue);
 }
 
+#topbar .contact-info a:hover {
+  cursor: pointer;
+}
+
 #topbar .contact-info i {
   color: var(--color-dark-blue);
   padding-right: 4px;
   margin-left: 15px;
   line-height: 0;
-}
-
-#topbar .contact-info i:first-child {
-  margin-left: 0;
 }
 
 #topbar .social-links a {
@@ -617,6 +617,7 @@ h2[aria-hidden="true"] {
   margin: 10px 0 0 0;
   font-size: 24px;
 }
+
 
 #hero .btn-get-started {
   font-family: "Raleway", sans-serif;
