@@ -431,6 +431,29 @@ h2 + p {
   visibility: visible;
 }
 
+ç {
+  background-color: var(--color-navy);
+  text-align: center;
+  padding: 10px;
+}
+
+.navbar-brand-mobile {
+  background-color: var(--color-navy); 
+  text-align: center; 
+  padding: 10px;
+}
+
+.navbar-brand-mobile img {
+  max-height: 5vh;
+  min-height: 60px;
+}
+
+@media (min-width: 993px) {
+  .navbar-brand-mobile {
+    display: none;
+  }
+}
+
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
     left: -90%;
