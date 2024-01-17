@@ -211,9 +211,9 @@ h2 + p {
   vertical-align: middle;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
   #topbar .container {
-    flex-wrap: nowrap; /* Prevent flex items from wrapping */
+    flex-wrap: nowrap;
   }
 
   #topbar a,
@@ -256,6 +256,12 @@ h2 + p {
 
   #topbar.topbar-scrolled {
     top: -40px;
+  }
+}
+
+@media (max-width: 449px) {
+  #topbar .hiddenUnder450 {
+    display: none;
   }
 }
 
