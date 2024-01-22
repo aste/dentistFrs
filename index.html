@@ -98,8 +98,8 @@
             </div>
             <li><a class="nav-link scrollto active" href="#hero">Forside</a></li>
             <li><a class="nav-link scrollto" href="#about">Om Os</a></li>
-            <li><a class="nav-link scrollto" href="#akut">Akut</a></li>
             <li><a class="nav-link scrollto" href="#contact">Kontakt</a></li>
+            <li><a class="nav-link scrollto" href="#akut">Akut</a></li>
             <li><a class="nav-link scrollto" href="#doctors">Personalet</a></li>
             <li><a class="nav-link scrollto" href="#services">Priser</a></li>
           </ul>
@@ -270,127 +270,6 @@
       </section>
       <!-- End About Section -->
 
-      <!-- ======= Appointment Section ======= -->
-      <section id="appointment" class="appointment section-bg">
-        <div class="container">
-          <div class="section-title">
-            <h2>Bestil Tid</h2>
-            <p>
-              Det er nemt at booke en tid hos os. Udfyld felterne og klik på "Bestil Tid", så vender
-              vi tilbage med en endelige bekræftelse på din aftale. Vi ser frem til at tage imod dig
-              og give dig den bedste tandpleje. Skulle du have nogle spørgsmål er du altid velkommen
-              til at <a class="scrollto" href="#contact">kontakte os</a>.
-            </p>
-          </div>
-
-          <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
-            <div class="row">
-              <div class="col-md-4 form-group">
-                <input
-                  type="text"
-                  name="name"
-                  class="form-control"
-                  id="name"
-                  placeholder="Navn"
-                  data-rule="minlen:4"
-                  data-msg="Please enter at least 4 chars"
-                />
-                <div class="validate"></div>
-              </div>
-              <div class="col-md-4 form-group mt-3 mt-md-0">
-                <input
-                  type="email"
-                  class="form-control"
-                  name="email"
-                  id="email"
-                  placeholder="e-mail"
-                  data-rule="email"
-                  data-msg="Please enter a valid email"
-                />
-                <div class="validate"></div>
-              </div>
-              <div class="col-md-4 form-group mt-3 mt-md-0">
-                <input
-                  type="tel"
-                  class="form-control"
-                  name="phone"
-                  id="phone"
-                  placeholder="Telefonnummer"
-                  data-rule="minlen:4"
-                  data-msg="Please enter at least 4 chars"
-                />
-                <div class="validate"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 form-group mt-3">
-                <input
-                  type="datetime"
-                  name="date"
-                  class="form-control datepicker"
-                  id="date"
-                  placeholder="Foretrukne dato"
-                  data-rule="minlen:4"
-                  data-msg="Please enter at least 4 chars"
-                />
-                <div class="validate"></div>
-              </div>
-              <div class="col-md-4 form-group mt-3">
-                <input
-                  type="datetime"
-                  name="date"
-                  class="form-control datepicker"
-                  id="date"
-                  placeholder="Foretrukne tidspunkt"
-                  data-rule="minlen:4"
-                  data-msg="Please enter at least 4 chars"
-                />
-                <div class="validate"></div>
-              </div>
-              <!-- <div class="col-md-4 form-group mt-3">
-                <select name="department" id="department" class="form-select">
-                  <option value="">Select Department</option>
-                  <option value="Department 1">Department 1</option>
-                  <option value="Department 2">Department 2</option>
-                  <option value="Department 3">Department 3</option>
-                </select>
-                <div class="validate"></div>
-              </div> -->
-              <div class="col-md-4 form-group mt-3">
-                <select name="doctor" id="doctor" class="form-select">
-                  <option value="">Behandler</option>
-                  <option value="Doctor 1">Marc, Tandlæge</option>
-                  <option value="Doctor 2">Annette, Tandlæge</option>
-                  <option value="Doctor 3">Louise, Tandplejer</option>
-                </select>
-                <div class="validate"></div>
-              </div>
-            </div>
-
-            <div class="form-group mt-3">
-              <textarea
-                class="form-control"
-                name="message"
-                rows="5"
-                placeholder="Evt. besked"
-              ></textarea>
-              <div class="validate"></div>
-            </div>
-            <div class="mb-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">
-                Your appointment request has been sent successfully. Thank you!
-              </div>
-            </div>
-            <div class="text-center">
-              <button type="submit">Bestil Tid</button>
-            </div>
-          </form>
-        </div>
-      </section>
-      <!-- End Appointment Section -->
-
       <!-- ======= Testimonials Section ======= -->
       <section id="testimonials" class="testimonials">
         <div class="container">
@@ -542,39 +421,126 @@
       </section>
       <!-- End Testimonials Section -->
 
-      <!-- ======= Akut Section ======= -->
-      <section id="akut" class="akut section-bg">
+      <!-- ======= Appointment Section ======= -->
+      <section id="appointment" class="appointment section-bg">
         <div class="container">
           <div class="section-title">
-            <h2>Akut Behandling</h2>
+            <h2>Bestil Tid</h2>
             <p>
-              Hvis du oplever akut tandpine eller andet, der kræver hurtig behandling, bør du straks
-              ringe til os på telefon
-              <span class="mb-5"><a href="tel:47 31 04 42">47 31 04 42</a></span
-              >. Vi anbefaler, at du kontakter os så tidligt på dagen som muligt, da det øger
-              chancen for at vi kan behandle dig samme dag.
+              Det er nemt at booke en tid hos os. Udfyld felterne og klik på "Bestil Tid", så vender
+              vi tilbage med en endelige bekræftelse på din aftale. Vi ser frem til at tage imod dig
+              og give dig den bedste tandpleje. Skulle du have nogle spørgsmål er du altid velkommen
+              til at <a class="scrollto" href="#contact">kontakte os</a>.
             </p>
           </div>
-          <div class="container icon-container mt-3">
-            <div class="bg-white p-4 rounded text-center my-1 shadow">
-              <i class="bi bi-telephone fa-2x col-dark-blue m-2"></i>
-              <h4 class="m-2">Akuttelefon</h4>
-              <p class="mt-3 mb-5">
-                <span><a href="tel:47 31 04 42">47 31 04 42</a></span>
-              </p>
-              <div class="d-flex justify-content-between maxwidth-wrapper">
-                <span class="day">mandag-torsdag</span>
-                <span class="time">8.00-17.00</span>
+
+          <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="col-md-4 form-group">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  id="name"
+                  placeholder="Navn"
+                  data-rule="minlen:4"
+                  data-msg="Please enter at least 4 chars"
+                />
+                <div class="validate"></div>
               </div>
-              <div class="d-flex justify-content-between maxwidth-wrapper mb-3">
-                <span class="day">fredag</span>
-                <span class="time">8.00-16.00</span>
+              <div class="col-md-4 form-group mt-3 mt-md-0">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  id="email"
+                  placeholder="e-mail"
+                  data-rule="email"
+                  data-msg="Please enter a valid email"
+                />
+                <div class="validate"></div>
+              </div>
+              <div class="col-md-4 form-group mt-3 mt-md-0">
+                <input
+                  type="tel"
+                  class="form-control"
+                  name="phone"
+                  id="phone"
+                  placeholder="Telefonnummer"
+                  data-rule="minlen:4"
+                  data-msg="Please enter at least 4 chars"
+                />
+                <div class="validate"></div>
               </div>
             </div>
-          </div>
+            <div class="row">
+              <div class="col-md-4 form-group mt-3">
+                <input
+                  type="datetime"
+                  name="date"
+                  class="form-control datepicker"
+                  id="date"
+                  placeholder="Foretrukne dato"
+                  data-rule="minlen:4"
+                  data-msg="Please enter at least 4 chars"
+                />
+                <div class="validate"></div>
+              </div>
+              <div class="col-md-4 form-group mt-3">
+                <input
+                  type="datetime"
+                  name="date"
+                  class="form-control datepicker"
+                  id="date"
+                  placeholder="Foretrukne tidspunkt"
+                  data-rule="minlen:4"
+                  data-msg="Please enter at least 4 chars"
+                />
+                <div class="validate"></div>
+              </div>
+              <!-- <div class="col-md-4 form-group mt-3">
+                      <select name="department" id="department" class="form-select">
+                        <option value="">Select Department</option>
+                        <option value="Department 1">Department 1</option>
+                        <option value="Department 2">Department 2</option>
+                        <option value="Department 3">Department 3</option>
+                      </select>
+                      <div class="validate"></div>
+                    </div> -->
+              <div class="col-md-4 form-group mt-3">
+                <select name="doctor" id="doctor" class="form-select">
+                  <option value="">Behandler</option>
+                  <option value="Doctor 1">Marc, Tandlæge</option>
+                  <option value="Doctor 2">Annette, Tandlæge</option>
+                  <option value="Doctor 3">Louise, Tandplejer</option>
+                </select>
+                <div class="validate"></div>
+              </div>
+            </div>
+
+            <div class="form-group mt-3">
+              <textarea
+                class="form-control"
+                name="message"
+                rows="5"
+                placeholder="Evt. besked"
+              ></textarea>
+              <div class="validate"></div>
+            </div>
+            <div class="mb-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">
+                Your appointment request has been sent successfully. Thank you!
+              </div>
+            </div>
+            <div class="text-center">
+              <button type="submit">Bestil Tid</button>
+            </div>
+          </form>
         </div>
       </section>
-      <!-- End Akut Section -->
+      <!-- End Appointment Section -->
 
       <!-- ======= Contact Section ======= -->
       <section id="contact" class="contact">
@@ -690,6 +656,40 @@
         </div>
       </section>
       <!-- End Contact Section -->
+
+      <!-- ======= Akut Section ======= -->
+      <section id="akut" class="akut">
+        <div class="container">
+          <div class="section-title">
+            <h2>Akut Behandling</h2>
+            <p>
+              Hvis du oplever akut tandpine eller andet, der kræver hurtig behandling, bør du straks
+              ringe til os på telefon
+              <span class="mb-5"><a href="tel:47 31 04 42">47 31 04 42</a></span
+              >. Vi anbefaler, at du kontakter os så tidligt på dagen som muligt, da det øger
+              chancen for at vi kan behandle dig samme dag.
+            </p>
+          </div>
+          <div class="container icon-container mt-3">
+            <div class="bg-white p-4 rounded text-center my-1 shadow">
+              <i class="bi bi-telephone fa-2x col-dark-blue m-2"></i>
+              <h4 class="m-2">Akuttelefon</h4>
+              <p class="mt-3 mb-5">
+                <span><a href="tel:47 31 04 42">47 31 04 42</a></span>
+              </p>
+              <div class="d-flex justify-content-between maxwidth-wrapper">
+                <span class="day">mandag-torsdag</span>
+                <span class="time">8.00-17.00</span>
+              </div>
+              <div class="d-flex justify-content-between maxwidth-wrapper mb-3">
+                <span class="day">fredag</span>
+                <span class="time">8.00-16.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Akut Section -->
 
       <!-- ======= Gallery Section ======= -->
       <section id="gallery" class="gallery section-bg">
@@ -1052,7 +1052,7 @@
       <!-- End Employee Section -->
 
       <!-- ======= Services Section ======= -->
-      <section id="services" class="services section">
+      <section id="services" class="services section-bg">
         <div class="container">
           <div class="section-title">
             <h2>Priser</h2>
@@ -1196,7 +1196,6 @@
         </div>
       </section>
       <!-- End Services Section -->
-      
     </main>
     <!-- End #main -->
 
