@@ -1370,13 +1370,13 @@ section {
 .doctors .member span {
   display: block;
   font-size: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 0;
   position: relative;
   font-weight: 500;
 }
 
 .doctors .member span::after {
-  content: "";
+  content: none;
   position: absolute;
   display: block;
   width: 50px;
@@ -1389,6 +1389,16 @@ section {
 .doctors .member p {
   margin: 10px 0 0 0;
   font-size: 14px;
+}
+
+.doctors .member .member-info span.member-edu {
+  color: var(--color-light-blue);
+  margin: 0px;
+  padding-bottom: 8px;
+}
+
+.doctors .member .member-info span.member-edu::after {
+  content: "";
 }
 
 .doctors .member .social {
