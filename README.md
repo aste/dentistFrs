@@ -9,6 +9,13 @@ This repository contains the source code for the Tandklinikken Frederikssund web
 - **index.html**: Main homepage file.
 - **inner-page.html**: Template for secondary pages.
 
+## Features
+
+- Responsive design for various devices.
+- User-friendly navigation.
+- Contact forms for easy communication.
+- Informative sections about services and team members.
+
 ## Installation
 
 1. Clone the repository:
@@ -19,10 +26,29 @@ This repository contains the source code for the Tandklinikken Frederikssund web
    ```sh
    cd dentistFrs
    ```
+3. Open `index.html` in your web browser to view the homepage. Use `inner-page.html` for additional pages.
 
-## Usage
+## Development
 
-Open `index.html` in your web browser to view the homepage. Use `inner-page.html` for additional pages.
+### Prerequisites
+
+- A modern web browser (e.g., Chrome, Firefox, Safari).
+- A code editor (e.g., VS Code, Sublime Text).
+
+### Running Locally
+
+1. Open the project directory in your code editor.
+2. Open `index.html` in your web browser to view the homepage.
+3. For changes, edit the HTML, CSS, or JS files in the `assets` folder and refresh the browser to see updates.
+
+### File Structure
+
+- **assets/css/**: Stylesheets for the website.
+- **assets/js/**: JavaScript files for interactive elements.
+- **assets/images/**: Images used in the website.
+- **forms/**: PHP or other backend scripts for form handling.
+- **index.html**: Main homepage.
+- **inner-page.html**: Template for additional pages.
 
 ## Contributing
 
@@ -40,6 +66,24 @@ Open `index.html` in your web browser to view the homepage. Use `inner-page.html
    git push origin feature/YourFeatureName
    ```
 5. Open a pull request.
+
+## Screenshots
+
+### Mobile Version
+
+![Homepage](assets/img/screenshots/mobile.png)
+
+### Vertical Tablet Version
+
+![Homepage](assets/img/screenshots/tablet-vertical.png)
+
+### Horizontal Tablet Version
+
+![Homepage](assets/img/screenshots/tablet-horizontal.png)
+
+### Desktop Version
+
+![Homepage](assets/img/screenshots/desktop.png)
 
 ## License
 
