@@ -598,14 +598,14 @@ h2 + p {
 
 #hero .container {
   position: relative;
+  margin-bottom: 4rem;
   z-index: 3;
 }
 
 #hero {
   width: 100%;
-  height: 72vh;
-  margin-top: 90px;
-  background: url("../img/hero-bg.jpeg") center top;
+  height: 64vh;
+  background: url("../img/hero-bg.png") center top;
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: -180px;
