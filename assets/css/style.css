@@ -1395,6 +1395,13 @@ section {
   padding-bottom: 8px;
 }
 
+.doctors .member .member-info span.member-invis-text {
+  color: var(--color-white);
+  margin: 0px;
+  padding-bottom: 8px;
+}
+
+
 .doctors .member .member-info span.member-edu::after {
   content: "";
 }
