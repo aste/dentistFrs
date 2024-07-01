@@ -73,9 +73,13 @@
    */
   let selectHeader = select("#header");
   let selectTopbar = select("#topbar");
+
   if (selectHeader) {
+    let lastScrollY = window.scrollY;
+
     const headerScrolled = () => {
-      if (window.scrollY > 100) {
+      let currentScrollY = window.scrollY;
+      if (window.scrollY < lastScrollY) {
         selectHeader.classList.add("header-scrolled");
         if (selectTopbar) {
           selectTopbar.classList.add("topbar-scrolled");
@@ -86,6 +90,7 @@
           selectTopbar.classList.remove("topbar-scrolled");
         }
       }
+      lastScrollY = currentScrollY;
     };
     window.addEventListener("load", headerScrolled);
     onscroll(document, headerScrolled);
@@ -221,6 +226,7 @@
   /**
    * Danish Date Picker
    */
+
   document.addEventListener("DOMContentLoaded", function () {
     flatpickr("#date", {
       locale: "da",

@@ -155,8 +155,15 @@ h2 + p {
   background: var(--color-white-blue);
   height: 40px;
   font-size: 14px;
-  transition: all 0.5s;
+  transition: all 0.3s;
   z-index: 996;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+#topbar.topbar-scrolled {
+  top: -40px;
 }
 
 #topbar .contact-info a {
@@ -252,16 +259,6 @@ h2 + p {
   }
 }
 
-@media (min-width: 576px) {
-  #header.header-scrolled {
-    top: 0;
-  }
-
-  #topbar.topbar-scrolled {
-    top: -40px;
-  }
-}
-
 @media (max-width: 449px) {
   #topbar .hiddenUnder450 {
     display: none;
@@ -278,6 +275,11 @@ h2 + p {
   padding: 8px 0;
   top: 40px;
   box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+  transition: all 0.3s;
+}
+
+#header.header-scrolled {
+  top: 0;
 }
 
 #header .logo {
