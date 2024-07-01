@@ -1165,15 +1165,15 @@ section {
 /*--------------------------------------------------------------
 # Appointments
 --------------------------------------------------------------*/
-.appointment .php-email-form {
+.appointment .email-form {
   width: 100%;
 }
 
-.appointment .php-email-form .form-group {
+.appointment .email-form .form-group {
   padding-bottom: 8px;
 }
 
-.appointment .php-email-form .validate {
+.appointment .email-form .validate {
   display: none;
   color: var(--color-navy);
   margin: 0 0 15px 0;
@@ -1181,7 +1181,7 @@ section {
   font-size: 13px;
 }
 
-.appointment .php-email-form .error-message {
+.appointment .email-form .error-message {
   display: none;
   color: var(--color-white);
   background: var(--color-turquoise);
@@ -1190,11 +1190,11 @@ section {
   font-weight: 600;
 }
 
-.appointment .php-email-form .error-message br + br {
+.appointment .email-form .error-message br + br {
   margin-top: 25px;
 }
 
-.appointment .php-email-form .sent-message {
+.appointment .email-form .sent-message {
   display: none;
   color: var(--color-white);
   background: var(--color-turquoise);
@@ -1203,14 +1203,14 @@ section {
   font-weight: 600;
 }
 
-.appointment .php-email-form .loading {
+.appointment .email-form .loading {
   display: none;
   background: var(--color-white);
   text-align: center;
   padding: 15px;
 }
 
-.appointment .php-email-form .loading:before {
+.appointment .email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1222,31 +1222,31 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.appointment .php-email-form input,
-.appointment .php-email-form textarea,
-.appointment .php-email-form select {
+.appointment .email-form input,
+.appointment .email-form textarea,
+.appointment .email-form select {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   padding: 10px !important;
 }
 
-.appointment .php-email-form input:focus,
-.appointment .php-email-form textarea:focus,
-.appointment .php-email-form select:focus {
+.appointment .email-form input:focus,
+.appointment .email-form textarea:focus,
+.appointment .email-form select:focus {
   border-color: var(--color-dark-blue);
 }
 
-.appointment .php-email-form input,
-.appointment .php-email-form select {
+.appointment .email-form input,
+.appointment .email-form select {
   height: 44px;
 }
 
-.appointment .php-email-form textarea {
+.appointment .email-form textarea {
   padding: 10px 12px;
 }
 
-.appointment .php-email-form button[type="submit"] {
+.appointment .email-form button[type="submit"] {
   background: var(--color-dark-blue);
   border: 0;
   padding: 10px 35px;
@@ -1255,7 +1255,7 @@ section {
   border-radius: 50px;
 }
 
-.appointment .php-email-form button[type="submit"]:hover {
+.appointment .email-form button[type="submit"]:hover {
   background: var(--color-blue);
   scale: 1.1;
 }
@@ -1400,7 +1400,6 @@ section {
   margin: 0px;
   padding-bottom: 8px;
 }
-
 
 .doctors .member .member-info span.member-edu::after {
   content: "";
@@ -1720,16 +1719,16 @@ section {
   color: var(--color-white);
 }
 
-.contact .php-email-form {
+.contact .email-form {
   width: 100%;
   background: var(--color-white);
 }
 
-.contact .php-email-form .form-group {
+.contact .email-form .form-group {
   padding-bottom: 8px;
 }
 
-.contact .php-email-form .error-message {
+.contact .email-form .error-message {
   display: none;
   color: var(--color-white);
   background: var(--color-turquoise);
@@ -1738,11 +1737,11 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br + br {
+.contact .email-form .error-message br + br {
   margin-top: 25px;
 }
 
-.contact .php-email-form .sent-message {
+.contact .email-form .sent-message {
   display: none;
   color: var(--color-white);
   background: var(--color-turquoise);
@@ -1751,14 +1750,14 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .loading {
+.contact .email-form .loading {
   display: none;
   background: var(--color-white);
   text-align: center;
   padding: 15px;
 }
 
-.contact .php-email-form .loading:before {
+.contact .email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1770,21 +1769,21 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input,
-.contact .php-email-form textarea {
+.contact .email-form input,
+.contact .email-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
 }
 
-.contact .php-email-form input {
+.contact .email-form input {
 }
 
-.contact .php-email-form textarea {
+.contact .email-form textarea {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type="submit"] {
+.contact .email-form button[type="submit"] {
   background: var(--color-dark-blue);
   border: 0;
   padding: 10px 35px;
@@ -1793,7 +1792,7 @@ section {
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type="submit"]:hover {
+.contact .email-form button[type="submit"]:hover {
   background: var(--color-blue);
   scale: 1.1;
 }

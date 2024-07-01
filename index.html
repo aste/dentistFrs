@@ -38,6 +38,7 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 
     <!-- Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
@@ -451,7 +452,20 @@
             </p>
           </div>
 
-          <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
+          <form
+            action="https://formsubmit.co/youremail@example.com"
+            method="post"
+            role="form"
+            class="email-form"
+          >
+            <!-- Add your email address to the action attribute above -->
+            <!-- Anti-bot measure hidden input -->
+            <input type="hidden" name="_honey" style="display: none" />
+            <!-- Add your email address as a hidden field -->
+            <input type="hidden" name="_subject" value="New Appointment Request" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
             <div class="row">
               <div class="col-md-4 form-group">
                 <input
@@ -471,7 +485,7 @@
                   class="form-control"
                   name="email"
                   id="email"
-                  placeholder="e-mail"
+                  placeholder="Email"
                   data-rule="email"
                   data-msg="Please enter a valid email"
                 />
@@ -493,37 +507,45 @@
             <div class="row">
               <div class="col-md-4 form-group mt-3">
                 <input
-                  type="datetime"
+                  type="date"
                   name="date"
                   class="form-control datepicker"
                   id="date"
                   placeholder="Foretrukne dato"
-                  data-rule="minlen:4"
-                  data-msg="Please enter at least 4 chars"
+                  data-rule="minlen:8"
+                  data-msg="Please enter at least 8 chars"
                 />
                 <div class="validate"></div>
               </div>
               <div class="col-md-4 form-group mt-3">
-                <select name="doctor" id="doctor" class="form-select">
+                <select name="preferred_time" id="preferred_time" class="form-select">
                   <option value="">Foretrukne tidspunkt</option>
-                  <option value="time 1">Morgen fra kl. 8.30 til 10.00</option>
-                  <option value="time 2">Formiddag fra kl. 10.00 til 12.00</option>
-                  <option value="time 3">Tidlig Eftermiddag fra kl. 12.00 til 15.00</option>
-                  <option value="time 4">Sen Eftermiddag fra kl. 15.00 til 17.00</option>
+                  <option value="Morgen fra kl. 8.30 til 10.00">
+                    Morgen fra kl. 8.30 til 10.00
+                  </option>
+                  <option value="Formiddag fra kl. 10.00 til 12.00">
+                    Formiddag fra kl. 10.00 til 12.00
+                  </option>
+                  <option value="Tidlig Eftermiddag fra kl. 12.00 til 15.00">
+                    Tidlig Eftermiddag fra kl. 12.00 til 15.00
+                  </option>
+                  <option value="Sen Eftermiddag fra kl. 15.00 til 17.00">
+                    Sen Eftermiddag fra kl. 15.00 til 17.00
+                  </option>
                 </select>
                 <div class="validate"></div>
               </div>
               <div class="col-md-4 form-group mt-3">
                 <select name="doctor" id="doctor" class="form-select">
-                  <option value="">Vælg behandler</option>
-                  <option value="Doctor 1">Marc, Tandlæge</option>
-                  <option value="Doctor 2">Annette, Tandlæge</option>
-                  <option value="Doctor 3">Anna, Tandlæge</option>
-                  <option value="Doctor 4">Charlotte, Tandlæge</option>
-                  <option value="Doctor 5">Majken, Tandlæge</option>
-                  <option value="Doctor 6">Sofie, Tandlæge</option>
-                  <option value="Doctor 7">Louise, Tandplejer</option>
-                  <option value="Doctor 8">Stina, Tandplejer</option>
+                  <option value="">Evt. valg af behandler</option>
+                  <option value="Marc, Tandlæge">Marc, Tandlæge</option>
+                  <option value="Annette, Tandlæge">Annette, Tandlæge</option>
+                  <option value="Anna, Tandlæge">Anna, Tandlæge</option>
+                  <option value="Charlotte, Tandlæge">Charlotte, Tandlæge</option>
+                  <option value="Majken, Tandlæge">Majken, Tandlæge</option>
+                  <option value="Sofie, Tandlæge">Sofie, Tandlæge</option>
+                  <option value="Louise, Tandplejer">Louise, Tandplejer</option>
+                  <option value="Stina, Tandplejer">Stina, Tandplejer</option>
                 </select>
                 <div class="validate"></div>
               </div>
@@ -534,15 +556,16 @@
                 class="form-control"
                 name="message"
                 rows="5"
-                placeholder="Evt. besked"
+                placeholder="Eventuel besked"
               ></textarea>
               <div class="validate"></div>
             </div>
             <div class="mb-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
+              <div class="loading">Sender din booking...</div>
+              <div class="error-message">Der opstod en fejl. Prøv venligst igen.</div>
               <div class="sent-message">
-                Your appointment request has been sent successfully. Thank you!
+                Din booking anmodning er modtaget. Vi vender tilbage med en endelige bekræftelse på
+                din aftale hurtigst muligt.
               </div>
             </div>
             <div class="text-center">
@@ -604,7 +627,20 @@
             </div>
 
             <div class="col-lg-8 mt-5 mt-lg-0 mb-5 pb-0">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <form
+                action="https://formsubmit.co/youremail@example.com"
+                method="post"
+                role="form"
+                class="email-form"
+              >
+                <!-- Add your email address to the action attribute above -->
+                <!-- Anti-bot measure hidden input -->
+                <input type="hidden" name="_honey" style="display: none" />
+                <!-- Add your email address as a hidden field -->
+                <input type="hidden" name="_subject" value="New Contact Message" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <input
@@ -622,7 +658,7 @@
                       class="form-control"
                       name="email"
                       id="email"
-                      placeholder="e-mail"
+                      placeholder="Email"
                       required
                     />
                   </div>
@@ -647,9 +683,11 @@
                   ></textarea>
                 </div>
                 <div class="my-4">
-                  <div class="loading">Sender</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Din besked er sendt</div>
+                  <div class="loading">Sender din besked...</div>
+                  <div class="error-message">Der opstod en fejl. Prøv venligst igen.</div>
+                  <div class="sent-message">
+                    Din besked er modtaget, vi vender tilbage hurtigst muligt.
+                  </div>
                 </div>
                 <div class="text-center"><button type="submit">Send Besked</button></div>
               </form>
@@ -1604,6 +1642,8 @@
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     <!-- Template Main JS File -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/da.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
