@@ -92,7 +92,9 @@
       }
       lastScrollY = currentScrollY;
     };
+
     window.addEventListener("load", headerScrolled);
+
     onscroll(document, headerScrolled);
   }
 
