@@ -1,3 +1,3 @@
 const config = {
-  formSubmitEmail: "info@tandklinikken-frederikssund.dk",
+  formSubmitEmail: "aste@tuta.io",
 };
