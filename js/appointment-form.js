@@ -19,6 +19,7 @@ document.getElementById("appointment-form").addEventListener("submit", (event) =
       Accept: "application/json",
     },
     body: JSON.stringify(formObject),
+    mode: "no-cors", // For testing purposes should be removed at deployment
   })
     .then((response) => response.json())
     .then((data) => {
