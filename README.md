@@ -4,10 +4,10 @@ This repository contains the source code for the Tandklinikken Frederikssund web
 
 ## Project Structure
 
-- **assets/**: Contains images, CSS, and JavaScript files.
-- **forms/**: Contains form handling scripts or templates.
-- **index.html**: Main homepage file.
-- **inner-page.html**: Template for secondary pages.
+- **assets/**: Images and other assets used in the website.
+- **css/**: Stylesheets for the website.
+- **js/**: JavaScript files for interactive elements.
+- **index.html**: Main homepage.
 
 ## Features
 
@@ -40,13 +40,6 @@ This repository contains the source code for the Tandklinikken Frederikssund web
 1. Open the project directory in your code editor.
 2. Open `index.html` in your web browser to view the homepage.
 3. For changes, edit the HTML, CSS, or JS files in the `assets` folder and refresh the browser to see updates.
-
-### File Structure
-
-- **assets/**: Images and other assets used in the website.
-- **css/**: Stylesheets for the website.
-- **js/**: JavaScript files for interactive elements.
-- **index.html**: Main homepage.
 
 ## Contributing
 
