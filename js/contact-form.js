@@ -1,5 +1,11 @@
-document.getElementById("contact").addEventListener("submit", (event) => {
+document.getElementById("contact-form").addEventListener("submit", (event) => {
   event.preventDefault();
+
+  console.log("1");
+  showAlert(
+    "Din booking anmodning er modtaget. Vi vender tilbage med en endelig bekræftelse på din aftale hurtigst muligt.",
+    "success"
+  );
 
   const form = event.target;
   const formData = new FormData(form);
@@ -10,7 +16,7 @@ document.getElementById("contact").addEventListener("submit", (event) => {
     formObject[key] = value;
   });
 
-  fetch(`http://formsubmit.co/ajax/${config.formSubmitEmail}`, {
+  fetch(`https://formsubmit.co/ajax/${config.formSubmitEmail}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -21,29 +27,49 @@ document.getElementById("contact").addEventListener("submit", (event) => {
     .then((response) => response.json())
     .then((data) => {
       if (data.success) {
-        alert("Din besked er modtaget, vi vender tilbage hurtigst muligt.");
+        console.log("1");
+        showAlert(
+          "Din booking anmodning er modtaget. Vi vender tilbage med en endelig bekræftelse på din aftale hurtigst muligt.",
+          "success"
+        );
         form.reset();
       } else {
-        alert(
-          "Der opstod en fejl. Prøv venligst igen. Kontakt os via info@tandklinikken-frederikssund.dk eller på 47 31 04 42, hvis fejlen fortsætter."
+        console.log("2");
+        showAlert(
+          `2 Der opstod en fejl. Prøv venligst igen. Kontakt os via ${config.formSubmitEmail} eller på 47 31 04 42, hvis fejlen fortsætter.`,
+          "danger"
         );
       }
     })
     .catch((error) => {
+      console.log("3");
       console.error("Error", error);
-      alert(
-        "Der opstod en fejl. Prøv venligst igen. Kontakt os via info@tandklinikken-frederikssund.dk eller på 47 31 04 42, hvis fejlen fortsætter."
+      showAlert(
+        `1 Der opstod en fejl. Prøv venligst igen. Kontakt os via ${config.formSubmitEmail} eller på 47 31 04 42, hvis fejlen fortsætter.`,
+        "danger"
       );
     });
 });
 
 function showAlert(message, type) {
-  const alertContainer = document.getElementById("alert-container");
-  alertContainer.textContent = message;
-  alertContainer.className = `custom-alert alert-${type}`;
-  alertContainer.style.display = "block";
+  // Create alert div
+  const alertDiv = document.createElement("div");
+  alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+  alertDiv.role = "alert";
+  alertDiv.innerHTML = `
+    ${message}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  `;
+
+  // Append to alert container
+  const alertContainer = document.getElementById("alert-contact");
+  alertContainer.appendChild(alertDiv);
+
 
   setTimeout(() => {
-    alertContainer.style.display = "none";
+    alertDiv.classList.remove("show");
+    setTimeout(() => {
+      alertDiv.remove();
+    }, 150); // Transition time to fade out
   }, 5000);
 }

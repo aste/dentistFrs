@@ -1167,6 +1167,11 @@ section {
 /*--------------------------------------------------------------
 # Custom Alert
 --------------------------------------------------------------*/
+.alert-success,
+.alert-danger {
+  margin: 30px 0 0 0;
+}
+
 .custom-alert {
   position: fixed;
   top: 20px;
@@ -1176,18 +1181,6 @@ section {
   padding: 15px;
   border: 1px solid transparent;
   border-radius: 4px;
-}
-
-.custom-alert-success {
-  color: #155724;
-  background-color: #d4edda;
-  border-color: #c3e6cb;
-}
-
-.custom-alert-danger {
-  color: #721c24;
-  background-color: #f8d7da;
-  border-color: #f5c6cb;
 }
 
 /*--------------------------------------------------------------
