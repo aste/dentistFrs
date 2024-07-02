@@ -43,12 +43,10 @@ This repository contains the source code for the Tandklinikken Frederikssund web
 
 ### File Structure
 
-- **assets/css/**: Stylesheets for the website.
-- **assets/js/**: JavaScript files for interactive elements.
-- **assets/images/**: Images used in the website.
-- **forms/**: PHP or other backend scripts for form handling.
+- **assets/**: Images and other assets used in the website.
+- **css/**: Stylesheets for the website.
+- **js/**: JavaScript files for interactive elements.
 - **index.html**: Main homepage.
-- **inner-page.html**: Template for additional pages.
 
 ## Contributing
 

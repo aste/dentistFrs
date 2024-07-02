@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 
     <!-- Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -440,137 +440,80 @@
       <!-- End Testimonials Section -->
 
       <!-- ======= Appointment Section ======= -->
-      <section id="appointment" class="appointment section-bg">
+   <div id="alert-container" class="custom-alert"></div>
+
+    <section id="appointment" class="appointment section-bg">
         <div class="container">
-          <div class="section-title">
-            <h2>Bestil Tid</h2>
-            <p>
-              Det er nemt at booke en tid hos os. Udfyld felterne og klik på "Bestil Tid", så vender
-              vi tilbage med en endelige bekræftelse på din aftale. Vi ser frem til at tage imod dig
-              og give dig den bedste tandpleje. Skulle du have nogle spørgsmål er du altid velkommen
-              til at <a class="scrollto" href="#contact">kontakte os</a>.
-            </p>
-          </div>
-
-          <form
-            action="https://formsubmit.co/aste@tuta.io"
-            method="post"
-            role="form"
-            class="email-form"
-          >
-            <input type="hidden" name="_honey" style="display: none" />
-            <input type="hidden" name="_subject" value="New Appointment Request" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
-
-            <div class="row">
-              <div class="col-md-4 form-group">
-                <input
-                  type="text"
-                  name="name"
-                  class="form-control"
-                  id="name"
-                  placeholder="Navn"
-                  data-rule="minlen:4"
-                  data-msg="Please enter at least 4 chars"
-                />
-                <div class="validate"></div>
-              </div>
-              <div class="col-md-4 form-group mt-3 mt-md-0">
-                <input
-                  type="email"
-                  class="form-control"
-                  name="email"
-                  id="email"
-                  placeholder="Email"
-                  data-rule="email"
-                  data-msg="Please enter a valid email"
-                />
-                <div class="validate"></div>
-              </div>
-              <div class="col-md-4 form-group mt-3 mt-md-0">
-                <input
-                  type="tel"
-                  class="form-control"
-                  name="phone"
-                  id="phone"
-                  placeholder="Telefonnummer"
-                  data-rule="minlen:4"
-                  data-msg="Please enter at least 4 chars"
-                />
-                <div class="validate"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 form-group mt-3">
-                <input
-                  type="date"
-                  name="date"
-                  class="form-control datepicker"
-                  id="date"
-                  placeholder="Foretrukne dato"
-                  data-rule="minlen:8"
-                  data-msg="Please enter at least 8 chars"
-                />
-                <div class="validate"></div>
-              </div>
-              <div class="col-md-4 form-group mt-3">
-                <select name="preferred_time" id="preferred_time" class="form-select">
-                  <option value="">Foretrukne tidspunkt</option>
-                  <option value="Morgen fra kl. 8.30 til 10.00">
-                    Morgen fra kl. 8.30 til 10.00
-                  </option>
-                  <option value="Formiddag fra kl. 10.00 til 12.00">
-                    Formiddag fra kl. 10.00 til 12.00
-                  </option>
-                  <option value="Tidlig Eftermiddag fra kl. 12.00 til 15.00">
-                    Tidlig Eftermiddag fra kl. 12.00 til 15.00
-                  </option>
-                  <option value="Sen Eftermiddag fra kl. 15.00 til 17.00">
-                    Sen Eftermiddag fra kl. 15.00 til 17.00
-                  </option>
-                </select>
-                <div class="validate"></div>
-              </div>
-              <div class="col-md-4 form-group mt-3">
-                <select name="doctor" id="doctor" class="form-select">
-                  <option value="">Evt. valg af behandler</option>
-                  <option value="Marc, Tandlæge">Marc, Tandlæge</option>
-                  <option value="Annette, Tandlæge">Annette, Tandlæge</option>
-                  <option value="Anna, Tandlæge">Anna, Tandlæge</option>
-                  <option value="Charlotte, Tandlæge">Charlotte, Tandlæge</option>
-                  <option value="Majken, Tandlæge">Majken, Tandlæge</option>
-                  <option value="Sofie, Tandlæge">Sofie, Tandlæge</option>
-                  <option value="Louise, Tandplejer">Louise, Tandplejer</option>
-                  <option value="Stina, Tandplejer">Stina, Tandplejer</option>
-                </select>
-                <div class="validate"></div>
-              </div>
+            <div class="section-title">
+                <h2>Bestil Tid</h2>
+                <p>
+                    Det er nemt at booke en tid hos os. Udfyld felterne og klik på "Bestil Tid", så vender vi tilbage med en endelige bekræftelse på din aftale. Vi ser frem til at tage imod dig og give dig den bedste tandpleje. Skulle du have nogle spørgsmål er du altid velkommen til at <a class="scrollto" href="#contact">kontakte os</a>.
+                </p>
             </div>
 
-            <div class="form-group mt-3">
-              <textarea
-                class="form-control"
-                name="message"
-                rows="5"
-                placeholder="Eventuel besked"
-              ></textarea>
-              <div class="validate"></div>
-            </div>
-            <div class="mb-3">
-              <div class="loading">Sender din booking...</div>
-              <div class="error-message">Der opstod en fejl. Prøv venligst igen.</div>
-              <div class="sent-message">
-                Din booking anmodning er modtaget. Vi vender tilbage med en endelige bekræftelse på
-                din aftale hurtigst muligt.
-              </div>
-            </div>
-            <div class="text-center">
-              <button type="submit">Bestil Tid</button>
-            </div>
-          </form>
+            <div id="alert-container" class="custom-alert"></div>
+
+            <form id="appointment-form" class="appointment-form">
+                <input type="hidden" name="_honey" style="display: none" />
+                <input type="hidden" name="_subject" value="New Appointment Request" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Navn" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                        <div class="validate"></div>
+                    </div>
+                    <div class="col-md-4 form-group mt-3 mt-md-0">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+                        <div class="validate"></div>
+                    </div>
+                    <div class="col-md-4 form-group mt-3 mt-md-0">
+                        <input type="tel" class="form-control" name="phone" id="phone" placeholder="Telefonnummer" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                        <div class="validate"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 form-group mt-3">
+                        <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Foretrukne dato" data-rule="minlen:8" data-msg="Please enter at least 8 chars" />
+                        <div class="validate"></div>
+                    </div>
+                    <div class="col-md-4 form-group mt-3">
+                        <select name="preferred_time" id="preferred_time" class="form-select">
+                            <option value="">Foretrukne tidspunkt</option>
+                            <option value="Morgen fra kl. 8.30 til 10.00">Morgen fra kl. 8.30 til 10.00</option>
+                            <option value="Formiddag fra kl. 10.00 til 12.00">Formiddag fra kl. 10.00 til 12.00</option>
+                            <option value="Tidlig Eftermiddag fra kl. 12.00 til 15.00">Tidlig Eftermiddag fra kl. 12.00 til 15.00</option>
+                            <option value="Sen Eftermiddag fra kl. 15.00 til 17.00">Sen Eftermiddag fra kl. 15.00 til 17.00</option>
+                        </select>
+                        <div class="validate"></div>
+                    </div>
+                    <div class="col-md-4 form-group mt-3">
+                        <select name="doctor" id="doctor" class="form-select">
+                            <option value="">Evt. valg af behandler</option>
+                            <option value="Marc, Tandlæge">Marc, Tandlæge</option>
+                            <option value="Annette, Tandlæge">Annette, Tandlæge</option>
+                            <option value="Anna, Tandlæge">Anna, Tandlæge</option>
+                            <option value="Charlotte, Tandlæge">Charlotte, Tandlæge</option>
+                            <option value="Majken, Tandlæge">Majken, Tandlæge</option>
+                            <option value="Sofie, Tandlæge">Sofie, Tandlæge</option>
+                            <option value="Louise, Tandplejer">Louise, Tandplejer</option>
+                            <option value="Stina, Tandplejer">Stina, Tandplejer</option>
+                        </select>
+                        <div class="validate"></div>
+                    </div>
+                </div>
+
+                <div class="form-group mt-3">
+                    <textarea class="form-control" name="message" rows="5" placeholder="Eventuel besked"></textarea>
+                    <div class="validate"></div>
+                </div>
+                <div class="text-center">
+                    <button type="submit">Bestil Tid</button>
+                </div>
+            </form>
         </div>
-      </section>
+    </section>
       <!-- End Appointment Section -->
 
       <!-- ======= Contact Section ======= -->
@@ -625,15 +568,12 @@
 
             <div class="col-lg-8 mt-5 mt-lg-0 mb-5 pb-0">
               <form
-                action="https://formsubmit.co/youremail@example.com"
+                action="https://formsubmit.co/aste@tuta.io"
                 method="post"
                 role="form"
-                class="email-form"
+                class="contact-form"
               >
-                <!-- Add your email address to the action attribute above -->
-                <!-- Anti-bot measure hidden input -->
                 <input type="hidden" name="_honey" style="display: none" />
-                <!-- Add your email address as a hidden field -->
                 <input type="hidden" name="_subject" value="New Contact Message" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
@@ -678,13 +618,6 @@
                     placeholder="Besked"
                     required
                   ></textarea>
-                </div>
-                <div class="my-4">
-                  <div class="loading">Sender din besked...</div>
-                  <div class="error-message">Der opstod en fejl. Prøv venligst igen.</div>
-                  <div class="sent-message">
-                    Din besked er modtaget, vi vender tilbage hurtigst muligt.
-                  </div>
                 </div>
                 <div class="text-center"><button type="submit">Send Besked</button></div>
               </form>
@@ -1641,6 +1574,9 @@
     <!-- Template Main JS File -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/da.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact-form.js"></script>
+    <script src="js/appointment-form.js"></script>
+    <script src="js/config.js"></script>
   </body>
 </html>

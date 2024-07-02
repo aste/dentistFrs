@@ -606,7 +606,7 @@ h2 + p {
 #hero {
   width: 100%;
   height: 84vh;
-  background: url("../img/hero-bg.jpg") center top;
+  background: url("../assets/img/hero-bg.jpg") center top;
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: -180px;
@@ -976,7 +976,7 @@ section {
 }
 
 .about .video-box {
-  background: url("../img/about.webp") center center no-repeat;
+  background: url("../assets/img/about.webp") center center no-repeat;
   background-size: cover;
   min-height: 500px;
 }
@@ -1165,17 +1165,46 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Custom Alert
+--------------------------------------------------------------*/
+.custom-alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1050;
+  display: none;
+  padding: 15px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.custom-alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.custom-alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+/*--------------------------------------------------------------
 # Appointments
 --------------------------------------------------------------*/
-.appointment .email-form {
+.contact .contact-form,
+.appointment .appointment-form {
   width: 100%;
 }
 
-.appointment .email-form .form-group {
+.contact .contact-form .form-group,
+.appointment .appointment-form .form-group {
   padding-bottom: 8px;
 }
 
-.appointment .email-form .validate {
+.contact .contact-form .validate,
+.appointment .appointment-form .validate {
   display: none;
   color: var(--color-navy);
   margin: 0 0 15px 0;
@@ -1183,7 +1212,8 @@ section {
   font-size: 13px;
 }
 
-.appointment .email-form .error-message {
+.contact .contact-form .error-message,
+.appointment .appointment-form .error-message {
   display: none;
   color: var(--color-white);
   background: var(--color-turquoise);
@@ -1192,11 +1222,13 @@ section {
   font-weight: 600;
 }
 
-.appointment .email-form .error-message br + br {
+.contact .contact-form .error-message br + br,
+.appointment .appointment-form .error-message br + br {
   margin-top: 25px;
 }
 
-.appointment .email-form .sent-message {
+.contact .contact-form .sent-message,
+.appointment .appointment-form .sent-message {
   display: none;
   color: var(--color-white);
   background: var(--color-turquoise);
@@ -1205,14 +1237,16 @@ section {
   font-weight: 600;
 }
 
-.appointment .email-form .loading {
+.contact .contact-form .loading,
+.appointment .appointment-form .loading {
   display: none;
   background: var(--color-white);
   text-align: center;
   padding: 15px;
 }
 
-.appointment .email-form .loading:before {
+.contact .contact-form .loading:before,
+.appointment .appointment-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1224,31 +1258,42 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.appointment .email-form input,
-.appointment .email-form textarea,
-.appointment .email-form select {
+.contact .contact-form input,
+.appointment .appointment-form input,
+.contact .contact-form textarea,
+.appointment .appointment-form textarea,
+.contact .contact-form select,
+.appointment .appointment-form select {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   padding: 10px !important;
 }
 
-.appointment .email-form input:focus,
-.appointment .email-form textarea:focus,
-.appointment .email-form select:focus {
+.contact .contact-form input:focus,
+.appointment .appointment-form input:focus,
+.contact .contact-form textarea:focus,
+.appointment .appointment-form textarea:focus,
+.contact .contact-form select:focus,
+.appointment .appointment-form select:focus {
   border-color: var(--color-dark-blue);
 }
 
-.appointment .email-form input,
-.appointment .email-form select {
+.contact .contact-form input,
+.appointment .appointment-form input,
+.contact .contact-form select,
+.appointment .appointment-form select {
   height: 44px;
 }
 
-.appointment .email-form textarea {
+.contact .contact-form textarea,
+.appointment .appointment-form textarea {
   padding: 10px 12px;
 }
 
-.appointment .email-form button[type="submit"] {
+.contact .contact-form button[type="submit"],
+.appointment .appointment-form button[type="submit"] {
+  margin-top: 20px;
   background: var(--color-dark-blue);
   border: 0;
   padding: 10px 35px;
@@ -1257,7 +1302,8 @@ section {
   border-radius: 50px;
 }
 
-.appointment .email-form button[type="submit"]:hover {
+.contact .contact-form button[type="submit"]:hover,
+.appointment .appointment-form button[type="submit"]:hover {
   background: var(--color-blue);
   scale: 1.1;
 }
@@ -1721,16 +1767,16 @@ section {
   color: var(--color-white);
 }
 
-.contact .email-form {
+.contact .appointment-form {
   width: 100%;
   background: var(--color-white);
 }
 
-.contact .email-form .form-group {
+.contact .appointment-form .form-group {
   padding-bottom: 8px;
 }
 
-.contact .email-form .error-message {
+.contact .appointment-form .error-message {
   display: none;
   color: var(--color-white);
   background: var(--color-turquoise);
@@ -1739,11 +1785,11 @@ section {
   font-weight: 600;
 }
 
-.contact .email-form .error-message br + br {
+.contact .appointment-form .error-message br + br {
   margin-top: 25px;
 }
 
-.contact .email-form .sent-message {
+.contact .appointment-form .sent-message {
   display: none;
   color: var(--color-white);
   background: var(--color-turquoise);
@@ -1752,14 +1798,14 @@ section {
   font-weight: 600;
 }
 
-.contact .email-form .loading {
+.contact .appointment-form .loading {
   display: none;
   background: var(--color-white);
   text-align: center;
   padding: 15px;
 }
 
-.contact .email-form .loading:before {
+.contact .appointment-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1771,21 +1817,21 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .email-form input,
-.contact .email-form textarea {
+.contact .appointment-form input,
+.contact .appointment-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
 }
 
-.contact .email-form input {
+.contact .appointment-form input {
 }
 
-.contact .email-form textarea {
+.contact .appointment-form textarea {
   padding: 10px 12px;
 }
 
-.contact .email-form button[type="submit"] {
+.contact .appointment-form button[type="submit"] {
   background: var(--color-dark-blue);
   border: 0;
   padding: 10px 35px;
@@ -1794,7 +1840,7 @@ section {
   border-radius: 50px;
 }
 
-.contact .email-form button[type="submit"]:hover {
+.contact .appointment-form button[type="submit"]:hover {
   background: var(--color-blue);
   scale: 1.1;
 }

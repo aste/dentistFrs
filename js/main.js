@@ -35,26 +35,6 @@
   };
 
   /**
-   * Navbar links active state on scroll
-   */
-  let navbarlinks = select("#navbar .scrollto", true);
-  const navbarlinksActive = () => {
-    let position = window.scrollY + 200;
-    navbarlinks.forEach((navbarlink) => {
-      if (!navbarlink.hash) return;
-      let section = select(navbarlink.hash);
-      if (!section) return;
-      if (position >= section.offsetTop && position <= section.offsetTop + section.offsetHeight) {
-        navbarlink.classList.add("active");
-      } else {
-        navbarlink.classList.remove("active");
-      }
-    });
-  };
-  window.addEventListener("load", navbarlinksActive);
-  onscroll(document, navbarlinksActive);
-
-  /**
    * Scrolls to an element with header offset
    */
   const scrollto = (el) => {
@@ -69,7 +49,7 @@
   };
 
   /**
-   * Toggle .header-scrolled class to #header when page is scrolled
+   * Hide Topbar on Scroll Down / Show on Scroll Up
    */
   let selectHeader = select("#header");
   let selectTopbar = select("#topbar");
@@ -79,7 +59,7 @@
 
     const headerScrolled = () => {
       let currentScrollY = window.scrollY;
-      if (window.scrollY < lastScrollY) {
+      if (window.scrollY > lastScrollY) {
         selectHeader.classList.add("header-scrolled");
         if (selectTopbar) {
           selectTopbar.classList.add("topbar-scrolled");
@@ -139,7 +119,7 @@
   );
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scroll with offset on links with a class name .scrollto
    */
   on(
     "click",
