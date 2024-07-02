@@ -10,9 +10,9 @@ document.getElementById("appointment-form").addEventListener("submit", (event) =
     formObject[key] = value;
   });
 
-  console.log(`http://formsubmit.co/ajax/${config.formSubmitEmail}`);
+  console.log(`https://formsubmit.co/ajax/${config.formSubmitEmail}`);
 
-  fetch(`http://formsubmit.co/ajax/${config.formSubmitEmail}`, {
+  fetch(`https://formsubmit.co/ajax/${config.formSubmitEmail}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
