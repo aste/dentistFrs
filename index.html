@@ -440,7 +440,6 @@
       <!-- End Testimonials Section -->
 
       <!-- ======= Appointment Section ======= -->
-
       <section id="appointment" class="appointment section-bg">
         <div class="container">
           <div class="section-title">
@@ -453,51 +452,62 @@
             </p>
           </div>
 
-          <form id="appointment-form" class="appointment-form">
-            <input type="hidden" name="_honey" style="display: none" />
-            <input type="hidden" name="_captcha" value="true" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_subject" value="Tidsbestilling" />
-            <!-- <input
-              type="hidden"
-              name="_next"
-              value="http://127.0.0.1:5500/dentistFrs/index.html#appointment"
-            /> -->
+          <form id="appointment-form" class="appointment-form needs-validation" novalidate>
+            <input type="hidden" name="access_key" value="0d1f4914-5925-48b9-8e97-bcf466d1858e" />
+            <input type="checkbox" name="botcheck" id="" style="display: none" />
+            <input type="hidden" name="subject" id="subject" value="" />
+            <input type="hidden" name="replyto" id="replyto" value="" />
 
             <div class="row">
-              <div class="col-md-4 form-group">
+              <div class="col-md-3 form-group">
                 <input
                   type="text"
-                  name="name"
+                  name="Navn"
                   class="form-control"
                   id="name"
-                  placeholder="Navn"
-                  data-rule="minlen:4"
-                  data-msg="Please enter at least 4 chars"
+                  placeholder="* Navn"
+                  data-rule="minlen:5"
+                  data-msg="Indtast venligst dit fulde navn"
+                  required
                 />
                 <div class="validate"></div>
               </div>
-              <div class="col-md-4 form-group mt-3 mt-md-0">
+              <div class="col-md-3 form-group mt-3 mt-md-0">
                 <input
                   type="email"
                   class="form-control"
-                  name="email"
+                  name="Email"
                   id="email"
-                  placeholder="Email"
+                  placeholder="* Email"
                   data-rule="email"
-                  data-msg="Please enter a valid email"
+                  data-msg="Indtast din personlige og gyldige email"
+                  required
                 />
                 <div class="validate"></div>
               </div>
-              <div class="col-md-4 form-group mt-3 mt-md-0">
+              <div class="col-md-3 form-group mt-3 mt-md-0">
                 <input
                   type="tel"
                   class="form-control"
-                  name="phone"
+                  name="Telfonnummer"
                   id="phone"
-                  placeholder="Telefonnummer"
-                  data-rule="minlen:4"
-                  data-msg="Please enter at least 4 chars"
+                  placeholder="* Telefonnummer"
+                  data-rule="minlen:8"
+                  data-msg="Indtast dit personlige og gyldige danske telefonnummer"
+                  required
+                />
+                <div class="validate"></div>
+              </div>
+              <div class="col-md-3 form-group mt-3 mt-md-0">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="CPR-nummer"
+                  id="phone"
+                  placeholder="* CPR-nummer"
+                  data-rule="minlen:10"
+                  data-msg="Indtast dit fulde CPR-nummer"
+                  required
                 />
                 <div class="validate"></div>
               </div>
@@ -506,18 +516,18 @@
               <div class="col-md-4 form-group mt-3">
                 <input
                   type="date"
-                  name="date"
+                  name="Foretrukne dato"
                   class="form-control datepicker"
                   id="date"
-                  placeholder="Foretrukne dato"
+                  placeholder="Evt. foretrukne dato"
                   data-rule="minlen:8"
                   data-msg="Please enter at least 8 chars"
                 />
                 <div class="validate"></div>
               </div>
               <div class="col-md-4 form-group mt-3">
-                <select name="preferred_time" id="preferred_time" class="form-select">
-                  <option value="">Foretrukne tidspunkt</option>
+                <select name="Foretrukne Tidspunkt" id="preferred_time" class="form-select">
+                  <option value="Ingen præferencer">Evt. foretrukne tidspunkt</option>
                   <option value="Morgen fra kl. 8.30 til 10.00">
                     Morgen fra kl. 8.30 til 10.00
                   </option>
@@ -534,8 +544,8 @@
                 <div class="validate"></div>
               </div>
               <div class="col-md-4 form-group mt-3">
-                <select name="doctor" id="doctor" class="form-select">
-                  <option value="">Evt. valg af behandler</option>
+                <select name="Foretrukne behandler" id="doctor" class="form-select">
+                  <option value="Ingen præferencer">Evt. valg af behandler</option>
                   <option value="Marc, Tandlæge">Marc, Tandlæge</option>
                   <option value="Annette, Tandlæge">Annette, Tandlæge</option>
                   <option value="Anna, Tandlæge">Anna, Tandlæge</option>
@@ -552,7 +562,7 @@
             <div class="form-group mt-3">
               <textarea
                 class="form-control"
-                name="message"
+                name="Besked"
                 rows="5"
                 placeholder="Eventuel besked"
               ></textarea>
@@ -560,7 +570,7 @@
             </div>
             <div class="text-center">
               <button type="submit">Bestil Tid</button>
-              <div id="alert-appointment"></div>
+              <div id="appointment-status"></div>
             </div>
           </form>
         </div>

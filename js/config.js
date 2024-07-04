@@ -1,5 +1,4 @@
 const config = {
-  // formSubmitEmail: "0772fc681fe4a8b3f476d60d76a6007f",
-  // formSubmitEmail: "info@tandklinikken-frederikssund.dk",
-  formSubmitEmail: "aste@tuta.io",
+  // Web3forms Public Access Key for aste@tuta.io
+  accessKey: "0d1f4914-5925-48b9-8e97-bcf466d1858e",
 };
