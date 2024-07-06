@@ -1715,12 +1715,14 @@ section {
   color: var(--color-grey);
 }
 
+.contact .info .openingHours,
 .contact .info .email,
 .contact .info .phone,
 .contact .info .openingHours {
   margin-top: 40px;
 }
 
+.contact .info .openingHours:hover i,
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
