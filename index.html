@@ -440,6 +440,7 @@
       <!-- End Testimonials Section -->
 
       <!-- ======= Appointment Section ======= -->
+
       <section id="appointment" class="appointment section-bg">
         <div class="container">
           <div class="section-title">
@@ -466,11 +467,10 @@
                   class="form-control"
                   id="name"
                   placeholder="* Navn"
-                  data-rule="minlen:5"
-                  data-msg="Indtast venligst dit fulde navn"
+                  minlength="5"
                   required
                 />
-                <div class="validate"></div>
+                <div class="invalid-feedback">Indtast dit fulde</div>
               </div>
               <div class="col-md-3 form-group mt-3 mt-md-0">
                 <input
@@ -479,37 +479,34 @@
                   name="Email"
                   id="email"
                   placeholder="* Email"
-                  data-rule="email"
-                  data-msg="Indtast din personlige og gyldige email"
+                  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                   required
                 />
-                <div class="validate"></div>
+                <div class="invalid-feedback">Indtast din email</div>
               </div>
               <div class="col-md-3 form-group mt-3 mt-md-0">
                 <input
                   type="tel"
                   class="form-control"
-                  name="Telfonnummer"
+                  name="Telefonnummer"
                   id="phone"
                   placeholder="* Telefonnummer"
-                  data-rule="minlen:8"
-                  data-msg="Indtast dit personlige og gyldige danske telefonnummer"
+                  pattern="^\+?\d{8,10}$"
                   required
                 />
-                <div class="validate"></div>
+                <div class="invalid-feedback">Indtast dit danske telefonnummer, 8 cifre</div>
               </div>
               <div class="col-md-3 form-group mt-3 mt-md-0">
                 <input
                   type="text"
                   class="form-control"
                   name="CPR-nummer"
-                  id="phone"
+                  id="cpr"
                   placeholder="* CPR-nummer"
-                  data-rule="minlen:10"
-                  data-msg="Indtast dit fulde CPR-nummer"
+                  pattern="\d{10}$"
                   required
                 />
-                <div class="validate"></div>
+                <div class="invalid-feedback">Indtast dit CPR-nummer, 10 cifre</div>
               </div>
             </div>
             <div class="row">
@@ -520,10 +517,7 @@
                   class="form-control datepicker"
                   id="date"
                   placeholder="Evt. foretrukne dato"
-                  data-rule="minlen:8"
-                  data-msg="Please enter at least 8 chars"
                 />
-                <div class="validate"></div>
               </div>
               <div class="col-md-4 form-group mt-3">
                 <select name="Foretrukne Tidspunkt" id="preferred_time" class="form-select">
@@ -541,7 +535,6 @@
                     Sen Eftermiddag fra kl. 15.00 til 17.00
                   </option>
                 </select>
-                <div class="validate"></div>
               </div>
               <div class="col-md-4 form-group mt-3">
                 <select name="Foretrukne behandler" id="doctor" class="form-select">
@@ -555,7 +548,6 @@
                   <option value="Louise, Tandplejer">Louise, Tandplejer</option>
                   <option value="Stina, Tandplejer">Stina, Tandplejer</option>
                 </select>
-                <div class="validate"></div>
               </div>
             </div>
 
@@ -566,7 +558,6 @@
                 rows="5"
                 placeholder="Eventuel besked"
               ></textarea>
-              <div class="validate"></div>
             </div>
             <div class="text-center">
               <button type="submit">Bestil Tid</button>
@@ -575,6 +566,7 @@
           </form>
         </div>
       </section>
+
       <!-- End Appointment Section -->
 
       <!-- ======= Contact Section ======= -->
