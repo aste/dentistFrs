@@ -29,12 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Add bootstrap validation styles
   (() => {
     "use strict";
     window.addEventListener(
       "load",
       () => {
-        let forms = document.getElementsByClassName("needs-validation");
+        let forms = document.getElementsByClassName("contact-form needs-validation");
         let validation = Array.prototype.filter.call(forms, (form) => {
           form.addEventListener(
             "submit",
@@ -44,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 event.stopPropagation();
               } else {
                 event.preventDefault();
-                submitForm();
+                submitContactForm();
               }
               form.classList.add("was-validated");
             },
@@ -56,12 +57,12 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   })();
 
-  const submitForm = () => {
+  const submitContactForm = () => {
     const formData = new FormData(form);
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    let replyto = document.getElementById("replyto");
+    let replyto = document.getElementsByClassName("contactReply");
     replyto.value = `${emailInput.value}`;
 
     let alertStatus = document.createElement("div");
