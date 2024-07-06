@@ -456,7 +456,7 @@
           <form id="appointment-form" class="appointment-form needs-validation" novalidate>
             <input type="hidden" name="access_key" value="0d1f4914-5925-48b9-8e97-bcf466d1858e" />
             <input type="checkbox" name="botcheck" id="" style="display: none" />
-            <input type="hidden" name="subject" id="subject" value="" />
+            <input type="hidden" name="subject" id="subject" value="Tidsbestilling" />
             <input type="hidden" name="replyto" id="replyto" value="" />
 
             <div class="row">
@@ -491,7 +491,7 @@
                   name="Telefonnummer"
                   id="phone"
                   placeholder="* Telefonnummer"
-                  pattern="^\+?\d{8,10}$"
+                  pattern="^((\(?\+45\)?)?)(\s?\d{2}\s?\d{2}\s?\d{2}\s?\d{2})$"
                   required
                 />
                 <div class="invalid-feedback">Indtast dit danske telefonnummer, 8 cifre</div>
@@ -502,11 +502,11 @@
                   class="form-control"
                   name="CPR-nummer"
                   id="cpr"
-                  placeholder="* CPR-nummer"
-                  pattern="\d{10}$"
+                  placeholder="* CPR-nummer (sendes krypteret)"
+                  pattern="^((((0[1-9]|[12][0-9]|3[01])(0[13578]|10|12)(\d{2}))|(([0][1-9]|[12][0-9]|30)(0[469]|11)(\d{2}))|((0[1-9]|1[0-9]|2[0-8])(02)(\d{2}))|((29)(02)(00))|((29)(02)([2468][048]))|((29)(02)([13579][26])))[-]\d{4})$"
                   required
                 />
-                <div class="invalid-feedback">Indtast dit CPR-nummer, 10 cifre</div>
+                <div class="invalid-feedback">Indtast et gyldigt CPR-nummer</div>
               </div>
             </div>
             <div class="row">
@@ -1619,12 +1619,17 @@
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-    <!-- Template Main JS File -->
+    <!-- External JS Files -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/da.js"></script>
+
+    <!-- Main JavaScript File -->
     <script src="js/main.js"></script>
+
+    <!-- Custom JavaScript Files -->
     <script src="js/contact-form.js"></script>
     <script src="js/appointment-form.js"></script>
     <script src="js/config.js"></script>

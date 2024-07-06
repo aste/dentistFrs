@@ -38,7 +38,13 @@ cprInput.addEventListener("input", () => {
 });
 
 // Format phone number and CPR
+IMask(phoneInput, {
+  mask: "+{45} 00 00 00 00",
+});
 
+IMask(cpr, {
+  mask: "000000-0000",
+});
 
 // Add bootstrap validation styles
 (() => {
@@ -74,10 +80,7 @@ const submitForm = () => {
   const json = JSON.stringify(object);
 
   let replyto = document.getElementById("replyto");
-  let subject = document.getElementById("subject");
-
   replyto.value = `${emailInput.value}`;
-  subject.value = `Ny tidsbestilling fra ${nameInput.value}`;
 
   let alertStatus = document.createElement("div");
   alertStatus.classList.add("mt-3");
@@ -112,7 +115,7 @@ const submitForm = () => {
     })
     .then(() => {
       form.reset();
-      form.classList.remove("was-validated"); // Remove validation styling
+      form.classList.remove("was-validated");
       const invalidFeedbacks = form.querySelectorAll(".invalid-feedback");
       invalidFeedbacks.forEach((feedback) => (feedback.style.display = "none"));
       setTimeout(() => {
