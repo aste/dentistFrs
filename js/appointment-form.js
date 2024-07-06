@@ -31,7 +31,7 @@ phoneInput.addEventListener("input", () => {
 
 cprInput.addEventListener("input", () => {
   if (cprInput.validity.patternMismatch) {
-    cprInput.setCustomValidity("Indtast dit fulde CPR-nummer (10 cifre)");
+    cprInput.setCustomValidity("Indtast dit fulde CPR-nummer");
   } else {
     cprInput.setCustomValidity("");
   }
@@ -52,7 +52,7 @@ IMask(cpr, {
   window.addEventListener(
     "load",
     () => {
-      let forms = document.getElementsByClassName("needs-validation");
+      let forms = document.getElementsByClassName("appointment-form needs-validation");
       let validation = Array.prototype.filter.call(forms, (form) => {
         form.addEventListener(
           "submit",

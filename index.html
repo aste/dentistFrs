@@ -440,7 +440,6 @@
       <!-- End Testimonials Section -->
 
       <!-- ======= Appointment Section ======= -->
-
       <section id="appointment" class="appointment section-bg">
         <div class="container">
           <div class="section-title">
@@ -456,7 +455,12 @@
           <form id="appointment-form" class="appointment-form needs-validation" novalidate>
             <input type="hidden" name="access_key" value="0d1f4914-5925-48b9-8e97-bcf466d1858e" />
             <input type="checkbox" name="botcheck" id="" style="display: none" />
-            <input type="hidden" name="subject" id="subject" value="Tidsbestilling" />
+            <input
+              type="hidden"
+              name="subject"
+              id="subject"
+              value="Tidsbestilling via hjemmesiden"
+            />
             <input type="hidden" name="replyto" id="replyto" value="" />
 
             <div class="row">
@@ -597,8 +601,8 @@
                   <i class="bi bi-envelope"></i>
                   <h4>Email</h4>
                   <p>
-                    <a href="mailto:info@tandklinikken-frederikssund.dk" target="_blank">
-                      info@tandklinikken-frederikssund.dk</a
+                    <a href="mailto:info@tandklinikken-frederikssund.dk" target="_blank"
+                      >info@tandklinikken-frederikssund.dk</a
                     >
                   </p>
                 </div>
@@ -613,23 +617,21 @@
                   <i class="bi bi-clock"></i>
                   <h4>Åbningstider</h4>
                   <p>
-                    mandag-torsdag &nbsp;&nbsp; 8.30-17.00<br />
-                    fredag
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.30-16.00
+                    mandag-torsdag &nbsp;&nbsp; 8.30-17.00<br />fredag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.30-16.00
                   </p>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-8 mt-5 mt-lg-0 mb-5 pb-0">
-              <form role="form" id="contact-form" class="contact-form">
+              <form role="form" id="contact-form" class="contact-form needs-validation" novalidate>
                 <input
                   type="hidden"
                   name="access_key"
                   value="0d1f4914-5925-48b9-8e97-bcf466d1858e"
                 />
                 <input type="checkbox" name="botcheck" id="" style="display: none" />
-                <input type="hidden" name="subject" id="subject" value="Tidsbestilling" />
+                <input type="hidden" name="subject" id="subject" value="Besked via hjemmesiden" />
                 <input type="hidden" name="replyto" id="replyto" value="" />
 
                 <div class="row">
@@ -643,7 +645,7 @@
                       minlength="5"
                       required
                     />
-                    <div class="contact-invalid-feedback">Indtast dit fulde</div>
+                    <div class="invalid-feedback">Indtast dit fulde navn</div>
                   </div>
                   <div class="col-md-6 form-group mt-3 mt-md-0">
                     <input
@@ -655,7 +657,7 @@
                       pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                       required
                     />
-                    <div class="contact-invalid-feedback">Indtast din email</div>
+                    <div class="invalid-feedback">Indtast din email</div>
                   </div>
                 </div>
                 <div class="form-group mt-3">
@@ -668,10 +670,12 @@
                     minlength="15"
                     required
                   ></textarea>
-                  <div class="contact-invalid-feedback">Din besked skal være på minimum 15 tegn</div>
+                  <div class="invalid-feedback">Din besked skal være på minimum 15 tegn</div>
                 </div>
-                <div class="text-center"><button type="submit">Send Besked</button></div>
-                <div id="contact-status"></div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Send Besked</button>
+                  <div id="contact-status"></div>
+                </div>
               </form>
             </div>
           </div>
