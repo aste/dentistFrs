@@ -18,9 +18,26 @@
     <meta content="" name="keywords" />
 
     <!-- Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.webp" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.webp" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.webp" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/apple-touch-icon.webp"
+      loading="lazy"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/favicon-32x32.webp"
+      loading="lazy"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/img/favicon-16x16.webp"
+      loading="lazy"
+    />
     <link rel="manifest" href="assets/img/site.webmanifest" />
 
     <!-- Fonts -->
@@ -41,7 +58,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 
     <!-- Main CSS File -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'" />
   </head>
 
   <body>
@@ -97,6 +114,7 @@
         <a href="#hero" class="logo me-auto scrollto"
           ><img
             src="assets/img/onlytextandlogo.webp"
+            loading="lazy"
             alt="Tandklinikken Frederikssund Logo"
             class="img-fluid"
         /></a>
@@ -104,7 +122,7 @@
         <nav id="navbar" class="navbar order-last order-lg-0 rounded" role="navigation">
           <ul class="pt-0">
             <div class="navbar-brand-mobile p-3 mb-3 container-fluid">
-              <img src="assets/img/logodarkblue.webp" alt="Logo" />
+              <img src="assets/img/logodarkblue.webp" loading="lazy" alt="Logo" />
             </div>
             <li><a class="nav-link scrollto active" href="#hero">Forside</a></li>
             <li><a class="nav-link scrollto" href="#about">Om Os</a></li>
@@ -128,6 +146,7 @@
         <a href="#about" class="logo scrollto">
           <img
             src="assets/img/onlytextandlogo.webp"
+            loading="lazy"
             alt="Tandklinikken Frederikssund"
             class="img-fluid main-logo"
           />
@@ -306,6 +325,7 @@
                     <div class="testimonial-item">
                       <img
                         src="assets/img/testimonials/reviewFemale.webp"
+                        loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
                       />
@@ -328,6 +348,7 @@
                     <div class="testimonial-item">
                       <img
                         src="assets/img/testimonials/reviewFemale.webp"
+                        loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
                       />
@@ -350,6 +371,7 @@
                     <div class="testimonial-item">
                       <img
                         src="assets/img/testimonials/reviewMale.webp"
+                        loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
                       />
@@ -371,6 +393,7 @@
                     <div class="testimonial-item">
                       <img
                         src="assets/img/testimonials/reviewMale.webp"
+                        loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
                       />
@@ -394,6 +417,7 @@
                     <div class="testimonial-item">
                       <img
                         src="assets/img/testimonials/reviewMale.webp"
+                        loading="lazy"
                         class="testimonial-img"
                         alt=""
                       />
@@ -416,6 +440,7 @@
                     <div class="testimonial-item">
                       <img
                         src="assets/img/testimonials/reviewMale.webp"
+                        loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
                       />
@@ -744,9 +769,10 @@
           <div class="row g-0">
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
-                <a href="assets/img/gallery/gallery-1.webp" class="galelry-lightbox">
+                <a href="assets/img/gallery/gallery-1.webp" loading="lazy" class="galelry-lightbox">
                   <img
                     src="assets/img/gallery/gallery-1.webp"
+                    loading="lazy"
                     alt="Klinikken set udefra"
                     class="img-fluid"
                   />
@@ -756,9 +782,10 @@
 
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
-                <a href="assets/img/gallery/gallery-2.webp" class="galelry-lightbox">
+                <a href="assets/img/gallery/gallery-2.webp" loading="lazy" class="galelry-lightbox">
                   <img
                     src="assets/img/gallery/gallery-2.webp"
+                    loading="lazy"
                     alt="Receptionen"
                     class="img-fluid"
                   />
@@ -768,9 +795,10 @@
 
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
-                <a href="assets/img/gallery/gallery-3.webp" class="galelry-lightbox">
+                <a href="assets/img/gallery/gallery-3.webp" loading="lazy" class="galelry-lightbox">
                   <img
                     src="assets/img/gallery/gallery-3.webp"
+                    loading="lazy"
                     alt="Venteværelset"
                     class="img-fluid"
                   />
@@ -780,9 +808,10 @@
 
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
-                <a href="assets/img/gallery/gallery-4.webp" class="galelry-lightbox">
+                <a href="assets/img/gallery/gallery-4.webp" loading="lazy" class="galelry-lightbox">
                   <img
                     src="assets/img/gallery/gallery-4.webp"
+                    loading="lazy"
                     alt="En igangværende tandlæge undersøgelse"
                     class="img-fluid"
                   />
@@ -792,9 +821,10 @@
 
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
-                <a href="assets/img/gallery/gallery-5.webp" class="galelry-lightbox">
+                <a href="assets/img/gallery/gallery-5.webp" loading="lazy" class="galelry-lightbox">
                   <img
                     src="assets/img/gallery/gallery-5.webp"
+                    loading="lazy"
                     alt="Stemningsbillede fra klinikken"
                     class="img-fluid"
                   />
@@ -804,9 +834,10 @@
 
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
-                <a href="assets/img/gallery/gallery-6.webp" class="galelry-lightbox">
+                <a href="assets/img/gallery/gallery-6.webp" loading="lazy" class="galelry-lightbox">
                   <img
                     src="assets/img/gallery/gallery-6.webp"
+                    loading="lazy"
                     alt="Bygningen udefra"
                     class="img-fluid"
                   />
@@ -816,9 +847,10 @@
 
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
-                <a href="assets/img/gallery/gallery-7.webp" class="galelry-lightbox">
+                <a href="assets/img/gallery/gallery-7.webp" loading="lazy" class="galelry-lightbox">
                   <img
                     src="assets/img/gallery/gallery-7.webp"
+                    loading="lazy"
                     alt="Fordelingsgangen i klinikken"
                     class="img-fluid"
                   />
@@ -828,9 +860,10 @@
 
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
-                <a href="assets/img/gallery/gallery-8.webp" class="galelry-lightbox">
+                <a href="assets/img/gallery/gallery-8.webp" loading="lazy" class="galelry-lightbox">
                   <img
                     src="assets/img/gallery/gallery-8.webp"
+                    loading="lazy"
                     alt="Stemningsbillede fra klinikken"
                     class="img-fluid"
                   />
@@ -859,6 +892,7 @@
                 <div class="pic">
                   <img
                     src="assets/img/personale/TandlægeMarc.webp"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Tandlæge Marc"
                   />
@@ -876,6 +910,7 @@
                 <div class="pic">
                   <img
                     src="assets/img/personale/TandlægeAnnette.webp"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Tandlæge Annette"
                   />
@@ -893,6 +928,7 @@
                 <div class="pic">
                   <img
                     src="assets/img/personale/TandlægeAnna.webp"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Tandlæge Anna"
                   />
@@ -910,6 +946,7 @@
                 <div class="pic">
                   <img
                     src="assets/img/personale/TandlægeCharlotte.webp"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Tandlæge Charlotte"
                   />
@@ -927,6 +964,7 @@
                 <div class="pic">
                   <img
                     src="assets/img/personale/TandlægeMajken.webp"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Tandlæge Majken"
                   />
@@ -944,6 +982,7 @@
                 <div class="pic">
                   <img
                     src="assets/img/personale/TandlægeSofie.webp"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Tandlæge Sofie"
                   />
@@ -963,6 +1002,7 @@
                 <div class="pic">
                   <img
                     src="assets/img/personale/TandplejerLouise.webp"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Tandplejer Louise"
                   />
@@ -980,6 +1020,7 @@
                 <div class="pic">
                   <img
                     src="assets/img/personale/TandplejerStina.webp"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Tandplejer Stina"
                   />
@@ -999,6 +1040,7 @@
                 <div class="pic">
                   <img
                     src="assets/img/personale/KlinikassistentShuko.webp"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistent Shuko"
                   />
@@ -1016,6 +1058,7 @@
                 <div class="pic">
                   <img
                     src="assets/img/personale/KlinikassistentGitte.webp"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistent Gitte"
                   />
@@ -1033,6 +1076,7 @@
                 <div class="pic">
                   <img
                     src="assets/img/personale/KlinikassistentHanne.webp"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistent Hanne"
                   />
@@ -1050,6 +1094,7 @@
                 <div class="pic">
                   <img
                     src="assets/img/personale/KlinikassistentLine.webp"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistent Line"
                   />
@@ -1067,6 +1112,7 @@
                 <div class="pic">
                   <img
                     src="assets/img/personale/KlinikassistentRikke.webp"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistent Rikke"
                   />
@@ -1086,6 +1132,7 @@
                 <div class="pic">
                   <img
                     src="assets/img/personale/AdministratorJesper.webp"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Administrator Jesper"
                   />
@@ -1103,6 +1150,7 @@
                 <div class="pic">
                   <img
                     src="assets/img/personale/klinikassistentkatja.webp"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistentelev Katja"
                   />
@@ -1120,6 +1168,7 @@
                 <div class="pic">
                   <img
                     src="assets/img/personale/klinikassistentlene.webp"
+                    loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistentelev Lene"
                   />
