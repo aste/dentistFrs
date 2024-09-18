@@ -75,6 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   })();
 
+
+  
   const submitAppointmentForm = () => {
     const formData = new FormData(form);
     const object = Object.fromEntries(formData);
