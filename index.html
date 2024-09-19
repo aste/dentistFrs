@@ -44,6 +44,9 @@
     />
 
     <!-- CSS Files -->
+    <link rel="preload" href="../assets/img/hero-bg.webp" as="image" />
+
+    <!-- CSS Files -->
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
     <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -55,7 +58,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 
     <!-- Main CSS File -->
-    <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'" />
+    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="css/style.css" /></noscript>
+    <style>
+      #hero {
+        width: 100%;
+        height: 84vh;
+        background: url("assets/img/hero-bg.webp") center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: -180px;
+      }
+      @media (max-width: 1024px) {
+        #hero {
+          background: url("assets/img/hero-bg-small.webp") center top;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -111,7 +132,6 @@
         <a href="#hero" class="logo me-auto scrollto"
           ><img
             src="assets/img/onlytextandlogo.webp"
-            loading="lazy"
             alt="Tandklinikken Frederikssund Logo"
             class="img-fluid"
         /></a>
@@ -119,7 +139,7 @@
         <nav id="navbar" class="navbar order-last order-lg-0 rounded" role="navigation">
           <ul class="pt-0">
             <div class="navbar-brand-mobile p-3 mb-3 container-fluid">
-              <img src="assets/img/logodarkblue.webp" loading="lazy" alt="Logo" />
+              <img src="assets/img/logodarkblue.webp" alt="Logo" />
             </div>
             <li><a class="nav-link scrollto active" href="#hero">Forside</a></li>
             <li><a class="nav-link scrollto" href="#about">Om Os</a></li>
@@ -143,7 +163,6 @@
         <a href="#about" class="logo scrollto">
           <img
             src="assets/img/onlytextandlogo.webp"
-            loading="lazy"
             alt="Tandklinikken Frederikssund"
             class="img-fluid main-logo"
           />

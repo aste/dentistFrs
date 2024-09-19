@@ -612,6 +612,14 @@ h2 + p {
   margin-bottom: -180px;
 }
 
+@media (max-width: 1024px) {
+  #hero {
+    background: url("../assets/img/hero-bg-small.webp") center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
 .main-logo {
   max-width: 50%;
   margin: 0;
