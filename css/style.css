@@ -255,7 +255,7 @@ h2 + p {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
-  
+
   #hero .container .btn-get-started {
     padding: 10px 20px 10px 20px;
   }
@@ -606,7 +606,7 @@ h2 + p {
   background: url("../assets/img/hero-bg.webp") center top;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-bottom: -180px;
+  margin-bottom: -160px;
 }
 
 .main-logo {
