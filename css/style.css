@@ -144,10 +144,6 @@ h2 + p {
   opacity: 1;
 }
 
-.datepicker-dropdown {
-  padding: 20px !important;
-}
-
 /*--------------------------------------------------------------
 # Top Bar
 --------------------------------------------------------------*/
@@ -436,12 +432,6 @@ h2 + p {
   visibility: visible;
 }
 
-ç {
-  background-color: var(--color-navy);
-  text-align: center;
-  padding: 10px;
-}
-
 .navbar-brand-mobile {
   background-color: var(--color-navy);
   text-align: center;
@@ -543,11 +533,6 @@ h2 + p {
 .navbar-mobile .active,
 .navbar-mobile li:hover > a {
   color: var(--color-dark-blue);
-}
-
-.navbar-mobile .getstarted,
-.navbar-mobile .getstarted:focus {
-  margin: 15px;
 }
 
 .navbar-mobile .dropdown ul {
@@ -768,64 +753,6 @@ section {
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
-.breadcrumbs {
-  padding: 20px 0;
-  background-color: var(--color-white-blue);
-  min-height: 40px;
-  margin-top: 120px;
-}
-
-@media (max-width: 992px) {
-  .breadcrumbs {
-    margin-top: 100px;
-  }
-}
-
-.breadcrumbs h2 {
-  font-size: 24px;
-  font-weight: 300;
-  margin: 0;
-}
-
-@media (max-width: 992px) {
-  .breadcrumbs h2 {
-    margin: 0 0 10px 0;
-  }
-}
-
-.breadcrumbs ol {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-}
-
-.breadcrumbs ol li + li {
-  padding-left: 10px;
-}
-
-.breadcrumbs ol li + li::before {
-  display: inline-block;
-  padding-right: 10px;
-  color: var(--color-grey);
-  content: "/";
-}
-
-@media (max-width: 768px) {
-  .breadcrumbs .d-flex {
-    display: block !important;
-  }
-
-  .breadcrumbs ol {
-    display: block;
-  }
-
-  .breadcrumbs ol li {
-    display: inline-block;
-  }
-}
 
 /*--------------------------------------------------------------
 # Why Us
@@ -989,73 +916,6 @@ section {
   min-height: 500px;
 }
 
-.about .play-btn {
-  width: 94px;
-  height: 94px;
-  background: radial-gradient(var(--color-dark-blue) 50%, rgba(25, 119, 204, 0.4) 52%);
-  border-radius: 50%;
-  display: block;
-  position: absolute;
-  left: calc(50% - 47px);
-  top: calc(50% - 47px);
-  overflow: hidden;
-}
-
-.about .play-btn::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-40%) translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid var(--color-white);
-  z-index: 100;
-  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.about .play-btn::before {
-  content: "";
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  animation-delay: 0s;
-  animation: pulsate-btn 2s;
-  animation-direction: forwards;
-  animation-iteration-count: infinite;
-  animation-timing-function: steps;
-  opacity: 1;
-  border-radius: 50%;
-  border: 5px solid rgba(25, 119, 204, 0.7);
-  top: -15%;
-  left: -15%;
-  background: rgba(198, 16, 0, 0);
-}
-
-.about .play-btn:hover::after {
-  border-left: 15px solid var(--color-dark-blue);
-  transform: scale(20);
-}
-
-.about .play-btn:hover::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-40%) translateY(-50%);
-  width: 0;
-  height: 0;
-  border: none;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid var(--color-white);
-  z-index: 200;
-  animation: none;
-  border-radius: 0;
-}
-
 @keyframes pulsate-btn {
   0% {
     transform: scale(0.6, 0.6);
@@ -1185,40 +1045,6 @@ section {
   padding-bottom: 8px;
 }
 
-.contact .contact-form .validate,
-.appointment .appointment-form .validate {
-  display: none;
-  color: var(--color-navy);
-  margin: 0 0 15px 0;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.contact .contact-form .error-message,
-.appointment .appointment-form .error-message {
-  display: none;
-  color: var(--color-white);
-  background: var(--color-turquoise);
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .contact-form .error-message br + br,
-.appointment .appointment-form .error-message br + br {
-  margin-top: 25px;
-}
-
-.contact .contact-form .sent-message,
-.appointment .appointment-form .sent-message {
-  display: none;
-  color: var(--color-white);
-  background: var(--color-turquoise);
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
 .contact .contact-form .loading,
 .appointment .appointment-form .loading {
   display: none;
@@ -1293,64 +1119,6 @@ section {
 /*--------------------------------------------------------------
 # Departments
 --------------------------------------------------------------*/
-.departments {
-  overflow: hidden;
-}
-
-.departments .nav-tabs {
-  border: 0;
-}
-
-.departments .nav-link {
-  border: 0;
-  padding: 12px 15px 12px 0;
-  transition: 0.3s;
-  color: var(--color-navy);
-  border-radius: 0;
-  border-right: 2px solid var(--color-white-blue);
-  font-weight: 600;
-  font-size: 15px;
-}
-
-.departments .nav-link:hover {
-  color: var(--color-dark-blue);
-}
-
-.departments .nav-link.active {
-  color: var(--color-dark-blue);
-  border-color: var(--color-dark-blue);
-}
-
-.departments .tab-pane.active {
-  animation: fadeIn 0.5s ease-out;
-}
-
-.departments .details h3 {
-  font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: var(--color-navy);
-}
-
-.departments .details p {
-  color: var(--color-grey);
-}
-
-.departments .details p:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width: 992px) {
-  .departments .nav-link {
-    border: 0;
-    padding: 15px;
-  }
-
-  .departments .nav-link.active {
-    color: var(--color-white);
-    background: var(--color-dark-blue);
-  }
-}
 
 /*--------------------------------------------------------------
 # Doctors
@@ -1435,38 +1203,6 @@ section {
   content: "";
 }
 
-.doctors .member .social {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.doctors .member .social a {
-  transition: ease-in-out 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-  width: 32px;
-  height: 32px;
-  background: var(--color-grey-blue);
-}
-
-.doctors .member .social a i {
-  color: var(--color-white);
-  font-size: 16px;
-  margin: 0 2px;
-}
-
-.doctors .member .social a:hover {
-  background: var(--color-dark-blue);
-}
-
-.doctors .member .social a + a {
-  margin-left: 8px;
-}
-
 .employee-separator {
   height: 1px;
   background-color: var(--color-light-blue);
@@ -1477,84 +1213,6 @@ section {
 /*--------------------------------------------------------------
 # Frequently Asked Questions
 --------------------------------------------------------------*/
-.faq .faq-list {
-  padding: 0 100px;
-}
-
-.faq .faq-list ul {
-  padding: 0;
-  list-style: none;
-}
-
-.faq .faq-list li + li {
-  margin-top: 15px;
-}
-
-.faq .faq-list li {
-  padding: 20px;
-  background: var(--color-white);
-  border-radius: 4px;
-  position: relative;
-}
-
-.faq .faq-list a {
-  display: block;
-  position: relative;
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-  padding: 0 30px;
-  outline: none;
-  cursor: pointer;
-}
-
-.faq .faq-list .icon-help {
-  font-size: 24px;
-  position: absolute;
-  right: 0;
-  left: 20px;
-  color: var(--color-blue);
-}
-
-.faq .faq-list .icon-show,
-.faq .faq-list .icon-close {
-  font-size: 24px;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.faq .faq-list p {
-  margin-bottom: 0;
-  padding: 10px 0 0 0;
-}
-
-.faq .faq-list .icon-show {
-  display: none;
-}
-
-.faq .faq-list a.collapsed {
-  color: var(--color-grey);
-}
-
-.faq .faq-list a.collapsed:hover {
-  color: var(--color-dark-blue);
-}
-
-.faq .faq-list a.collapsed .icon-show {
-  display: inline-block;
-}
-
-.faq .faq-list a.collapsed .icon-close {
-  display: none;
-}
-
-@media (max-width: 1200px) {
-  .faq .faq-list {
-    padding: 0;
-  }
-}
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -1563,7 +1221,7 @@ section {
   padding-left: 50px;
 }
 
-.testimonials .testimonials-carousel,
+
 .testimonials .testimonials-slider {
   overflow: hidden;
 }
@@ -1628,24 +1286,12 @@ section {
   position: relative;
 }
 
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: var(--color-white);
-  opacity: 1;
-  border: 1px solid var(--color-dark-blue);
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--color-dark-blue);
-}
-
 @media (max-width: 768px) {
   .testimonials .testimonial-wrap {
     padding-left: 0;
   }
 
-  .testimonials .testimonials-carousel,
+  
   .testimonials .testimonials-slider {
     overflow: hidden;
   }
@@ -1745,28 +1391,6 @@ section {
 
 .contact .appointment-form .form-group {
   padding-bottom: 8px;
-}
-
-.contact .appointment-form .error-message {
-  display: none;
-  color: var(--color-white);
-  background: var(--color-turquoise);
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .appointment-form .error-message br + br {
-  margin-top: 25px;
-}
-
-.contact .appointment-form .sent-message {
-  display: none;
-  color: var(--color-white);
-  background: var(--color-turquoise);
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
 }
 
 .contact .appointment-form .loading {
@@ -1918,59 +1542,6 @@ section {
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
   color: var(--color-dark-blue);
-}
-
-#footer .footer-newsletter {
-  font-size: 15px;
-}
-
-#footer .footer-newsletter h4 {
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--color-navy);
-  position: relative;
-  padding-bottom: 12px;
-}
-
-#footer .footer-newsletter form {
-  margin-top: 30px;
-  background: var(--color-white);
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 50px;
-  text-align: left;
-  border: 1px solid var(--color-light-blue);
-}
-
-#footer .footer-newsletter form input[type="email"] {
-  border: 0;
-  padding: 4px 8px;
-  width: calc(100% - 100px);
-}
-
-#footer .footer-newsletter form input[type="submit"] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background: var(--color-dark-blue);
-  color: var(--color-white);
-  transition: 0.3s;
-  border-radius: 50px;
-}
-
-#footer .footer-newsletter form input[type="submit"]:hover {
-  background: var(--color-blue);
-}
-
-#footer .credits {
-  padding-top: 5px;
-  font-size: 13px;
-  color: var(--color-navy);
 }
 
 #footer .social-links a {
