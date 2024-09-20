@@ -44,7 +44,9 @@
     />
 
     <!-- CSS Files -->
-    <link rel="preload" href="../assets/img/hero-bg.webp" as="image" />
+    <link rel="preload" href="assets/img/hero-bg.webp" as="image" />
+    <link rel="preload" href="assets/img/hero-bg-1200.webp" as="image1200" />
+    <link rel="preload" href="assets/img/hero-bg-768.webp" as="image768" />
 
     <!-- CSS Files -->
     <link
@@ -181,12 +183,15 @@
         <h2 aria-hidden="true" class="logo me-auto">
           <a href="#hero" class="scrollto">Tandklinikken Frederikssund</a>
         </h2>
-        <a href="#hero" class="logo me-auto scrollto"
-          ><img
+        <a href="#hero" class="logo me-auto scrollto">
+          <img
             src="assets/img/onlytextandlogo.webp"
             alt="Tandklinikken Frederikssund Logo"
-            class="img-fluid"
-        /></a>
+            width="368"
+            height="101"
+            class="img-fluid logo-img"
+          />
+        </a>
 
         <nav id="navbar" class="navbar order-last order-lg-0 rounded" role="navigation">
           <ul class="pt-0">
@@ -217,6 +222,8 @@
             src="assets/img/onlytextandlogo.webp"
             alt="Tandklinikken Frederikssund"
             class="img-fluid main-logo"
+            width="735"
+            height="202"
           />
         </a>
         <h2>Her kan du føle dig tryg</h2>
@@ -1761,7 +1768,6 @@
 
     <!-- Custom JavaScript Files -->
     <script src="js/appointment-form.js" defer></script>
-    <script src="js/config.js" defer></script>
     <script src="js/contact-form.js" defer></script>
   </body>
 </html>
