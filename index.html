@@ -43,10 +43,15 @@
       rel="stylesheet"
     />
 
-    <!-- CSS Files -->
-    <link rel="preload" href="assets/img/hero-bg.webp" as="image" />
-    <link rel="preload" href="assets/img/hero-bg-1200.webp" as="image1200" />
-    <link rel="preload" href="assets/img/hero-bg-768.webp" as="image768" />
+    <!-- Preload Files -->
+    <link rel="preload" href="assets/img/hero-bg.webp" as="image" media="(min-width: 1200px)" />
+    <link
+      rel="preload"
+      href="assets/img/hero-bg-1200.webp"
+      as="image"
+      media="(min-width: 768px) and (max-width: 1199px)"
+    />
+    <link rel="preload" href="assets/img/hero-bg-768.webp" as="image" media="(max-width: 767px)" />
 
     <!-- CSS Files -->
     <link
@@ -114,7 +119,7 @@
         background: url("assets/img/hero-bg.webp") center top;
         background-size: cover;
         background-repeat: no-repeat;
-        margin-bottom: 0px;
+        margin-bottom: -180px;
       }
       @media (max-width: 1199px) {
         #hero {

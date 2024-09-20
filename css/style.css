@@ -251,7 +251,13 @@ h2 + p {
 
   #hero .container .btn-get-started,
   #hero .container h2 {
-    margin-left: 22%;
+    margin-left: 23%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  #hero .container .btn-get-started {
+    padding: 10px 20px 10px 20px;
   }
 }
 
@@ -603,22 +609,6 @@ h2 + p {
   margin-bottom: -180px;
 }
 
-@media (max-width: 1199px) {
-  #hero {
-    background: url("../assets/img/hero-bg-1200.webp") center top;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-}
-
-@media (max-width: 767px) {
-  #hero {
-    background: url("../assets/img/hero-bg-768.webp") center top;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-}
-
 .main-logo {
   max-width: min(50%, 735px);
   max-height: 202px;
@@ -686,6 +676,22 @@ h2[aria-hidden="true"] {
 #hero .btn-get-started:hover {
   background-color: var(--color-light-turquoise);
   scale: 1.1;
+}
+
+@media (max-width: 1199px) {
+  #hero {
+    background: url("../assets/img/hero-bg-1200.webp") center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 767px) {
+  #hero {
+    background: url("../assets/img/hero-bg-768.webp") center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -775,10 +781,6 @@ section {
 .section-title p {
   margin-bottom: 0;
 }
-
-/*--------------------------------------------------------------
-# Breadcrumbs
---------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Why Us
@@ -1143,10 +1145,6 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Departments
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
 # Doctors
 --------------------------------------------------------------*/
 
@@ -1235,10 +1233,6 @@ section {
   width: 80%;
   margin: 2rem auto 0.5rem;
 }
-
-/*--------------------------------------------------------------
-# Frequently Asked Questions
---------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Testimonials
