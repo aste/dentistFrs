@@ -606,7 +606,7 @@ h2 + p {
   background: url("../assets/img/hero-bg.webp") center top;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-bottom: -160px;
+  margin-bottom: 0px;
 }
 
 .main-logo {
@@ -858,12 +858,6 @@ section {
 .why-us .maxwidth-wrapper {
   max-width: 240px;
   margin: auto;
-}
-
-@media (max-width: 992px) {
-  #why-us {
-    margin-top: -100px;
-  }
 }
 
 /*--------------------------------------------------------------
