@@ -1265,8 +1265,11 @@ section {
 }
 
 .testimonials .testimonial-item h4 {
-  font-size: 14px;
+  font-size: 24px;
   color: var(--color-grey-blue);
+  color: var(--color-light-turquoise);
+  /* color: yellow; */
+  /* color: var(--color-turquoise); */
   margin: 0;
 }
 

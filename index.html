@@ -593,6 +593,7 @@
                   placeholder="* Email"
                   pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                   required
+                  oninput="this.value = this.value.toLowerCase()"
                 />
                 <div class="invalid-feedback">Indtast din email</div>
               </div>
@@ -622,7 +623,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-4 form-group mt-3">
+              <div class="col-md-3 form-group mt-3">
                 <input
                   type="date"
                   name="Foretrukne dato"
@@ -631,7 +632,7 @@
                   placeholder="Evt. foretrukne dato"
                 />
               </div>
-              <div class="col-md-4 form-group mt-3">
+              <div class="col-md-3 form-group mt-3">
                 <select name="Foretrukne Tidspunkt" id="preferred_time" class="form-select">
                   <option value="Ingen præferencer">Evt. foretrukne tidspunkt</option>
                   <option value="Morgen fra kl. 8.30 til 10.00">
@@ -648,7 +649,22 @@
                   </option>
                 </select>
               </div>
-              <div class="col-md-4 form-group mt-3">
+              <div class="col-md-3 form-group mt-3">
+                <select name="Behandling" id="treatment" class="form-select">
+                  <option value="Ikke valgt">Evt. behandling</option>
+                  <option value="Tandeftersyn">Tandeftersyn</option>
+                  <option value="Tandpine">Tandpine</option>
+                  <option value="Knækket tand">Knækket Tand</option>
+                  <option value="Plastfyldning">Plastfyldning</option>
+                  <option value="Rodbehandling">Rodbehandling</option>
+                  <option value="Tandkrone">Tandkrone</option>
+                  <option value="Tandimplantat">Tandimplantat</option>
+                  <option value="Fjernelse af Tand">Fjernelse af Tand</option>
+                  <option value="Paradentosebehandling">Paradentosebehandling</option>
+                  <option value="Andet">Andet (tilføj gerne en kommentar)</option>
+                </select>
+              </div>
+              <div class="col-md-3 form-group mt-3">
                 <select name="Foretrukne behandler" id="doctor" class="form-select">
                   <option value="Ingen præferencer">Evt. valg af behandler</option>
                   <option value="Marc, Tandlæge">Marc, Tandlæge</option>
@@ -1292,38 +1308,77 @@
                 </thead>
 
                 <tbody>
+                  <!-- Lokalbedøvelse -->
+                  <tr>
+                    <td colspan="4" class="table-group-title">Bedøvelse</td>
+                  </tr>
+                  <tr>
+                    <td>Lokalbedøvelse</td>
+                    <td>290 kr.</td>
+                    <td></td>
+                  </tr>
                   <!-- Plastfyldning -->
                   <tr>
                     <td colspan="4" class="table-group-title">Plastfyldning</td>
                   </tr>
+                  <!-- Fortand -->
                   <tr>
-                    <td>Plastfyldning af 2 flader i stor kindtand i underkæbe</td>
-                    <td>1.295 kr.</td>
-                    <td>1.395 kr.</td>
+                    <td>Plastfyldning af 1 flade i fortand</td>
+                    <td>468 kr.</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Plastfyldning af 2 flader i fortand</td>
+                    <td>870 kr.</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Plastfyldning af 3+ flader i fortand</td>
+                    <td>870 kr.</td>
+                    <td>1.850 kr.</td>
+                  </tr>
+
+                  <!-- Lille Kindtand -->
+                  <tr>
+                    <td>Plastfyldning af 1 flade i lille kindtand</td>
+                    <td>770 kr.</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Plastfyldning af 2 flader i lille kindtand</td>
+                    <td>1.195 kr.</td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td>Plastfyldning af 3 flader i lille kindtand</td>
                     <td>1.395 kr.</td>
-                    <td>1.495 kr.</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td>Plastfyldning af 4 flader i lille kindtand</td>
+                    <td>Plastfyldning af 4-5 flader i lille kindtand</td>
                     <td>1.650 kr.</td>
-                    <td>1.750 kr.</td>
-                  </tr>
-                  <tr>
-                    <td>Plastfyldning af 4 flader i stor kindtand</td>
-                    <td>1.850 kr.</td>
-                    <td>1.950 kr.</td>
-                  </tr>
-                  <tr>
-                    <td>Plastfyldning af 5 flader i lille kindtand</td>
                     <td>2.175 kr.</td>
-                    <td>2.275 kr.</td>
+                  </tr>
+
+                  <!-- Stor Kindtand -->
+                  <tr>
+                    <td>Plastfyldning af 1 flade i stor kindtand</td>
+                    <td>880 kr.</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td>Plastfyldning af 5 flader i stor kindtand</td>
-                    <td>2.375 kr.</td>
+                    <td>Plastfyldning af 2 flader i stor kindtand</td>
+                    <td>1.295 kr.</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Plastfyldning af 3 flader i stor kindtand</td>
+                    <td>1.650 kr.</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Plastfyldning af 4-5 flader i stor kindtand</td>
+                    <td>1.850 kr.</td>
                     <td>2.475 kr.</td>
                   </tr>
 
