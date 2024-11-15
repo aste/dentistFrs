@@ -584,6 +584,20 @@ h2 + p {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+/* General Styles for #hero */
+#hero {
+  width: 100%;
+  height: 84vh;
+  background: url("../assets/img/hero-bg.webp") center top no-repeat;
+  background-size: cover;
+  margin-bottom: -180px;
+}
+
+#hero .container {
+  position: relative;
+  z-index: 3;
+}
+
 #hero::before {
   content: "";
   position: absolute;
@@ -595,28 +609,7 @@ h2 + p {
   z-index: 2;
 }
 
-#hero .container {
-  position: relative;
-  z-index: 3;
-}
-
-#hero {
-  width: 100%;
-  height: 84vh;
-  background: url("../assets/img/hero-bg.webp") center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-bottom: 0px;
-}
-
-.main-logo {
-  max-width: min(50%, 735px);
-  max-height: 202px;
-  height: auto;
-  margin: 0;
-  padding: 0;
-}
-
+/* Text and Button Styles */
 #hero h1 {
   margin: 0;
   font-size: 48px;
@@ -626,6 +619,34 @@ h2 + p {
   color: var(--color-navy);
 }
 
+#hero h2 {
+  color: var(--color-navy);
+  margin: 10px 0 0;
+  font-size: 24px;
+  margin-left: 18%;
+}
+
+#hero .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 35px;
+  margin-top: 30px;
+  margin-left: 18%;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: var(--color-white);
+  background: var(--color-turquoise);
+}
+
+#hero .btn-get-started:hover {
+  background-color: var(--color-light-turquoise);
+  transform: scale(1.1);
+}
+
+/* Hidden Elements for Accessibility */
 h1[aria-hidden="true"],
 h2[aria-hidden="true"] {
   position: absolute;
@@ -638,59 +659,20 @@ h2[aria-hidden="true"] {
   border: 0;
 }
 
-#hero h2 {
-  color: var(--color-navy);
-  margin: 10px 0 0 0;
-  font-size: 24px;
+/* Logo Styles */
+.main-logo {
+  max-width: min(50%, 735px);
+  max-height: 202px;
+  height: auto;
+  margin: 0;
+  padding: 0;
 }
 
-#hero .btn-get-started {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 35px;
-  margin-top: 30px;
-  border-radius: 50px;
-  transition: 0.5s;
-  color: var(--color-white);
-  background: var(--color-turquoise);
-}
-
-#hero .btn-get-started,
-#hero h2 {
-  margin-left: 18%;
-}
-
-@media (max-width: 768px) {
-}
-
-@media (max-width: 768px) {
-  #hero .btn-get-started,
-  #hero h2 {
-    margin-left: 100px;
-  }
-}
-
-#hero .btn-get-started:hover {
-  background-color: var(--color-light-turquoise);
-  scale: 1.1;
-}
-
+/* Media Queries */
 @media (max-width: 1199px) {
   #hero {
-    background: url("../assets/img/hero-bg-1200.webp") center top;
+    background: url("../assets/img/hero-bg-1200.webp") center top no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;
-  }
-}
-
-@media (max-width: 767px) {
-  #hero {
-    background: url("../assets/img/hero-bg-768.webp") center top;
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 }
 
@@ -702,7 +684,7 @@ h2[aria-hidden="true"] {
 
 @media (max-width: 992px) {
   #hero {
-    margin-bottom: 0;
+    margin-bottom: max(-16vh, -120px);
   }
 
   .main-logo {
@@ -725,8 +707,20 @@ h2[aria-hidden="true"] {
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
-    margin-bottom: 30px;
     margin-bottom: 1em;
+  }
+}
+
+@media (max-width: 767px) {
+  #hero {
+    background: url("../assets/img/hero-bg-768.webp") center top no-repeat;
+    background-size: cover;
+    margin-bottom: max(-16vh, -90px);
+  }
+
+  #hero h2,
+  #hero .btn-get-started {
+    margin-left: 100px;
   }
 }
 
