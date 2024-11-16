@@ -73,44 +73,6 @@ h2 + p {
   color: var(--color-dark-blue);
   margin-bottom: 0;
 }
-
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: var(--color-white);
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid var(--color-dark-blue);
-  border-top-color: #d1e6f9;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1s linear infinite;
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -151,27 +113,10 @@ h2 + p {
   background: var(--color-white-blue);
   height: 40px;
   font-size: 14px;
-  transition: all 0.3s;
   z-index: 996;
   position: fixed;
   width: 100%;
   top: 0;
-}
-
-#topbar.topbar-scrolled {
-  top: -40px;
-}
-
-#topbar .social-links a,
-#topbar .contact-info a {
-  transition: color 0.3s, transform 0.3s;
-  line-height: 1;
-  color: var(--color-navy);
-}
-
-#topbar .social-links a {
-  transition: transform 0.3s;
-  line-height: 1;
 }
 
 #topbar .contact-info i {
@@ -179,18 +124,7 @@ h2 + p {
   padding-right: 4px;
   margin-left: 15px;
   line-height: 0;
-  width: 16px;
-  height: 16px;
   display: inline-block;
-}
-
-#topbar .contact-info a:hover {
-  color: var(--color-dark-blue);
-  transform: scale(1.05);
-}
-
-#topbar .social-links a:hover {
-  transform: scale(1.1);
 }
 
 #topbar .social-links a {
@@ -200,26 +134,11 @@ h2 + p {
   line-height: 1px;
 }
 
-#topbar .social-links a:first-child {
-  border-left: 0;
-}
-
 .icon-link {
   display: inline-block;
   font-size: 1em;
   color: inherit;
   text-decoration: none;
-}
-
-.icon-link:hover {
-  scale: 1.1;
-}
-
-.trustpilot-icon {
-  height: 1.2em;
-  margin-bottom: 0.1em;
-  width: auto;
-  vertical-align: middle;
 }
 
 @media (max-width: 768px) {
@@ -272,19 +191,10 @@ h2 + p {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: var(--color-white);
   transition: all 0.5s;
-  z-index: 997;
-  padding: 8px 0;
-  top: 40px;
-  box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
-  transition: all 0.3s;
 }
 
-#header.header-scrolled {
-  top: 0;
-}
-
+/* Logo styles */
 #header .logo {
   font-size: 30px;
   margin: 0;
@@ -299,15 +209,7 @@ h2 + p {
   color: var(--color-navy);
 }
 
-#header .logo img {
-  max-width: 100%;
-  max-height: 48px;
-  aspect-ratio: 368 / 101;
-}
-
-/**
-* Appointment Button *
-*/
+/* Appointment button */
 .appointment-btn {
   margin-left: 25px;
   background: var(--color-turquoise);
@@ -371,20 +273,6 @@ h2 + p {
   text-decoration: underline var(--color-dark-blue);
   text-underline-offset: 0.5em;
 }
-
-/* .navbar a i,
-.navbar a:focus i {
-  font-size: 12px;
-  line-height: 0;
-  margin-left: 5px;
-} */
-
-/* .navbar a:hover,
-.navbar .active,
-.navbar .active:focus,
-.navbar li:hover > a {
-  border-color: var(--color-dark-blue);
-} */
 
 .navbar .dropdown ul {
   display: block;
@@ -578,32 +466,6 @@ h2 + p {
 # Hero Section
 --------------------------------------------------------------*/
 /* General Styles for #hero */
-#hero {
-  width: 100%;
-  height: 84vh;
-  background: url("../assets/img/hero-bg.webp") center top no-repeat;
-  background-size: cover;
-  aspect-ratio: 16 / 9;
-  margin-bottom: -180px;
-}
-
-#hero .container {
-  position: relative;
-  z-index: 3;
-}
-
-#hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.66);
-  z-index: 2;
-}
-
-/* Text and Button Styles */
 #hero h1 {
   margin: 0;
   font-size: 48px;
@@ -618,6 +480,7 @@ h2 + p {
   margin-left: 18%;
 }
 
+/* Button styles */
 #hero .btn-get-started {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
@@ -638,36 +501,7 @@ h2 + p {
   transform: scale(1.1);
 }
 
-/* Hidden Elements for Accessibility */
-h1[aria-hidden="true"],
-h2[aria-hidden="true"] {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-/* Logo Styles */
-.main-logo {
-  max-width: min(50%, 735px);
-  max-height: 202px;
-  height: auto;
-  margin: 0;
-  padding: 0;
-}
-
 /* Media Queries */
-@media (max-width: 1199px) {
-  #hero {
-    background: url("../assets/img/hero-bg-1200.webp") center top no-repeat;
-    background-size: cover;
-  }
-}
-
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
@@ -675,11 +509,7 @@ h2[aria-hidden="true"] {
 }
 
 @media (max-width: 992px) {
-  #hero {
-    margin-bottom: max(-16vh, -120px);
-  }
-
-  .main-logo {
+  #hero .main-logo {
     margin-top: 35%;
   }
 
@@ -704,24 +534,13 @@ h2[aria-hidden="true"] {
 }
 
 @media (max-width: 767px) {
-  #hero {
-    background: url("../assets/img/hero-bg-768.webp") center top no-repeat;
-    background-size: cover;
-    margin-bottom: max(-16vh, -90px);
-  }
-
   #hero h2,
   #hero .btn-get-started {
     margin-left: 100px;
   }
 
   #hero .container h2 {
-    font-size: 0.9rem;
-  }
-
-  #hero .container .main-logo {
-    max-width: 64%;
-    aspect-ratio: 735 / 202;
+    font-size: 1.2rem;
   }
 
   #hero .container .btn-get-started,
@@ -741,7 +560,24 @@ h2[aria-hidden="true"] {
     font-size: 24px;
     line-height: 32px;
   }
+  #hero .container h2 {
+    font-size: 0.8rem;
+  }
 }
+
+/* Accessibility styles */
+h1[aria-hidden="true"],
+h2[aria-hidden="true"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
