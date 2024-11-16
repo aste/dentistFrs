@@ -162,18 +162,16 @@ h2 + p {
   top: -40px;
 }
 
+#topbar .social-links a,
 #topbar .contact-info a {
+  transition: color 0.3s, transform 0.3s;
   line-height: 1;
   color: var(--color-navy);
-  transition: 0.3s;
 }
 
-#topbar .contact-info a:hover {
-  color: var(--color-dark-blue);
-}
-
-#topbar .contact-info a:hover {
-  cursor: pointer;
+#topbar .social-links a {
+  transition: transform 0.3s;
+  line-height: 1;
 }
 
 #topbar .contact-info i {
@@ -181,6 +179,18 @@ h2 + p {
   padding-right: 4px;
   margin-left: 15px;
   line-height: 0;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+#topbar .contact-info a:hover {
+  color: var(--color-dark-blue);
+  transform: scale(1.05);
+}
+
+#topbar .social-links a:hover {
+  transform: scale(1.1);
 }
 
 #topbar .social-links a {
@@ -188,11 +198,6 @@ h2 + p {
   padding-left: 15px;
   display: inline-block;
   line-height: 1px;
-  transition: 0.3s;
-}
-
-#topbar .social-links a:hover {
-  scale: 1.1;
 }
 
 #topbar .social-links a:first-child {
@@ -222,6 +227,11 @@ h2 + p {
     flex-wrap: nowrap;
   }
 
+  #topbar .social-links i,
+  #topbar .social-links img {
+    margin-bottom: 0.5em;
+  }
+
   #topbar a,
   #topbar i {
     font-size: smaller;
@@ -237,27 +247,18 @@ h2 + p {
     max-width: 20px;
   }
 
+  #header .logo img {
+    width: 70%;
+    aspect-ratio: 368 / 101; /* Adjust ratio as needed */
+  }
+
   #header .logo {
     max-width: 36%;
   }
 
-  #hero .container h2 {
-    font-size: 0.9rem;
-  }
-
-  #hero .container .main-logo {
-    max-width: 64%;
-  }
-
-  #hero .container .btn-get-started,
-  #hero .container h2 {
-    margin-left: 23%;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  #hero .container .btn-get-started {
-    padding: 10px 20px 10px 20px;
+  #topbar .contact-info i {
+    width: 12px;
+    height: 12px;
   }
 }
 
@@ -301,6 +302,7 @@ h2 + p {
 #header .logo img {
   max-width: 100%;
   max-height: 48px;
+  aspect-ratio: 368 / 101;
 }
 
 /**
@@ -353,33 +355,36 @@ h2 + p {
   padding: 8px 0 8px 20px;
 }
 
-.navbar a,
-.navbar a:focus {
+.navbar a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 14px;
   color: var(--color-navy);
   white-space: nowrap;
+  font-size: 14px;
   transition: 0.3s;
-  border-bottom: 2px solid var(--color-white);
   padding: 5px 2px;
 }
 
-.navbar a i,
+.navbar a:hover {
+  color: var(--color-dark-blue);
+  text-decoration: underline var(--color-dark-blue);
+  text-underline-offset: 0.5em;
+}
+
+/* .navbar a i,
 .navbar a:focus i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
-}
+} */
 
-.navbar a:hover,
+/* .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
-  color: var(--color-dark-blue);
   border-color: var(--color-dark-blue);
-}
+} */
 
 .navbar .dropdown ul {
   display: block;
@@ -411,12 +416,6 @@ h2 + p {
 
 .navbar .dropdown ul a i {
   font-size: 12px;
-}
-
-.navbar .dropdown ul a:hover,
-.navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover > a {
-  color: var(--color-dark-blue);
 }
 
 .navbar .dropdown:hover > ul {
@@ -535,12 +534,6 @@ h2 + p {
   border: none;
 }
 
-.navbar-mobile a:hover,
-.navbar-mobile .active,
-.navbar-mobile li:hover > a {
-  color: var(--color-dark-blue);
-}
-
 .navbar-mobile .dropdown ul {
   position: static;
   display: none;
@@ -590,6 +583,7 @@ h2 + p {
   height: 84vh;
   background: url("../assets/img/hero-bg.webp") center top no-repeat;
   background-size: cover;
+  aspect-ratio: 16 / 9;
   margin-bottom: -180px;
 }
 
@@ -615,8 +609,6 @@ h2 + p {
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  text-transform: uppercase;
-  color: var(--color-navy);
 }
 
 #hero h2 {
@@ -722,8 +714,34 @@ h2[aria-hidden="true"] {
   #hero .btn-get-started {
     margin-left: 100px;
   }
+
+  #hero .container h2 {
+    font-size: 0.9rem;
+  }
+
+  #hero .container .main-logo {
+    max-width: 64%;
+    aspect-ratio: 735 / 202;
+  }
+
+  #hero .container .btn-get-started,
+  #hero .container h2 {
+    margin-left: 23%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #hero .container .btn-get-started {
+    padding: 10px 20px 10px 20px;
+  }
 }
 
+@media (max-width: 576px) {
+  #hero h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
