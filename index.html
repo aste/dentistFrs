@@ -14,74 +14,27 @@
     <meta name="author" content="Tandklinikken Frederikssund" />
     <meta name="msvalidate.01" content="09FDF968E9341CB9F158BFEB759294EF" />
     <title>Tandklinikken Frederikssund</title>
-    <!-- Icons -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/img/apple-touch-icon.webp"
-      loading="lazy"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/img/favicon-32x32.webp"
-      loading="lazy"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/img/favicon-16x16.webp"
-      loading="lazy"
-    />
-    <link rel="manifest" href="assets/img/site.webmanifest" />
 
-    <!-- Fonts -->
+    <!-- Preload Files -->
+
+    <!-- Preconnect for Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+
+    <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Preload Files -->
-    <link rel="preload" as="image" href="assets/img/hero-bg.webp" />
-    <link
-      rel="preload"
-      as="image"
-      href="assets/img/hero-bg-1200.webp"
-      media="(max-width: 1199px)"
-    />
-    <link rel="preload" as="image" href="assets/img/hero-bg-768.webp" media="(max-width: 767px)" />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      as="style"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="assets/vendor/boxicons/fonts/boxicons.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <link rel="preload" as="image" href="assets/img/onlytextandlogo.webp" type="image/webp" />
-    <link rel="preload" as="image" href="assets/img/trustpilot.svg" type="image/svg+xml" />
-    <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style" />
-    <link rel="preload" href="css/style.css" as="style" />
-    <link rel="preload" href="js/main.js" as="script" />
+    <!-- Favicons -->
+    <link rel="icon" href="assets/img/favicon-32x32.webp" type="image/webp" />
+    <link rel="manifest" href="assets/img/site.webmanifest" />
 
     <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/vendor/fontawesome-free/css/all.min.css" />
     <link rel="stylesheet" href="assets/vendor/animate.css/animate.min.css" />
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" />
     <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css" />
     <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css" />
@@ -89,9 +42,49 @@
     <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 
-    <!-- Main CSS File -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <noscript><link rel="stylesheet" href="css/style.css" /></noscript>
+
+    <!-- Preloaded Files -->
+    <link rel="preload" as="image" href="assets/img/hero-bg.webp" type="image/webp" />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/img/hero-bg-1200.webp"
+      media="(max-width: 1199px)"
+      type="image/webp"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/img/hero-bg-768.webp"
+      media="(max-width: 767px)"
+      type="image/webp"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="assets/vendor/boxicons/fonts/boxicons.woff2"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      as="style"
+      type="text/css"
+    />
+    <link rel="preload" href="css/style.css" as="style" type="text/css" />
+    <link rel="preload" href="js/main.js" as="script" type="text/javascript" />
+
     <style>
       /* Preloader */
       #preloader {
@@ -129,9 +122,50 @@
       }
 
       /* Top Bar */
+      #topbar {
+        background: var(--color-white-blue);
+        height: 40px;
+        font-size: 14px;
+        z-index: 996;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        transition: all 0.3s ease;
+      }
+
+      #topbar.topbar-scrolled {
+        top: -40px;
+      }
+
       #topbar .contact-info i {
+        color: var(--color-dark-blue);
         width: 16px;
         height: 16px;
+        padding-right: 4px;
+        margin-left: 15px;
+        line-height: 0;
+        display: inline-block;
+      }
+
+      #topbar .contact-info a {
+        color: #00325a;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      #topbar .contact-info a:hover {
+        transform: scale(1.05);
+      }
+
+      #topbar .social-links a {
+        color: var(--color-navy);
+        padding-left: 15px;
+        display: inline-block;
+        line-height: 1px;
+        transition: all 0.3s ease;
+      }
+
+      #topbar .social-links a:hover {
+        transform: scale(1.2);
       }
 
       .trustpilot-icon {
@@ -141,26 +175,32 @@
         vertical-align: middle;
       }
 
-      #topbar {
-        transition: all 0.3s ease;
+      @media (max-width: 768px) {
+        #topbar .container {
+          flex-wrap: nowrap;
+        }
+
+        #topbar .social-links i,
+        #topbar .social-links img {
+          margin-bottom: 0.5em;
+        }
+
+        #topbar a,
+        #topbar i {
+          font-size: smaller;
+          white-space: nowrap;
+        }
+
+        #topbar .contact-info i {
+          width: 12px;
+          height: 12px;
+        }
       }
 
-      #topbar.topbar-scrolled {
-        top: -40px;
-      }
-
-      #topbar .social-links a,
-      #topbar .contact-info a {
-        color: #00325a;
-        transition: transform 0.3s ease-in-out;
-      }
-
-      #topbar .social-links a:hover {
-        transform: scale(1.2);
-      }
-
-      #topbar .contact-info a:hover {
-        transform: scale(1.05);
+      @media (max-width: 449px) {
+        #topbar .hiddenUnder450 {
+          display: none;
+        }
       }
 
       /* Header */
@@ -169,7 +209,7 @@
         z-index: 997;
         padding: 8px 0;
         top: 40px;
-        box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+        box-shadow: 0 2px 15px rgba(25, 119, 204, 0.1);
       }
 
       #header.header-scrolled {
@@ -194,9 +234,37 @@
         align-items: center;
       }
 
+      .appointment-btn {
+        margin-left: 25px;
+        margin-right: 8px;
+        padding: 8px 25px;
+        font-size: 14px;
+        background: var(--color-turquoise);
+        color: var(--color-white);
+        border-radius: 50px;
+        white-space: nowrap;
+        transition: 0.3s;
+        display: inline-block;
+      }
+
       @media (max-width: 992px) {
         .navbar ul {
           display: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        #header .contact-info .appointment-btn {
+          max-width: 20px;
+        }
+
+        #header .logo img {
+          width: 70%;
+          aspect-ratio: 368 / 101;
+        }
+
+        #header .logo {
+          max-width: 36%;
         }
       }
 
@@ -209,6 +277,20 @@
         background-repeat: no-repeat;
         margin-top: 60px;
         margin-bottom: -180px;
+      }
+
+      #hero h1 {
+        margin: 0;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 56px;
+      }
+
+      #hero h2 {
+        color: var(--color-navy);
+        margin: 10px 0 0;
+        font-size: 24px;
+        margin-left: 18%;
       }
 
       #hero::before {
@@ -233,12 +315,48 @@
         padding: 0;
       }
 
+      #hero .btn-get-started {
+        font-family: "Raleway", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 12px 35px;
+        margin-top: 30px;
+        margin-left: 18%;
+        border-radius: 50px;
+        transition: 0.5s;
+        color: white;
+        background: #1abc9c;
+      }
+
       @media (max-width: 1199px) {
         #hero {
           background: url("assets/img/hero-bg-1200.webp") center top;
           background-repeat: no-repeat;
           background-size: cover;
           margin-bottom: -120px;
+          background-attachment: fixed;
+        }
+      }
+
+      @media (max-width: 992px) {
+        #hero h1 {
+          font-size: 28px;
+          line-height: 36px;
+        }
+
+        #hero .container h2 {
+          font-size: 1rem;
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
+          margin-left: 18%;
+        }
+
+        #hero .container .btn-get-started {
+          margin-top: 1.5rem;
+          font-size: 0.8rem;
+          margin-left: 18%;
         }
       }
 
@@ -249,8 +367,30 @@
           background-size: cover;
           margin-bottom: -90px;
         }
+
         #hero .container .main-logo {
           max-width: 64%;
+        }
+
+        #hero .container h2 {
+          margin-left: 23%;
+        }
+
+        #hero .container .btn-get-started {
+          padding: 10px 20px;
+          margin-top: 1rem;
+          margin-left: 23%;
+        }
+      }
+
+      @media (max-width: 576px) {
+        #hero h1 {
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        #hero .container h2 {
+          font-size: 0.8rem;
         }
       }
     </style>

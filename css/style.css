@@ -109,114 +109,13 @@ h2 + p {
 /*--------------------------------------------------------------
 # Top Bar
 --------------------------------------------------------------*/
-#topbar {
-  background: var(--color-white-blue);
-  height: 40px;
-  font-size: 14px;
-  z-index: 996;
-  position: fixed;
-  width: 100%;
-  top: 0;
-}
 
-#topbar .contact-info i {
-  color: var(--color-dark-blue);
-  padding-right: 4px;
-  margin-left: 15px;
-  line-height: 0;
-  display: inline-block;
-}
-
-#topbar .social-links a {
-  color: var(--color-navy);
-  padding-left: 15px;
-  display: inline-block;
-  line-height: 1px;
-  transition: all 0.3s ease;
-}
-
-.icon-link {
-  display: inline-block;
-  font-size: 1em;
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  #topbar .container {
-    flex-wrap: nowrap;
-  }
-
-  #topbar .social-links i,
-  #topbar .social-links img {
-    margin-bottom: 0.5em;
-  }
-
-  #topbar a,
-  #topbar i {
-    font-size: smaller;
-    white-space: nowrap;
-  }
-
-  #header .contact-info .appointment-btn {
-    max-width: 20px;
-  }
-
-  #header .logo img {
-    width: 70%;
-    aspect-ratio: 368 / 101;
-  }
-
-  #header .logo {
-    max-width: 36%;
-  }
-
-  #topbar .contact-info i {
-    width: 12px;
-    height: 12px;
-  }
-}
-
-@media (max-width: 449px) {
-  #topbar .hiddenUnder450 {
-    display: none;
-  }
-}
 
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 #header {
   transition: all 0.5s;
-}
-
-/* Logo styles */
-#header .logo {
-  font-size: 30px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  font-family: "Poppins", sans-serif;
-}
-
-#header .logo a {
-  color: var(--color-navy);
-}
-
-/* Appointment button */
-.appointment-btn {
-  margin-left: 25px;
-  background: var(--color-turquoise);
-  color: var(--color-white);
-  border-radius: 50px;
-  padding: 8px 25px;
-  margin-right: 8px;
-  white-space: nowrap;
-  transition: 0.3s;
-  font-size: 14px;
-  display: inline-block;
 }
 
 .appointment-btn:hover {
@@ -462,94 +361,10 @@ h2 + p {
 # Hero Section
 --------------------------------------------------------------*/
 /* General Styles for #hero */
-#hero h1 {
-  margin: 0;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 56px;
-}
-
-#hero h2 {
-  color: var(--color-navy);
-  margin: 10px 0 0;
-  font-size: 24px;
-  margin-left: 18%;
-}
-
-/* Button styles */
-#hero .btn-get-started {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 35px;
-  margin-top: 30px;
-  margin-left: 18%;
-  border-radius: 50px;
-  transition: 0.5s;
-  color: var(--color-white);
-  background: var(--color-turquoise);
-}
 
 #hero .btn-get-started:hover {
   background-color: var(--color-light-turquoise);
   transform: scale(1.1);
-}
-
-/* Media Queries */
-@media (min-width: 1024px) {
-  #hero {
-    background-attachment: fixed;
-  }
-}
-
-@media (max-width: 992px) {
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  #hero .container .btn-get-started,
-  #hero .container h2 {
-    margin-left: 18%;
-  }
-
-  #hero .container h2 {
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  #hero .container .btn-get-started {
-    margin-top: 1.5rem;
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 767px) {
-  #hero .container .btn-get-started {
-    padding: 10px 20px 10px 20px;
-  }
-
-  #hero .container .btn-get-started,
-  #hero .container h2 {
-    margin-left: 23%;
-  }
-
-  #hero .container .btn-get-started {
-    margin-top: 1rem;
-  }
-}
-
-@media (max-width: 576px) {
-  #hero h1 {
-    font-size: 24px;
-    line-height: 32px;
-  }
-  #hero .container h2 {
-    font-size: 0.8rem;
-  }
 }
 
 /* Accessibility styles */
