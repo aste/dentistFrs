@@ -1,0 +1,121 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+.header {
+  color: var(--default-color);
+  transition: all 0.5s;
+  z-index: 997;
+  background-color: var(--background-color);
+
+  .topbar {
+    background-color: var(--accent-color);
+    height: 40px;
+    padding: 0;
+    font-size: 14px;
+    transition: all 0.5s;
+
+    .contact-info {
+      i {
+        font-style: normal;
+        color: var(--contrast-color);
+
+        a,
+        span {
+          padding-left: 5px;
+          color: var(--contrast-color);
+
+          @media (max-width: 575px) {
+            font-size: 13px;
+          }
+        }
+
+        a {
+          line-height: 0;
+          transition: 0.3s;
+
+          &:hover {
+            color: var(--contrast-color);
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .social-links {
+      a {
+        color: color-mix(in srgb, var(--contrast-color), transparent 40%);
+        line-height: 0;
+        transition: 0.3s;
+        margin-left: 20px;
+
+        &:hover {
+          color: var(--contrast-color);
+        }
+      }
+    }
+  }
+
+  .branding {
+    min-height: 60px;
+    padding: 10px 0;
+  }
+
+  .logo {
+    line-height: 1;
+
+    img {
+      max-height: 36px;
+      margin-right: 8px;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin: 0;
+      font-weight: 700;
+      color: var(--heading-color);
+    }
+  }
+
+  .cta-btn,
+  .cta-btn:focus {
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    font-size: 14px;
+    padding: 8px 25px;
+    margin: 0 0 0 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+
+    &:hover {
+      color: var(--contrast-color);
+      background: color-mix(in srgb, var(--accent-color), transparent 15%);
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .logo {
+      order: 1;
+    }
+
+    .cta-btn {
+      order: 2;
+      margin: 0 15px 0 0;
+      padding: 6px 15px;
+    }
+
+    .navmenu {
+      order: 3;
+    }
+  }
+
+  .scrolled & {
+    box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+
+    .topbar {
+      height: 0;
+      visibility: hidden;
+      overflow: hidden;
+    }
+  }
+}

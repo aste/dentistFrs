@@ -1,0 +1,120 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Doctors Section
+--------------------------------------------------------------*/
+.doctors {
+  .team-member {
+    background-color: var(--surface-color);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-radius: 5px;
+    transition: 0.5s;
+    padding: 30px;
+    height: 100%;
+
+    @media (max-width: 468px) {
+      flex-direction: column;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    .pic {
+      overflow: hidden;
+      width: 150px;
+      border-radius: 50%;
+      flex-shrink: 0;
+
+      img {
+        transition: ease-in-out 0.3s;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    .member-info {
+      padding-left: 30px;
+
+      @media (max-width: 468px) {
+        padding: 30px 0 0 0;
+        text-align: center;
+      }
+    }
+
+    h4 {
+      font-weight: 700;
+      margin-bottom: 5px;
+      font-size: 20px;
+    }
+
+    span {
+      display: block;
+      font-size: 15px;
+      padding-bottom: 10px;
+      position: relative;
+      font-weight: 500;
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 1px;
+        background: color-mix(in srgb, var(--default-color), transparent 85%);
+        bottom: 0;
+        left: 0;
+
+        @media (max-width: 468px) {
+          left: calc(50% - 25px);
+        }
+      }
+    }
+
+    p {
+      margin: 10px 0 0 0;
+      font-size: 14px;
+    }
+
+    .social {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      width: 100%;
+
+      @media (max-width: 468px) {
+        justify-content: center;
+      }
+
+      a {
+        background: color-mix(in srgb, var(--default-color), transparent 94%);
+        transition: ease-in-out 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        width: 36px;
+        height: 36px;
+
+        i {
+          color: color-mix(in srgb, var(--default-color), transparent 20%);
+          font-size: 16px;
+          margin: 0 2px;
+        }
+
+        &:hover {
+          background: var(--accent-color);
+
+          i {
+            color: var(--contrast-color);
+          }
+        }
+      }
+
+      a+a {
+        margin-left: 8px;
+      }
+    }
+  }
+}
