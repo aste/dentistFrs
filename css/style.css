@@ -132,6 +132,7 @@ h2 + p {
   padding-left: 15px;
   display: inline-block;
   line-height: 1px;
+  transition: all 0.3s ease;
 }
 
 .icon-link {
@@ -157,18 +158,13 @@ h2 + p {
     white-space: nowrap;
   }
 
-  #topbar .contact-info {
-    justify-content: center;
-    flex-direction: row;
-  }
-
   #header .contact-info .appointment-btn {
     max-width: 20px;
   }
 
   #header .logo img {
     width: 70%;
-    aspect-ratio: 368 / 101; /* Adjust ratio as needed */
+    aspect-ratio: 368 / 101;
   }
 
   #header .logo {
@@ -509,49 +505,40 @@ h2 + p {
 }
 
 @media (max-width: 992px) {
-  #hero .main-logo {
-    margin-top: 35%;
-  }
-
-  #hero .btn-get-started {
-    margin-top: 1em;
-  }
-
-  #hero .container {
-    padding-bottom: 64px;
-  }
-
   #hero h1 {
     font-size: 28px;
     line-height: 36px;
   }
 
-  #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 1em;
-  }
-}
-
-@media (max-width: 767px) {
-  #hero h2,
-  #hero .btn-get-started {
-    margin-left: 100px;
-  }
-
-  #hero .container h2 {
-    font-size: 1.2rem;
-  }
-
   #hero .container .btn-get-started,
   #hero .container h2 {
-    margin-left: 23%;
+    margin-left: 18%;
+  }
+
+  #hero .container h2 {
+    font-size: 1rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
 
   #hero .container .btn-get-started {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #hero .container .btn-get-started {
     padding: 10px 20px 10px 20px;
+  }
+
+  #hero .container .btn-get-started,
+  #hero .container h2 {
+    margin-left: 23%;
+  }
+
+  #hero .container .btn-get-started {
+    margin-top: 1rem;
   }
 }
 
