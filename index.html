@@ -44,97 +44,213 @@
     />
 
     <!-- Preload Files -->
-    <link rel="preload" href="assets/img/hero-bg.webp" as="image" media="(min-width: 1200px)" />
+    <link rel="preload" as="image" href="assets/img/hero-bg.webp" />
     <link
       rel="preload"
-      href="assets/img/hero-bg-1200.webp"
       as="image"
-      media="(min-width: 768px) and (max-width: 1199px)"
+      href="assets/img/hero-bg-1200.webp"
+      media="(max-width: 1199px)"
     />
-    <link rel="preload" href="assets/img/hero-bg-768.webp" as="image" media="(max-width: 767px)" />
+    <link rel="preload" as="image" href="assets/img/hero-bg-768.webp" media="(max-width: 767px)" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      as="style"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="assets/vendor/boxicons/fonts/boxicons.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="preload" as="image" href="assets/img/onlytextandlogo.webp" type="image/webp" />
+    <link rel="preload" as="image" href="assets/img/trustpilot.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="preload" href="js/main.js" as="script" />
 
     <!-- CSS Files -->
-    <link
-      rel="stylesheet"
-      href="assets/vendor/fontawesome-free/css/all.min.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      rel="stylesheet"
-      href="assets/vendor/animate.css/animate.min.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      rel="stylesheet"
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      rel="stylesheet"
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      rel="stylesheet"
-      href="assets/vendor/boxicons/css/boxicons.min.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      rel="stylesheet"
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      rel="stylesheet"
-      href="assets/vendor/remixicon/remixicon.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      rel="stylesheet"
-      href="assets/vendor/swiper/swiper-bundle.min.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-      media="print"
-      onload="this.media='all'"
-    />
+    <link rel="stylesheet" href="assets/vendor/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendor/animate.css/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" />
+    <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/vendor/remixicon/remixicon.css" />
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 
     <!-- Main CSS File -->
-    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="css/style.css" />
     <noscript><link rel="stylesheet" href="css/style.css" /></noscript>
     <style>
+      /* Preloader */
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        overflow: hidden;
+        background: white;
+      }
+
+      #preloader:before {
+        content: "";
+        position: fixed;
+        top: calc(50% - 30px);
+        left: calc(50% - 30px);
+        border: 6px solid #3e84ae;
+        border-top-color: #d1e6f9;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: animate-preloader 1s linear infinite;
+      }
+
+      @keyframes animate-preloader {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Top Bar */
+      #topbar .contact-info i {
+        width: 16px;
+        height: 16px;
+      }
+
+      .trustpilot-icon {
+        height: 1.2em;
+        margin-bottom: 0.1em;
+        width: auto;
+        vertical-align: middle;
+      }
+
+      #topbar {
+        transition: all 0.3s ease;
+      }
+
+      #topbar.topbar-scrolled {
+        top: -40px;
+      }
+
+      #topbar .social-links a,
+      #topbar .contact-info a {
+        color: #00325a;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      #topbar .social-links a:hover {
+        transform: scale(1.2);
+      }
+
+      #topbar .contact-info a:hover {
+        transform: scale(1.05);
+      }
+
+      /* Header */
+      #header {
+        background: white;
+        z-index: 997;
+        padding: 8px 0;
+        top: 40px;
+        box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+      }
+
+      #header.header-scrolled {
+        top: 0;
+      }
+
+      #header .logo img {
+        max-width: 100%;
+        max-height: 48px;
+        aspect-ratio: 368 / 101;
+      }
+
+      .navbar {
+        padding: 0;
+      }
+
+      .navbar ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        align-items: center;
+      }
+
+      @media (max-width: 992px) {
+        .navbar ul {
+          display: none;
+        }
+      }
+
+      /* Hero */
       #hero {
         width: 100%;
         height: 84vh;
         background: url("assets/img/hero-bg.webp") center top;
         background-size: cover;
         background-repeat: no-repeat;
+        margin-top: 60px;
         margin-bottom: -180px;
       }
+
+      #hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.66);
+        z-index: 2;
+      }
+
+      #hero .container {
+        z-index: 3;
+      }
+
+      #hero .container .main-logo {
+        max-width: 50%;
+        aspect-ratio: 735 / 202;
+        margin: 0;
+        padding: 0;
+      }
+
       @media (max-width: 1199px) {
         #hero {
           background: url("assets/img/hero-bg-1200.webp") center top;
-          background-size: cover;
           background-repeat: no-repeat;
-          margin-bottom: max(-20vh, -100px);
+          background-size: cover;
+          margin-bottom: -120px;
         }
       }
+
       @media (max-width: 767px) {
         #hero {
           background: url("assets/img/hero-bg-768.webp") center top;
-          background-size: cover;
           background-repeat: no-repeat;
-          margin-bottom: max(-16vh, -90px);
+          background-size: cover;
+          margin-bottom: -90px;
+        }
+        #hero .container .main-logo {
+          max-width: 64%;
         }
       }
     </style>
@@ -142,19 +258,19 @@
 
   <body>
     <!-- ======= Top Bar ======= -->
-    <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div id="topbar" class="d-flex fixed-top">
       <div class="container d-flex justify-content-between">
-        <div class="contact-info d-flex align-items-center">
-          <a class="ms-1" href="mailto:info@tandklinikken-frederikssund.dk" target="_blank">
-            <i class="bi bi-envelope pe-0"></i>
+        <div class="d-flex contact-info d-flex align-items-center">
+          <a href="mailto:info@tandklinikken-frederikssund.dk" target="_blank">
+            <i class="bi bi-envelope pe-0 ms-0" style="width: 16px; height: 16px"></i>
             info@tandklinikken-frederikssund.dk
           </a>
           <a href="tel:47 31 04 42">
-            <i class="bi bi-telephone ms-3 pe-0"></i>
+            <i class="bi bi-telephone ms-3 pe-0" style="width: 16px; height: 16px"></i>
             <span>47 31 04 42</span>
           </a>
           <a href="https://maps.app.goo.gl/FwnERW5XAwo3J58V7" target="_blank">
-            <i class="bi bi-geo-alt ms-3 pe-0"></i>
+            <i class="bi bi-geo-alt ms-3 pe-0" style="width: 16px; height: 16px"></i>
             <span class="ms-0 d-sm-inline hiddenUnder450">Færgeparken 23</span
             ><span class="d-none d-md-inline">,</span
             ><span class="d-none d-md-inline"> Frederikssund</span>
@@ -166,7 +282,7 @@
         </div>
         <div class="d-flex social-links align-items-center">
           <a href="https://maps.app.goo.gl/FwnERW5XAwo3J58V7" target="_blank" class="google">
-            <i class="bi bi-google d-none d-sm-block" width="50"></i>
+            <i class="bi bi-google d-none d-sm-block" width="20"></i>
           </a>
           <a
             href="https://dk.trustpilot.com/review/www.tandklinikken-frederikssund.dk"
@@ -177,7 +293,7 @@
               src="assets/img/trustpilot.svg"
               alt="Trustpilot"
               class="trustpilot-icon d-none d-sm-block"
-              width="50"
+              width="20"
             />
           </a>
         </div>
@@ -223,15 +339,15 @@
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
-      <div class="container">
+      <div class="container align-items-center">
         <h1 aria-hidden="true">Tandklinikken Frederikssund</h1>
         <a href="#about" class="logo scrollto">
           <img
             src="assets/img/onlytextandlogo.webp"
-            alt="Tandklinikken Frederikssund"
-            class="img-fluid main-logo"
+            alt="Hero Logo"
             width="735"
             height="202"
+            class="img-fluid main-logo"
           />
         </a>
         <h2>Her kan du føle dig tryg</h2>
@@ -411,6 +527,8 @@
                         loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
+                        width="90"
+                        height="90"
                       />
                       <h3>H. Jensen</h3>
                       <h4>★★★★★</h4>
@@ -434,6 +552,8 @@
                         loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
+                        width="90"
+                        height="90"
                       />
                       <h3>D. Birk</h3>
                       <h4>★★★★★</h4>
@@ -457,6 +577,8 @@
                         loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
+                        width="90"
+                        height="90"
                       />
                       <h3>A. Qamar</h3>
                       <h4>★★★★★</h4>
@@ -479,6 +601,8 @@
                         loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
+                        width="90"
+                        height="90"
                       />
                       <h3>T. Henriksen</h3>
                       <h4>★★★★★</h4>
@@ -502,7 +626,9 @@
                         src="assets/img/testimonials/reviewMale.webp"
                         loading="lazy"
                         class="testimonial-img"
-                        alt=""
+                        alt="patientudtalelse"
+                        width="90"
+                        height="90"
                       />
                       <h3>D. Jensen</h3>
                       <h4>★★★★★</h4>
@@ -526,6 +652,8 @@
                         loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
+                        width="90"
+                        height="90"
                       />
                       <h3>R. R. S.</h3>
                       <h4>★★★★★</h4>
@@ -578,7 +706,7 @@
                   minlength="5"
                   required
                 />
-                <div class="invalid-feedback">Indtast dit fulde</div>
+                <div class="invalid-feedback">Indtast dit fulde navn</div>
               </div>
               <div class="col-md-3 form-group mt-3 mt-md-0">
                 <input
@@ -625,12 +753,12 @@
                   name="Foretrukne dato"
                   class="form-control datepicker"
                   id="date"
-                  placeholder="Evt. foretrukne dato"
+                  placeholder="Foretrukne Dato"
                 />
               </div>
               <div class="col-md-3 form-group mt-3">
                 <select name="Foretrukne Tidspunkt" id="preferred_time" class="form-select">
-                  <option value="Ingen præferencer">Evt. foretrukne tidspunkt</option>
+                  <option value="Ingen præferencer">Foretrukne Tidspunkt</option>
                   <option value="Morgen fra kl. 8.30 til 10.00">
                     Morgen fra kl. 8.30 til 10.00
                   </option>
@@ -647,7 +775,7 @@
               </div>
               <div class="col-md-3 form-group mt-3">
                 <select name="Behandling" id="treatment" class="form-select">
-                  <option value="Ikke valgt">Evt. behandling</option>
+                  <option value="Ikke valgt">Behandling</option>
                   <option value="Tandeftersyn">Tandeftersyn</option>
                   <option value="Tandpine">Tandpine</option>
                   <option value="Knækket tand">Knækket Tand</option>
@@ -662,7 +790,7 @@
               </div>
               <div class="col-md-3 form-group mt-3">
                 <select name="Foretrukne behandler" id="doctor" class="form-select">
-                  <option value="Ingen præferencer">Evt. valg af behandler</option>
+                  <option value="Ingen præferencer">Behandler</option>
                   <option value="Marc, Tandlæge">Marc, Tandlæge</option>
                   <option value="Annette, Tandlæge">Annette, Tandlæge</option>
                   <option value="Anna, Tandlæge">Anna, Tandlæge</option>
@@ -884,6 +1012,8 @@
                     loading="lazy"
                     alt="Receptionen"
                     class="img-fluid"
+                    width="300"
+                    height="200"
                   />
                 </a>
               </div>
@@ -897,6 +1027,8 @@
                     loading="lazy"
                     alt="Venteværelset"
                     class="img-fluid"
+                    width="300"
+                    height="200"
                   />
                 </a>
               </div>
@@ -910,6 +1042,8 @@
                     loading="lazy"
                     alt="En igangværende tandlæge undersøgelse"
                     class="img-fluid"
+                    width="300"
+                    height="200"
                   />
                 </a>
               </div>
@@ -923,6 +1057,8 @@
                     loading="lazy"
                     alt="Stemningsbillede fra klinikken"
                     class="img-fluid"
+                    width="300"
+                    height="200"
                   />
                 </a>
               </div>
@@ -936,6 +1072,8 @@
                     loading="lazy"
                     alt="Bygningen udefra"
                     class="img-fluid"
+                    width="300"
+                    height="200"
                   />
                 </a>
               </div>
@@ -949,6 +1087,8 @@
                     loading="lazy"
                     alt="Fordelingsgangen i klinikken"
                     class="img-fluid"
+                    width="300"
+                    height="200"
                   />
                 </a>
               </div>
@@ -962,6 +1102,8 @@
                     loading="lazy"
                     alt="Stemningsbillede fra klinikken"
                     class="img-fluid"
+                    width="300"
+                    height="200"
                   />
                 </a>
               </div>
@@ -991,6 +1133,8 @@
                     loading="lazy"
                     class="img-fluid"
                     alt="Tandlæge Marc"
+                    width="150"
+                    height="150"
                   />
                 </div>
                 <div class="member-info">
@@ -1009,6 +1153,8 @@
                     loading="lazy"
                     class="img-fluid"
                     alt="Tandlæge Annette"
+                    width="150"
+                    height="150"
                   />
                 </div>
                 <div class="member-info">
@@ -1027,6 +1173,8 @@
                     loading="lazy"
                     class="img-fluid"
                     alt="Tandlæge Anna"
+                    width="150"
+                    height="150"
                   />
                 </div>
                 <div class="member-info">
@@ -1045,6 +1193,8 @@
                     loading="lazy"
                     class="img-fluid"
                     alt="Tandlæge Charlotte"
+                    width="150"
+                    height="150"
                   />
                 </div>
                 <div class="member-info">
@@ -1063,6 +1213,8 @@
                     loading="lazy"
                     class="img-fluid"
                     alt="Tandlæge Majken"
+                    width="150"
+                    height="150"
                   />
                 </div>
                 <div class="member-info">
@@ -1081,6 +1233,8 @@
                     loading="lazy"
                     class="img-fluid"
                     alt="Tandlæge Sofie"
+                    width="150"
+                    height="150"
                   />
                 </div>
                 <div class="member-info">
@@ -1101,6 +1255,8 @@
                     loading="lazy"
                     class="img-fluid"
                     alt="Tandplejer Louise"
+                    width="150"
+                    height="150"
                   />
                 </div>
                 <div class="member-info">
@@ -1119,6 +1275,8 @@
                     loading="lazy"
                     class="img-fluid"
                     alt="Tandplejer Stina"
+                    width="150"
+                    height="150"
                   />
                 </div>
                 <div class="member-info">
@@ -1139,6 +1297,8 @@
                     loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistent Gitte"
+                    width="150"
+                    height="150"
                   />
                 </div>
                 <div class="member-info">
@@ -1157,6 +1317,8 @@
                     loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistent Hanne"
+                    width="150"
+                    height="150"
                   />
                 </div>
                 <div class="member-info">
@@ -1175,6 +1337,8 @@
                     loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistent Katja"
+                    width="150"
+                    height="150"
                   />
                 </div>
                 <div class="member-info">
@@ -1193,6 +1357,8 @@
                     loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistent Line"
+                    width="150"
+                    height="150"
                   />
                 </div>
                 <div class="member-info">
@@ -1211,6 +1377,8 @@
                     loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistent Rikke"
+                    width="150"
+                    height="150"
                   />
                 </div>
                 <div class="member-info">
@@ -1229,6 +1397,8 @@
                     loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistent Shuko"
+                    width="150"
+                    height="150"
                   />
                 </div>
                 <div class="member-info">
@@ -1249,6 +1419,8 @@
                     loading="lazy"
                     class="img-fluid"
                     alt="Administrator Jesper"
+                    width="150"
+                    height="150"
                   />
                 </div>
                 <div class="member-info">
@@ -1267,6 +1439,8 @@
                     loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistentelev Lene"
+                    width="150"
+                    height="150"
                   />
                 </div>
                 <div class="member-info">
@@ -1811,8 +1985,8 @@
     ></a>
 
     <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
 
