@@ -271,7 +271,7 @@
       /* Hero */
       #hero {
         width: 100%;
-        height: 84vh;
+        height: clamp(420px, 84vh, 1200px);
         background: url("assets/img/hero-bg.webp") center top;
         background-size: cover;
         background-repeat: no-repeat;
@@ -332,6 +332,7 @@
 
       @media (max-width: 1199px) {
         #hero {
+          height: clamp(420px, 84vh, 1000px);
           background: url("assets/img/hero-bg-1200.webp") center top;
           background-repeat: no-repeat;
           background-size: cover;
@@ -362,6 +363,7 @@
 
       @media (max-width: 767px) {
         #hero {
+          height: clamp(360px, 84vh, 800px);
           background: url("assets/img/hero-bg-768.webp") center top;
           background-repeat: no-repeat;
           background-size: cover;
@@ -484,7 +486,7 @@
         <a href="#about" class="logo scrollto">
           <img
             src="assets/img/onlytextandlogo.webp"
-            alt="Hero Logo"
+            alt="Tandklinikken Frederikssunds Logo og billede af to tandlæger"
             width="735"
             height="202"
             class="img-fluid main-logo"
