@@ -4,17 +4,27 @@ This repository contains the source code for the [Tandklinikken Frederikssund we
 
 ## Project Structure
 
-- **assets/**: Images and other assets used in the website.
-- **css/**: Stylesheets for the website.
-- **js/**: JavaScript files for interactive elements.
-- **index.html**: Main homepage.
+dentistFrs/
+├─ src/ # Source files
+│ ├─ assets/ # Images, vendor libraries
+│ ├─ scss/ # SCSS source files
+│ ├─ css/ # Compiled CSS
+│ ├─ js/ # JavaScript files
+│ └─ index.html # Main homepage
+├─ dist/ # Production build output
+├─ package.json # Project dependencies and scripts
+├─ vite.config.js # Vite configuration
+└─ purgecss.config.js # CSS optimization config
 
 ## Features
 
-- Responsive design for various devices.
-- User-friendly navigation.
-- Contact forms for easy communication.
-- Informative sections about services and team members.
+- Responsive design for various devices
+- User-friendly navigation
+- Contact forms for easy communication
+- Informative sections about services and team members
+- Optimized build process with Vite
+- SCSS compilation
+- CSS optimization with PurgeCSS
 
 ## Installation
 
@@ -22,24 +32,40 @@ This repository contains the source code for the [Tandklinikken Frederikssund we
    ```sh
    git clone https://github.com/aste/dentistFrs.git
    ```
-2. Navigate to the project directory:
+2. Navigate to the project directory::
    ```sh
    cd dentistFrs
    ```
-3. Open `index.html` in your web browser to view the homepage. Use `inner-page.html` for additional pages.
+3. Clone the repository:
+   ```sh
+   npm install
+   ```
 
 ## Development
 
 ### Prerequisites
 
-- A modern web browser (e.g., Chrome, Firefox, Safari).
-- A code editor (e.g., VS Code, Sublime Text).
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+- A modern web browser
+- A code editor (e.g., VS Code, Sublime Text)
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run sass` - Watch and compile SASS files
+- `npm run purge` - Run PurgeCSS optimization
+- `npm run clean` - Clean build directory
 
 ### Running Locally
 
-1. Open the project directory in your code editor.
-2. Open `index.html` in your web browser to view the homepage.
-3. For changes, edit the HTML, CSS, or JS files in the `assets` folder and refresh the browser to see updates.
+1. Start the development server:
+   `npm run dev`
+2. Open your browser to http://localhost:3000
+3. Make changes to files in the src directory
+4. The browser will automatically refresh to show your changes
 
 ## Contributing
 

@@ -1,5 +1,6 @@
-module.exports = {
-  content: ["./index.html", "./js/*.js", "./assets/**/*.html", "./assets/**/*.js"],
-  css: ["./assets/css/*.css", "./assets/vendor/**/*.css", "./css/style.css"],
-  output: "./css/",
+export default {
+  content: ["./src/index.html", "./src/js/*.js"],
+  css: ["./src/css/*.css", "./src/assets/vendor/**/*.css"],
+  output: "./src/css/",
+  safelist: [/swiper-/, /modal-/, /show/, /active/, /collapsed/, /collapse/],
 };

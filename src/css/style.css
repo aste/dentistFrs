@@ -891,6 +891,7 @@ section {
 
 .testimonials .testimonial-item {
   box-sizing: content-box;
+  border-radius: 8px;
   padding: 30px 30px 30px 60px;
   margin: 30px 15px;
   min-height: 200px;
@@ -1051,7 +1052,6 @@ section {
 
 .contact .appointment-form {
   width: 100%;
-  background: var(--color-white);
 }
 
 .contact .appointment-form .form-group {
