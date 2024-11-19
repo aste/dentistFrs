@@ -1,6 +1,9 @@
-export default {
-  content: ["./src/index.html", "./src/js/*.js"],
-  css: ["./src/css/*.css", "./src/assets/vendor/**/*.css"],
+// purgecss.config.js
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  css: ["./src/**/*.css"],
   output: "./src/css/",
-  safelist: [/swiper-/, /modal-/, /show/, /active/, /collapsed/, /collapse/],
+  safelist: {
+    standard: [/swiper-/, /modal-/, /show/, /active/, /collapsed/, /collapse/],
+  },
 };
