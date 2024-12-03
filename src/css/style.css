@@ -110,7 +110,6 @@ h2 + p {
 # Top Bar
 --------------------------------------------------------------*/
 
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -487,10 +486,20 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about .icon-boxes h4 {
-  font-size: 18px;
-  color: var(--color-grey);
-  margin-bottom: 15px;
+
+.about h2 {
+  margin-top: 1.25rem;
+}
+
+.about .section-title p {
+  text-align: left;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about .icon-box p {
+  text-align: left;
+  margin-bottom: 2rem;
 }
 
 .about .icon-boxes h3 {
@@ -501,12 +510,19 @@ section {
 }
 
 .about .icon-boxes h4 {
+  font-size: 18px;
+  color: var(--color-grey);
+  margin-bottom: 15px;
+}
+
+.about .icon-boxes h4 {
   color: var(--color-dark-blue);
 }
 
-.about .icon-box {
-  margin-top: 40px;
+.about .icon-boxes {
+  padding: 2.5rem 4rem 1rem 4rem
 }
+
 
 .about .icon-box .icon {
   float: left;
@@ -557,7 +573,7 @@ section {
 }
 
 .about .video-box {
-  background: url("../assets/img/about1.webp") center center no-repeat;
+  background: url("../assets/img/about1.webp") right bottom 10% no-repeat;
   background-size: cover;
   min-height: 500px;
 }
