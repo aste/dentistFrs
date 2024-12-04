@@ -41,29 +41,6 @@
     <noscript><link rel="stylesheet" href="src/css/style.css" /></noscript>
 
     <!-- Preloaded Files -->
-    <link rel="preload" as="image" href="src/assets/img/hero-bg.webp" type="image/webp" />
-    <link rel="preload" as="image" href="src/assets/img/onlytextandlogo.webp" />
-    <link
-      rel="preload"
-      as="image"
-      href="src/assets/img/hero-bg-1200.webp"
-      media="(max-width: 1199px)"
-      type="image/webp"
-    />
-    <link
-      rel="preload"
-      as="image"
-      href="src/assets/img/hero-bg-768.webp"
-      media="(max-width: 767px)"
-      type="image/webp"
-    />
-    <link
-      rel="preload"
-      as="font"
-      href="src/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
     <link
       rel="preload"
       as="font"
@@ -266,7 +243,8 @@
       #hero {
         width: 100%;
         height: clamp(420px, 84vh, 1200px);
-        background: url("src/assets/img/hero-bg.webp") center top;
+        /* background: url("../assets/img/hero-bg.webp") no-repeat center top/cover; */
+        background: no-repeat center top/cover;
         background-size: cover;
         background-repeat: no-repeat;
         margin-top: 60px;
@@ -320,7 +298,8 @@
       @media (max-width: 1199px) {
         #hero {
           height: clamp(420px, 84vh, 1000px);
-          background: url("src/assets/img/hero-bg-1200.webp") center top;
+          /* background: url("../assets/img/hero-bg-1200.webp") no-repeat center top/cover; */
+          background: no-repeat center top/cover;
           background-repeat: no-repeat;
           background-size: cover;
           margin-bottom: -120px;
@@ -346,7 +325,8 @@
       @media (max-width: 767px) {
         #hero {
           height: clamp(360px, 84vh, 800px);
-          background: url("src/assets/img/hero-bg-768.webp") center top;
+          /* background: url("../assets/img/hero-bg-768.webp") no-repeat center top/cover; */
+          background: no-repeat center top/cover;
           background-repeat: no-repeat;
           background-size: cover;
           margin-bottom: -90px;
@@ -399,6 +379,26 @@
     </style>
 
     <!-- Scripts -->
+    <script>
+      const baseUrl = import.meta.env.PROD ? '/assets/img/' : 'src/assets/img/';
+      const mobileQuery = window.matchMedia("(max-width: 767px)");
+      const tabletQuery = window.matchMedia("(max-width: 1199px)");
+
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
+      link.type = "image/webp";
+
+      if (mobileQuery.matches) {
+        link.href = `${baseUrl}hero-bg-768.webp`;
+      } else if (tabletQuery.matches) {
+        link.href = `${baseUrl}hero-bg-1200.webp`;
+      } else {
+        link.href = `${baseUrl}hero-bg.webp`;
+      }
+
+      document.head.appendChild(link);
+    </script>
     <script src="https://web3forms.com/client/script.js" async defer></script>
   </head>
 
@@ -496,7 +496,7 @@
         <a href="#about" class="logo scrollto">
           <img
             src="src/assets/img/onlytextandlogo.webp"
-            class="main-logo"
+            class="main-logo img-fluid"
             width="735"
             height="202"
             alt="Tandklinikken Frederikssunds Logo"

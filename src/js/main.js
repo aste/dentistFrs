@@ -1,34 +1,54 @@
 // Import vendor dependencies
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import GLightbox from 'glightbox'
-import Swiper from 'swiper'
-import IMask from 'imask'
-import flatpickr from "flatpickr"
-import { Danish } from "flatpickr/dist/l10n/da.js"
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import GLightbox from "glightbox";
+import Swiper from "swiper";
+import IMask from "imask";
+import flatpickr from "flatpickr";
+import { Danish } from "flatpickr/dist/l10n/da.js";
 
 // Import custom scripts
-import './appointment-form.js'
-import './contact-form.js'
+import "./appointment-form.js";
+import "./contact-form.js";
+
+// Important large above the fold content
+import heroLarge from "../assets/img/hero-bg.webp";
+import heroMedium from "../assets/img/hero-bg-1200.webp";
+import heroSmall from "../assets/img/hero-bg-768.webp";
+
+// Set hero background based on viewport
+function setHeroBackground() {
+  const hero = document.getElementById("hero");
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    hero.style.backgroundImage = `url(${heroSmall})`;
+  } else if (window.matchMedia("(max-width: 1199px)").matches) {
+    hero.style.backgroundImage = `url(${heroMedium})`;
+  } else {
+    hero.style.backgroundImage = `url(${heroLarge})`;
+  }
+}
+
+window.addEventListener("load", setHeroBackground);
+window.addEventListener("resize", setHeroBackground);
 
 // Initialize Flatpickr with Danish locale
-flatpickr.localize(Danish)
+flatpickr.localize(Danish);
 document.addEventListener("DOMContentLoaded", function () {
-    flatpickr("#date", {
-        locale: "da",
-    });
+  flatpickr("#date", {
+    locale: "da",
+  });
 });
 
 // Initialize GLightbox
 const lightbox = GLightbox({
-    selector: '.glightbox',
-    touchNavigation: true,
-    loop: true,
-    autoplayVideos: true
+  selector: ".glightbox",
+  touchNavigation: true,
+  loop: true,
+  autoplayVideos: true,
 });
 
 // Initialize Gallery Lightbox
 const galleryLightbox = GLightbox({
-    selector: '.gallery-lightbox'
+  selector: ".gallery-lightbox",
 });
 
 // main.js Code
