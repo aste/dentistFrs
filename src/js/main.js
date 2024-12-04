@@ -1,33 +1,33 @@
 // Import vendor dependencies
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import GLightbox from 'glightbox'
-import Swiper from 'swiper'
-import flatpickr from "flatpickr"
-import { Danish } from "flatpickr/dist/l10n/da.js"
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import GLightbox from "glightbox";
+import Swiper from "swiper";
+import flatpickr from "flatpickr";
+import { Danish } from "flatpickr/dist/l10n/da.js";
 
 // Import custom scripts
-import './appointment-form.js'
-import './contact-form.js'
+import "./appointment-form.js";
+import "./contact-form.js";
 
 // Initialize Flatpickr with Danish locale
-flatpickr.localize(Danish)
+flatpickr.localize(Danish);
 document.addEventListener("DOMContentLoaded", function () {
-    flatpickr("#date", {
-        locale: "da",
-    });
+  flatpickr("#date", {
+    locale: "da",
+  });
 });
 
 // Initialize GLightbox
 const lightbox = GLightbox({
-    selector: '.glightbox',
-    touchNavigation: true,
-    loop: true,
-    autoplayVideos: true
+  selector: ".glightbox",
+  touchNavigation: true,
+  loop: true,
+  autoplayVideos: true,
 });
 
 // Initialize Gallery Lightbox
 const galleryLightbox = GLightbox({
-    selector: '.gallery-lightbox'
+  selector: ".gallery-lightbox",
 });
 
 // main.js Code
@@ -247,5 +247,4 @@ const galleryLightbox = GLightbox({
       locale: "da",
     });
   });
-
 })();

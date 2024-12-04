@@ -40,43 +40,25 @@
     <link rel="stylesheet" href="src/css/style.css" />
     <noscript><link rel="stylesheet" href="src/css/style.css" /></noscript>
 
-    <!-- Preloaded Files -->
-    <link rel="preload" as="image" href="src/assets/img/hero-bg.webp" type="image/webp" />
-    <link
-      rel="preload"
-      as="image"
-      href="src/assets/img/hero-bg-1200.webp"
-      media="(max-width: 1199px)"
-      type="image/webp"
-    />
-    <link
-      rel="preload"
-      as="image"
-      href="src/assets/img/hero-bg-768.webp"
-      media="(max-width: 767px)"
-      type="image/webp"
-    />
-    <link
-      rel="preload"
-      as="font"
-      href="src/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      as="font"
-      href="src/assets/vendor/boxicons/fonts/boxicons.woff2"
-      type="font/woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="src/assets/vendor/bootstrap/css/bootstrap.min.css"
-      as="style"
-      type="text/css"
-    />
-    <link rel="preload" href="src/css/style.css" as="style" type="text/css" />
+    <!-- Preloaded Files & Scripts -->
+    <script>
+      const viewport = window.innerWidth;
+      const preload = document.createElement("link");
+      preload.rel = "preload";
+      preload.as = "image";
+      preload.type = "image/webp";
+      preload.fetchpriority = "high";
+
+      if (viewport >= 1200) {
+        preload.href = "/assets/img/hero-bg.webp";
+      } else if (viewport >= 769) {
+        preload.href = "/assets/img/hero-bg-1200.webp";
+      } else {
+        preload.href = "/assets/img/hero-bg-768.webp";
+      }
+      document.head.appendChild(preload);
+    </script>
+
 
     <style>
       /* Preloader */
@@ -592,10 +574,8 @@
       <section id="about" class="about p-0 section-bg">
         <div class="container-fluid">
           <div class="row">
-            <div
-              class="col-xl-5 col-lg-6 video-box d-flex align-items-end position-relative"
-            ></div>
-            
+            <div class="col-xl-5 col-lg-6 video-box d-flex align-items-end position-relative"></div>
+
             <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column">
               <div class="section-title">
                 <h2>Velkommen til Tandklinikken Frederikssund</h2>
@@ -624,7 +604,8 @@
                 <h4 class="title">Frederikssund Mest Populære Tandlæge</h4>
                 <p class="description">
                   Som Frederikssunds førende tandklinik er vi stolte over at være det foretrukne
-                  valg for vores lokale samfund. Vores dedikation til kvalitet og patientpleje har gjort os til den mest populære tandlægeklinik i området.
+                  valg for vores lokale samfund. Vores dedikation til kvalitet og patientpleje har
+                  gjort os til den mest populære tandlægeklinik i området.
                 </p>
               </div>
 
@@ -633,7 +614,8 @@
                 <h4 class="title">Høj Kvalitet til en Fair Pris</h4>
                 <p class="description">
                   På Tandklinikken Frederikssund tilbyder vi behandlinger af højeste standard til
-                  fair og konkurrencedygtige priser. Vores fokus på faglig ekspertise sikrer, at du får den bedste pleje uden at gå på kompromis med kvaliteten.
+                  fair og konkurrencedygtige priser. Vores fokus på faglig ekspertise sikrer, at du
+                  får den bedste pleje uden at gå på kompromis med kvaliteten.
                 </p>
               </div>
 
