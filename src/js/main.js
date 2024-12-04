@@ -2,7 +2,6 @@
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import GLightbox from 'glightbox'
 import Swiper from 'swiper'
-import IMask from 'imask'
 import flatpickr from "flatpickr"
 import { Danish } from "flatpickr/dist/l10n/da.js"
 
@@ -249,8 +248,4 @@ const galleryLightbox = GLightbox({
     });
   });
 
-  /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
 })();

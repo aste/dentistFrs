@@ -1,3 +1,5 @@
+import IMask from "imask";
+
 document.addEventListener("DOMContentLoaded", function () {
   const alertParent = document.getElementById("appointment-status");
   const form = document.getElementById("appointment-form");
@@ -75,8 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   })();
 
-
-  
   const submitAppointmentForm = () => {
     const formData = new FormData(form);
     const object = Object.fromEntries(formData);
