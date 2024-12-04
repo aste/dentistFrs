@@ -41,7 +41,6 @@
     <noscript><link rel="stylesheet" href="src/css/style.css" /></noscript>
 
     <!-- Preloaded Files & Scripts -->
-    <link rel="preload" as="image" href="src/assets/img/onlytextandlogo.webp" type="image/webp" />
     <script>
       const viewport = window.innerWidth;
       const preload = document.createElement("link");
@@ -60,42 +59,10 @@
       document.head.appendChild(preload);
     </script>
 
+    <link rel="preload" as="image" href="src/assets/img/onlytextandlogo.webp" type="image/webp" />
+    <link rel="preload" as="image" href="src/assets/img/logodarkblue.webp" type="image/webp" />
+
     <style>
-      /* Preloader */
-      #preloader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 9999;
-        overflow: hidden;
-        background: white;
-      }
-
-      #preloader:before {
-        content: "";
-        position: fixed;
-        top: calc(50% - 30px);
-        left: calc(50% - 30px);
-        border: 6px solid #3e84ae;
-        border-top-color: #d1e6f9;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        animation: animate-preloader 1s linear infinite;
-      }
-
-      @keyframes animate-preloader {
-        0% {
-          transform: rotate(0deg);
-        }
-
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-
       /* Top Bar */
       #topbar {
         background: var(--color-white-blue);
@@ -245,13 +212,38 @@
 
       /* Hero */
       #hero {
+        height: clamp(360px, 84vh, 800px);
+        background: url("src/assets/img/hero-bg-768.webp") center top;
+        margin-bottom: -90px;
+        margin-top: 60px;
+
         width: 100%;
-        height: clamp(420px, 84vh, 1200px);
-        background: url("src/assets/img/hero-bg.webp") center top;
         background-size: cover;
         background-repeat: no-repeat;
-        margin-top: 60px;
-        margin-bottom: -165px;
+      }
+
+      @media (min-width: 768px) and (max-width: 1199px) {
+        #hero {
+          height: clamp(420px, 84vh, 1000px);
+          background: url("src/assets/img/hero-bg-1200.webp") center top;
+          margin-bottom: -120px;
+          background-attachment: fixed;
+          width: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        #hero {
+          height: clamp(420px, 84vh, 1200px);
+          background: url("src/assets/img/hero-bg.webp") center top;
+          margin-bottom: -165px;
+          background-attachment: fixed;
+          width: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
       }
 
       #hero h2 {
@@ -298,17 +290,6 @@
         background: #1abc9c;
       }
 
-      @media (max-width: 1199px) {
-        #hero {
-          height: clamp(420px, 84vh, 1000px);
-          background: url("src/assets/img/hero-bg-1200.webp") center top;
-          background-repeat: no-repeat;
-          background-size: cover;
-          margin-bottom: -120px;
-          background-attachment: fixed;
-        }
-      }
-
       @media (max-width: 992px) {
         #hero .container h2 {
           font-size: 1rem;
@@ -325,14 +306,6 @@
       }
 
       @media (max-width: 767px) {
-        #hero {
-          height: clamp(360px, 84vh, 800px);
-          background: url("src/assets/img/hero-bg-768.webp") center top;
-          background-repeat: no-repeat;
-          background-size: cover;
-          margin-bottom: -90px;
-        }
-
         #hero .container .main-logo {
           max-width: 64%;
         }
@@ -441,6 +414,8 @@
             width="368"
             height="101"
             class="img-fluid logo-img"
+            loading="eager"
+            fetchpriority="high"
           />
         </a>
 
@@ -453,6 +428,8 @@
                 width="217"
                 height="60"
                 class="img-fluid logo-img"
+                loading="eager"
+                fetchpriority="high"
               />
             </div>
             <li><a class="nav-link scrollto active" href="#hero">Forside</a></li>
@@ -2108,8 +2085,6 @@
       </div>
     </div>
     <!-- End Modal -->
-
-    <div id="preloader"></div>
     <a href="#hero" class="back-to-top scrollto d-flex align-items-center justify-content-center"
       ><i class="bi bi-arrow-up-short"></i
     ></a>
