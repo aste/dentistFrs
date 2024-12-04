@@ -41,6 +41,7 @@
     <noscript><link rel="stylesheet" href="src/css/style.css" /></noscript>
 
     <!-- Preloaded Files & Scripts -->
+    <link rel="preload" as="image" href="src/assets/img/onlytextandlogo.webp" type="image/webp" />
     <script>
       const viewport = window.innerWidth;
       const preload = document.createElement("link");
@@ -58,7 +59,6 @@
       }
       document.head.appendChild(preload);
     </script>
-
 
     <style>
       /* Preloader */
@@ -481,6 +481,8 @@
             width="735"
             height="202"
             class="img-fluid main-logo"
+            loading="eager"
+            fetchpriority="high"
           />
         </a>
         <h2>Her kan du føle dig tryg</h2>

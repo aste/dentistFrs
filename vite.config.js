@@ -1,51 +1,56 @@
-import { defineConfig } from 'vite'
-import { resolve } from 'path'
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
+import { defineConfig } from "vite";
+import { resolve } from "path";
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 export default defineConfig({
-  base: './',
+  base: "./",
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     emptyOutDir: true,
-    assetsDir: 'assets',
+    assetsDir: "assets",
     rollupOptions: {
-      input: resolve(__dirname, 'index.html'),
+      input: resolve(__dirname, "index.html"),
       output: {
         manualChunks: {
-          vendor: ['bootstrap', 'swiper', 'glightbox', 'flatpickr', 'imask'],
+          vendor: ["bootstrap", "swiper", "glightbox", "flatpickr", "imask"],
         },
         assetFileNames: ({ name }) => {
           if (/\.(woff|woff2)$/.test(name)) {
-            return 'assets/fonts/[name][extname]'
+            return "assets/fonts/[name][extname]";
           }
           if (/\.(png|jpe?g|gif|webp|svg)$/.test(name)) {
-            return 'assets/img/[name][extname]'
+            return "assets/img/[name][extname]";
           }
           if (/\.css$/.test(name)) {
-            return 'assets/css/[name][extname]'
+            // Check if it's the main style.css file
+            if (name.includes("style.css")) {
+              return "assets/css/critical[extname]";
+            }
+            // Other CSS files
+            return "assets/css/[name][extname]";
           }
           if (/\.webmanifest$/.test(name)) {
-            return '[name][extname]'
+            return "[name][extname]";
           }
-          return 'assets/[ext]/[name][extname]'
+          return "assets/[ext]/[name][extname]";
         },
-        chunkFileNames: 'assets/js/[name].js',
-        entryFileNames: 'assets/js/[name].js',
-      }
+        chunkFileNames: "assets/js/[name].js",
+        entryFileNames: "assets/js/[name].js",
+      },
     },
-    minify: 'terser',
+    minify: "terser",
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true
-      }
-    }
+        drop_debugger: true,
+      },
+    },
   },
   preview: {
     port: 4173,
     strictPort: true,
     host: true,
-    open: true
+    open: true,
   },
   plugins: [
     ViteImageOptimizer({
@@ -56,7 +61,7 @@ export default defineConfig({
         multipass: true,
         plugins: [
           {
-            name: 'preset-default',
+            name: "preset-default",
             params: {
               overrides: {
                 removeViewBox: false,
@@ -81,6 +86,6 @@ export default defineConfig({
         alphaQuality: 80,
         force: false,
       },
-    })
-  ]
-})
+    }),
+  ],
+});
