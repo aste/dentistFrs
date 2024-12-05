@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+import cssnano from "cssnano";
 
 export default defineConfig({
   base: "./",
@@ -8,6 +9,7 @@ export default defineConfig({
     outDir: "dist",
     emptyOutDir: true,
     assetsDir: "assets",
+    cssCodeSplit: false, // Keep CSS as one file for SPA
     rollupOptions: {
       input: resolve(__dirname, "index.html"),
       output: {
@@ -22,20 +24,15 @@ export default defineConfig({
             return "assets/img/[name][extname]";
           }
           if (/\.css$/.test(name)) {
-            // Check if it's the main style.css file
-            if (name.includes("style.css")) {
-              return "assets/css/critical[extname]";
-            }
-            // Other CSS files
-            return "assets/css/[name][extname]";
+            return "assets/css/[name].[hash][extname]";
           }
           if (/\.webmanifest$/.test(name)) {
             return "[name][extname]";
           }
           return "assets/[ext]/[name][extname]";
         },
-        chunkFileNames: "assets/js/[name].js",
-        entryFileNames: "assets/js/[name].js",
+        chunkFileNames: "assets/js/[name].[hash].js",
+        entryFileNames: "assets/js/[name].[hash].js",
       },
     },
     minify: "terser",
@@ -43,7 +40,27 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
+        pure_funcs: ["console.log"],
       },
+      format: {
+        comments: false,
+      },
+    },
+  },
+  css: {
+    postcss: {
+      plugins: [
+        cssnano({
+          preset: [
+            "default",
+            {
+              discardComments: { removeAll: true },
+              normalizeWhitespace: true,
+              minifyFontValues: { removeQuotes: false },
+            },
+          ],
+        }),
+      ],
     },
   },
   preview: {
