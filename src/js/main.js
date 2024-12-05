@@ -20,17 +20,33 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Initialize GLightbox
-const lightbox = GLightbox({
-  selector: ".glightbox",
-  touchNavigation: true,
-  loop: true,
-  autoplayVideos: true,
-});
+document.addEventListener("DOMContentLoaded", function () {
+  // Update gallery item links to use correct path
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  galleryItems.forEach(item => {
+    const link = item.querySelector('a');
+    const img = item.querySelector('img');
+    if (link && img) {
+      // Get the image src and update link href to use correct path
+      const imgPath = img.getAttribute('src');
+      link.setAttribute('href', imgPath);
+    }
+  });
 
-// Initialize Gallery Lightbox
-const galleryLightbox = GLightbox({
-  selector: ".gallery-lightbox",
+  // Initialize gallery lightbox
+  const galleryLightbox = GLightbox({
+    selector: '.gallery-lightbox',
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true,
+    onOpen: () => {
+      // Optional: Add loading indicator management
+      console.log('Lightbox opened');
+    },
+    onClose: () => {
+      console.log('Lightbox closed');
+    }
+  });
 });
 
 // main.js Code
@@ -197,20 +213,6 @@ const galleryLightbox = GLightbox({
       preloader.remove();
     });
   }
-
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: ".glightbox",
-  });
-
-  /**
-   * Initiate Gallery Lightbox
-   */
-  const galleryLightbox = GLightbox({
-    selector: ".gallery-lightbox",
-  });
 
   /**
    * Testimonials slider
