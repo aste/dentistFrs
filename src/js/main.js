@@ -1,12 +1,15 @@
-// Import Flatpickr CSS first
+// Import CSS
 import "flatpickr/dist/flatpickr.min.css";
+import "swiper/css";
+import "swiper/css/pagination";
 
 // Import vendor dependencies
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import GLightbox from "glightbox";
-import Swiper from "swiper";
 import flatpickr from "flatpickr";
 import { Danish } from "flatpickr/dist/l10n/da.js";
+import Swiper from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 // Import custom scripts
 import "./appointment-form.js";
@@ -14,210 +17,29 @@ import "./contact-form.js";
 
 // Initialize Flatpickr with Danish locale
 flatpickr.localize(Danish);
-document.addEventListener("DOMContentLoaded", function () {
-  flatpickr("#date", {
-    locale: "da",
-  });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Update gallery item links to use correct path
-  const galleryItems = document.querySelectorAll('.gallery-item');
-  galleryItems.forEach(item => {
-    const link = item.querySelector('a');
-    const img = item.querySelector('img');
+const initializeGallery = () => {
+  const galleryItems = document.querySelectorAll(".gallery-item");
+  galleryItems.forEach((item) => {
+    const link = item.querySelector("a");
+    const img = item.querySelector("img");
     if (link && img) {
-      // Get the image src and update link href to use correct path
-      const imgPath = img.getAttribute('src');
-      link.setAttribute('href', imgPath);
+      const imgPath = img.getAttribute("src");
+      link.setAttribute("href", imgPath);
     }
   });
 
-  // Initialize gallery lightbox
-  const galleryLightbox = GLightbox({
-    selector: '.gallery-lightbox',
+  return GLightbox({
+    selector: ".gallery-lightbox",
     touchNavigation: true,
     loop: true,
     autoplayVideos: true,
-    onOpen: () => {
-      // Optional: Add loading indicator management
-      console.log('Lightbox opened');
-    },
-    onClose: () => {
-      console.log('Lightbox closed');
-    }
   });
-});
+};
 
-// main.js Code
-(function () {
-  "use strict";
-
-  /**
-   * Easy selector helper function
-   */
-  const select = (el, all = false) => {
-    el = el.trim();
-    if (all) {
-      return [...document.querySelectorAll(el)];
-    } else {
-      return document.querySelector(el);
-    }
-  };
-
-  /**
-   * Easy event listener function
-   */
-  const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all);
-    if (selectEl) {
-      if (all) {
-        selectEl.forEach((e) => e.addEventListener(type, listener));
-      } else {
-        selectEl.addEventListener(type, listener);
-      }
-    }
-  };
-
-  /**
-   * Easy on scroll event listener
-   */
-  const onscroll = (el, listener) => {
-    el.addEventListener("scroll", listener);
-  };
-
-  /**
-   * Scrolls to an element with header offset
-   */
-  const scrollto = (el) => {
-    let header = select("#header");
-    let offset = header.offsetHeight;
-
-    let elementPos = select(el).offsetTop;
-    window.scrollTo({
-      top: elementPos - offset,
-      behavior: "smooth",
-    });
-  };
-
-  /**
-   * Hide Topbar on Scroll Down / Show on Scroll Up
-   */
-  let selectHeader = select("#header");
-  let selectTopbar = select("#topbar");
-
-  if (selectHeader) {
-    let lastScrollY = window.scrollY;
-
-    const headerScrolled = () => {
-      let currentScrollY = window.scrollY;
-      if (window.scrollY > lastScrollY) {
-        selectHeader.classList.add("header-scrolled");
-        if (selectTopbar) {
-          selectTopbar.classList.add("topbar-scrolled");
-        }
-      } else {
-        selectHeader.classList.remove("header-scrolled");
-        if (selectTopbar) {
-          selectTopbar.classList.remove("topbar-scrolled");
-        }
-      }
-      lastScrollY = currentScrollY;
-    };
-
-    window.addEventListener("load", headerScrolled);
-
-    onscroll(document, headerScrolled);
-  }
-
-  /**
-   * Back to top button
-   */
-  let backtotop = select(".back-to-top");
-  if (backtotop) {
-    const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
-        backtotop.classList.add("active");
-      } else {
-        backtotop.classList.remove("active");
-      }
-    };
-    window.addEventListener("load", toggleBacktotop);
-    onscroll(document, toggleBacktotop);
-  }
-
-  /**
-   * Mobile nav toggle
-   */
-  on("click", ".mobile-nav-toggle", function (e) {
-    select("#navbar").classList.toggle("navbar-mobile");
-    this.classList.toggle("bi-list");
-    this.classList.toggle("bi-x");
-  });
-
-  /**
-   * Mobile nav dropdowns activate
-   */
-  on(
-    "click",
-    ".navbar .dropdown > a",
-    function (e) {
-      if (select("#navbar").classList.contains("navbar-mobile")) {
-        e.preventDefault();
-        this.nextElementSibling.classList.toggle("dropdown-active");
-      }
-    },
-    true
-  );
-
-  /**
-   * Scroll with offset on links with a class name .scrollto
-   */
-  on(
-    "click",
-    ".scrollto",
-    function (e) {
-      if (select(this.hash)) {
-        e.preventDefault();
-
-        let navbar = select("#navbar");
-        if (navbar.classList.contains("navbar-mobile")) {
-          navbar.classList.remove("navbar-mobile");
-          let navbarToggle = select(".mobile-nav-toggle");
-          navbarToggle.classList.toggle("bi-list");
-          navbarToggle.classList.toggle("bi-x");
-        }
-        scrollto(this.hash);
-      }
-    },
-    true
-  );
-
-  /**
-   * Scroll with ofset on page load with hash links in the url
-   */
-  window.addEventListener("load", () => {
-    if (window.location.hash) {
-      if (select(window.location.hash)) {
-        scrollto(window.location.hash);
-      }
-    }
-  });
-
-  /**
-   * Preloader
-   */
-  let preloader = select("#preloader");
-  if (preloader) {
-    window.addEventListener("load", () => {
-      preloader.remove();
-    });
-  }
-
-  /**
-   * Testimonials slider
-   */
-  new Swiper(".testimonials-slider", {
+const initializeTestimonials = () => {
+  return new Swiper(".testimonials-slider", {
+    modules: [Navigation, Pagination, Autoplay],
     speed: 600,
     loop: true,
     autoplay: {
@@ -235,21 +57,144 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 1,
         spaceBetween: 20,
       },
-
       1200: {
         slidesPerView: 2,
         spaceBetween: 20,
       },
     },
   });
+};
 
-  /**
-   * Danish Date Picker
-   */
+const select = (el, all = false) => {
+  try {
+    el = el.trim();
+    if (all) {
+      const elements = [...document.querySelectorAll(el)];
+      if (elements.length === 0) console.warn(`No elements found for selector: ${el}`);
+      return elements;
+    }
+    const element = document.querySelector(el);
+    if (!element) console.warn(`Element not found for selector: ${el}`);
+    return element;
+  } catch (err) {
+    console.error(`Error selecting element: ${el}`, err);
+    return all ? [] : null;
+  }
+};
 
-  document.addEventListener("DOMContentLoaded", function () {
-    flatpickr("#date", {
-      locale: "da",
-    });
+const on = (type, el, listener, all = false) => {
+  const selectEl = select(el, all);
+  if (selectEl) {
+    if (all) {
+      selectEl.forEach((e) => e.addEventListener(type, listener));
+    } else {
+      selectEl.addEventListener(type, listener);
+    }
+  }
+};
+
+const scrollto = (el) => {
+  const header = select("#header");
+  const offset = header?.offsetHeight || 0;
+  const elementPos = select(el)?.offsetTop || 0;
+
+  window.scrollTo({
+    top: elementPos - offset,
+    behavior: "smooth",
   });
-})();
+};
+
+const initializeHeader = () => {
+  const header = select("#header");
+  const topbar = select("#topbar");
+
+  if (header) {
+    let lastScrollY = window.scrollY;
+    const headerScrolled = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        header.classList.add("header-scrolled");
+        topbar?.classList.add("topbar-scrolled");
+      } else {
+        header.classList.remove("header-scrolled");
+        topbar?.classList.remove("topbar-scrolled");
+      }
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("load", headerScrolled);
+    document.addEventListener("scroll", headerScrolled);
+  }
+};
+
+const initializeBackToTop = () => {
+  const backtotop = select(".back-to-top");
+  if (backtotop) {
+    const toggleBacktotop = () => {
+      backtotop.classList.toggle("active", window.scrollY > 100);
+    };
+    window.addEventListener("load", toggleBacktotop);
+    document.addEventListener("scroll", toggleBacktotop);
+  }
+};
+
+const initializeMobileNav = () => {
+  on("click", ".mobile-nav-toggle", function () {
+    select("#navbar").classList.toggle("navbar-mobile");
+    this.classList.toggle("bi-list");
+    this.classList.toggle("bi-x");
+  });
+
+  on(
+    "click",
+    ".navbar .dropdown > a",
+    function (e) {
+      if (select("#navbar").classList.contains("navbar-mobile")) {
+        e.preventDefault();
+        this.nextElementSibling.classList.toggle("dropdown-active");
+      }
+    },
+    true
+  );
+};
+
+const initializeScrollTo = () => {
+  on(
+    "click",
+    ".scrollto",
+    function (e) {
+      if (select(this.hash)) {
+        e.preventDefault();
+        const navbar = select("#navbar");
+        if (navbar?.classList.contains("navbar-mobile")) {
+          navbar.classList.remove("navbar-mobile");
+          const navbarToggle = select(".mobile-nav-toggle");
+          navbarToggle?.classList.toggle("bi-list");
+          navbarToggle?.classList.toggle("bi-x");
+        }
+        scrollto(this.hash);
+      }
+    },
+    true
+  );
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize all components
+  flatpickr("#date", { locale: "da" });
+  initializeGallery();
+  initializeTestimonials();
+  initializeHeader();
+  initializeBackToTop();
+  initializeMobileNav();
+  initializeScrollTo();
+
+  // Handle hash links on page load
+  if (window.location.hash && select(window.location.hash)) {
+    scrollto(window.location.hash);
+  }
+
+  // Remove preloader if exists
+  const preloader = select("#preloader");
+  preloader?.remove();
+});

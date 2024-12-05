@@ -3,13 +3,14 @@ import { resolve } from "path";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import cssnano from "cssnano";
 
+
 export default defineConfig({
   base: "./",
   build: {
     outDir: "dist",
     emptyOutDir: true,
     assetsDir: "assets",
-    cssCodeSplit: false, // Keep CSS as one file for SPA
+    cssCodeSplit: false,
     rollupOptions: {
       input: resolve(__dirname, "index.html"),
       output: {
@@ -57,6 +58,10 @@ export default defineConfig({
               discardComments: { removeAll: true },
               normalizeWhitespace: true,
               minifyFontValues: { removeQuotes: false },
+              discardUnused: true,
+              mergeIdents: true,
+              reduceIdents: true,
+              minifySelectors: true,
             },
           ],
         }),
