@@ -1,3 +1,6 @@
+// Import Flatpickr CSS first
+import "flatpickr/dist/flatpickr.min.css";
+
 // Import vendor dependencies
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import GLightbox from "glightbox";

@@ -520,9 +520,8 @@ section {
 }
 
 .about .icon-boxes {
-  padding: 2.5rem 4rem 1rem 4rem
+  padding: 2.5rem 4rem 1rem 4rem;
 }
-
 
 .about .icon-box .icon {
   float: left;
@@ -1113,7 +1112,14 @@ section {
   max-width: 300px;
 }
 
+#akut h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+}
+
 #akut .bi-telephone {
+  font-size: 40px;
   color: var(--color-dark-blue);
 }
 
