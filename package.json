@@ -10,6 +10,8 @@
     "start": "vite build && vite preview --host"
   },
   "dependencies": {
+    "@fontsource/open-sans": "^5.1.0",
+    "@fontsource/raleway": "^5.1.0",
     "bootstrap": "^5.3.3",
     "flatpickr": "^4.6.13",
     "glightbox": "^3.3.0",

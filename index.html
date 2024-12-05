@@ -15,16 +15,6 @@
     <meta name="msvalidate.01" content="09FDF968E9341CB9F158BFEB759294EF" />
     <title>Tandklinikken Frederikssund</title>
 
-    <!-- Preconnect for Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap&display=swap"
-      rel="stylesheet"
-    />
-
     <!-- Favicons -->
     <link rel="icon" href="src/assets/img/favicon-32x32.webp" type="image/webp" />
     <link rel="manifest" href="src/assets/img/site.webmanifest" />
@@ -48,9 +38,9 @@
       preload.type = "image/webp";
       preload.fetchpriority = "high";
 
-      if (viewport >= 1200) {
+      if (viewport > 1200) {
         preload.href = "/assets/img/hero-bg.webp";
-      } else if (viewport >= 768) {
+      } else if (viewport > 768) {
         preload.href = "/assets/img/hero-bg-1200.webp";
       } else {
         preload.href = "/assets/img/hero-bg-768.webp";
