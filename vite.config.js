@@ -3,7 +3,6 @@ import { resolve } from "path";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import cssnano from "cssnano";
 
-
 export default defineConfig({
   base: "./",
   build: {
@@ -48,6 +47,7 @@ export default defineConfig({
       },
     },
   },
+  publicDir: "public",
   css: {
     postcss: {
       plugins: [
