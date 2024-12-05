@@ -93,8 +93,10 @@
         transition: transform 0.3s ease-in-out;
       }
 
-      #topbar .contact-info a:hover {
-        transform: scale(1.05);
+      #topbar a:hover {
+        color: var(--color-dark-blue);
+        text-decoration: underline var(--color-dark-blue);
+        text-underline-offset: 0.25em;
       }
 
       #topbar .social-links a {
@@ -211,11 +213,11 @@
 
       /* Hero */
       #hero {
-        height: clamp(360px, 84vh, 800px);
-        background: url("src/assets/img/hero-bg-768.webp") center top;
+        height: clamp(360px, 75vh, 800px);
+        background: url("src/assets/img/hero-bg-768.webp") 56% top;
         margin-bottom: -90px;
         margin-top: 60px;
-
+        background-attachment: fixed;
         width: 100%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -225,7 +227,9 @@
         #hero {
           height: clamp(420px, 84vh, 1000px);
           background: url("src/assets/img/hero-bg-1200.webp") center top;
+          margin-top: 60px;
           margin-bottom: -120px;
+          background-attachment: fixed;
           width: 100%;
           background-size: cover;
           background-repeat: no-repeat;
@@ -236,6 +240,7 @@
         #hero {
           height: clamp(420px, 84vh, 1200px);
           background: url("src/assets/img/hero-bg.webp") center top;
+          margin-top: 60px;
           margin-bottom: -165px;
           background-attachment: fixed;
           width: 100%;
