@@ -863,7 +863,7 @@ section {
   padding-left: 30px;
 }
 
-.doctors .member h4 {
+.doctors .member h3 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
@@ -1058,7 +1058,7 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.contact .info h4 {
+.contact .info h3 {
   padding: 0 0 0 60px;
   font-size: 22px;
   font-weight: 600;
@@ -1161,7 +1161,7 @@ section {
   max-width: 300px;
 }
 
-#akut h4 {
+#akut h3 {
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 30px 0;
