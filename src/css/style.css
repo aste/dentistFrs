@@ -323,6 +323,10 @@ h2 + p {
   right: 15px;
 }
 
+.navbar-mobile .mobile-nav-toggle .bi-list {
+  display: none;
+}
+
 .navbar-mobile ul {
   display: block;
   position: absolute;
