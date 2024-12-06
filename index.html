@@ -413,7 +413,7 @@
           </a>
         </h2>
 
-        <nav id="navbar" class="navbar order-last order-lg-0 rounded" role="navigation">
+        <nav id="navbar" class="navbar order-last order-lg-0 rounded">
           <ul class="pt-0">
             <div class="navbar-brand-mobile p-3 mb-3 container-fluid">
               <img
@@ -432,7 +432,14 @@
             <li><a class="nav-link scrollto" href="#doctors">Personalet</a></li>
             <li><a class="nav-link scrollto" href="#services">Priser</a></li>
           </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
+          <button
+            class="mobile-nav-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            type="button"
+          >
+            <i class="bi bi-list" aria-hidden="true"></i>
+          </button>
         </nav>
 
         <a href="#appointment" class="appointment-btn scrollto">Bestil Tid</a>

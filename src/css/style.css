@@ -280,9 +280,12 @@ h2 + p {
 */
 
 .mobile-nav-toggle {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
   color: var(--color-navy);
   font-size: 28px;
-  cursor: pointer;
   display: none;
   line-height: 0;
   transition: 0.5s;
