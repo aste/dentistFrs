@@ -466,6 +466,13 @@ section {
 /*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/
+.why-us .content h2 {
+  font-family: Raleway, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
 .why-us .content p {
   margin-bottom: 30px;
 }
@@ -495,11 +502,11 @@ section {
   margin-bottom: 30px;
 }
 
-.why-us .icon-boxes h4 {
+.why-us .icon-boxes h3 {
   padding-top: 1rem;
 }
 
-.why-us .icon-boxes .icon-box h4 {
+.why-us .icon-boxes .icon-box h3 {
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 30px 0;
