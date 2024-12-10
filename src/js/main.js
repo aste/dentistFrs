@@ -1,22 +1,23 @@
-// Import CSS
+// Import Third-party CSS Libraries
 import "flatpickr/dist/flatpickr.min.css";
 import "swiper/css";
 import "swiper/css/pagination";
 
-// Import vendor dependencies
+// Import Third-party JavaScript Libraries
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import GLightbox from "glightbox";
+import Swiper from "swiper";
 import flatpickr from "flatpickr";
 import { Danish } from "flatpickr/dist/l10n/da.js";
-import Swiper from "swiper";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-// Import custom scripts
+// Import Local CSS Modules
+import "../css/animations.css";
+
+// Import Local JavaScript Modules
 import "./appointment-form.js";
 import "./contact-form.js";
-
-// Initialize Flatpickr with Danish locale
-flatpickr.localize(Danish);
+import { initializeAnimations } from "./animations.js";
 
 const initializeGallery = () => {
   const galleryItems = document.querySelectorAll(".gallery-item");
@@ -180,21 +181,21 @@ const initializeScrollTo = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Initialize all components
+  // Initialize Flatpickr with Danish locale
+  flatpickr.localize(Danish);
   flatpickr("#date", { locale: "da" });
-  initializeGallery();
-  initializeTestimonials();
+
+  // Initialize all components
   initializeHeader();
   initializeBackToTop();
   initializeMobileNav();
   initializeScrollTo();
+  initializeGallery();
+  initializeTestimonials();
+  initializeAnimations();
 
   // Handle hash links on page load
   if (window.location.hash && select(window.location.hash)) {
     scrollto(window.location.hash);
   }
-
-  // Remove preloader if exists
-  const preloader = select("#preloader");
-  preloader?.remove();
 });
