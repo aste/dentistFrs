@@ -1,7 +1,24 @@
-// Reusable animation configurations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("showAnimation");
+    } else {
+      entry.target.classList.remove("showAnimation");
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll(".hiddenAnimation");
+hiddenElements.forEach((element) => {
+  console.log(element);
+  observer.observe(element);
+});
+
+// // animations.js
 const animationConfig = {
   fadeIn: {
-    threshold: 0.75,
+    threshold: 0.25,
     rootMargin: "0px",
     classNames: {
       initial: "fade-in",
@@ -9,7 +26,7 @@ const animationConfig = {
     },
   },
   slideIn: {
-    threshold: 0.75,
+    threshold: 0.25,
     rootMargin: "0px",
     classNames: {
       initial: "slide-in",
@@ -17,7 +34,7 @@ const animationConfig = {
     },
   },
   scaleIn: {
-    threshold: 0.75,
+    threshold: 0.25,
     rootMargin: "0px",
     classNames: {
       initial: "scale-in",
@@ -26,38 +43,12 @@ const animationConfig = {
   },
 };
 
-// Create an Intersection Observer that monitors elements and toggles the "show" class
-// when they enter/exit the viewport. For each observed element:
-// - element.target is the element being observed
-// - isIntersecting is true when element enters viewport, false when it exits
-// - toggle() adds the class if isIntersecting is true, removes it if false
-
-// Toggles 'show' class on elements when they become visible in the viewport
-// const animationObserver = new IntersectionObserver((elements) => {
-//   elements.forEach((element) => element.target.classList.toggle("show", element.isIntersecting));
-// });
-
-const animationObserver = (animationConfigObj) => {
-  return new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(animationConfigObj.classNames.visible);
-        } else {
-          entry.target.classList.remove(animationConfigObj.classNames.visible);
-        }
-      });
-    },
-    {
-      threshold: animationConfigObj.threshold,
-      rootMargin: animationConfigObj.rootMargin,
-    }
-  );
-};
-
-// const createAnimationObserver = (config) => {
-//   return new IntersectionObserver(
-//     (entries, intersectionObserverInstance) => {
+// const createAnimationObserver = (element, config) => {
+//   // First add the initial class
+//   console.log(`createAnimationObserver is called of ${element}`);
+//   element.classList.add(config.classNames.initial);
+//   const observer = new IntersectionObserver(
+//     (entries) => {
 //       entries.forEach((entry) => {
 //         if (entry.isIntersecting) {
 //           entry.target.classList.add(config.classNames.visible);
@@ -69,56 +60,19 @@ const animationObserver = (animationConfigObj) => {
 //       rootMargin: config.rootMargin,
 //     }
 //   );
+
+//   observer.observe(element);
+//   return observer;
 // };
 
-// Initialize animations for elements
 // const initializeAnimations = () => {
-//   // Fade in animations
-//   const fadeElements = document.querySelectorAll(".fade");
-//   const fadeObserver = createAnimationObserver(animationConfig.fadeIn);
-//   fadeElements.forEach((element) => {
-//     element.classList.add(animationConfig.fadeIn.classNames.initial);
-//     fadeObserver.observe(element);
-//   });
-
-//   // Slide in animations
-//   const slideElements = document.querySelectorAll(".slide");
-//   const slideObserver = createAnimationObserver(animationConfig.slideIn);
-//   slideElements.forEach((element) => {
-//     element.classList.add(animationConfig.slideIn.classNames.initial);
-//     slideObserver.observe(element);
-//   });
-
-//   // Scale in animations
-//   const scaleElements = document.querySelectorAll('[data-animation="scale"]');
-//   const scaleObserver = createAnimationObserver(animationConfig.scaleIn);
-//   scaleElements.forEach((element) => {
-//     element.classList.add(animationConfig.scaleIn.classNames.initial);
-//     scaleObserver.observe(element);
-//   });
+//   console.log(`initializeAnimations is called`);
+//   // About section animation
+//   const aboutSection = document.querySelector(".about .icon-boxes");
+//   if (aboutSection) {
+//     console.log(`Hello we will add a slide-in animation`);
+//     createAnimationObserver(aboutSection, animationConfig.slideIn);
+//   }
 // };
 
-const initializeAnimations = () => {
-  // About section animation
-  const aboutSection = document.querySelector(".about .icon-boxes");
-  if (aboutSection) {
-    aboutSection.classList.add(animationConfig.scaleIn.classNames.initial);
-    const fadeObserver = createAnimationObserver(animationConfig.scaleIn);
-    fadeObserver.observe(aboutSection);
-  }
-
-  // Services cards animation
-  // const serviceCards = document.querySelectorAll(".services .icon-box");
-  // if (serviceCards.length) {
-  // serviceCards.forEach((card, index) => {
-  // card.setAttribute("data-animation", "slide");
-  // card.classList.add(animationConfig.slideIn.classNames.initial);
-  // card.classList.add(`delay-${index + 1}`);
-  // const slideObserver = createAnimationObserver(animationConfig.slideIn);
-  // slideObserver.observe(card);
-  // });
-  // }
-};
-
-// Export for use in main.js
-export { initializeAnimations };
+// export { initializeAnimations };

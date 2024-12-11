@@ -1,4 +1,17 @@
-/* Enable animations if the the user hasn't enabled the reduced-motion settings*/
+.hiddenAnimation {
+  opacity: 0;
+  filter: blur(1rem);
+  transform: translateX(100%);
+  transition: all 600ms;
+}
+
+.showAnimation {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+/* Add animations unless the user has reduced-motion enabled*/
 @media (prefers-reduced-motion: no-preference) {
   /* Fade In Animation */
   .fade-in {
@@ -33,7 +46,7 @@
     opacity: 1;
     transform: scale(1);
   }
-
+  /*  */
   /* Other Animations */
   .slide-in--left {
     transform: translateX(-30px);

@@ -17,7 +17,8 @@ import "../css/animations.css";
 // Import Local JavaScript Modules
 import "./appointment-form.js";
 import "./contact-form.js";
-import { initializeAnimations } from "./animations.js";
+// import { initializeAnimations } from "./animations.js";
+import "./animations.js";
 
 const initializeGallery = () => {
   const galleryItems = document.querySelectorAll(".gallery-item");
@@ -192,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeScrollTo();
   initializeGallery();
   initializeTestimonials();
-  initializeAnimations();
+  // initializeAnimations();
 
   // Handle hash links on page load
   if (window.location.hash && select(window.location.hash)) {

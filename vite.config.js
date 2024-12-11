@@ -15,6 +15,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ["bootstrap", "swiper", "glightbox", "flatpickr", "imask"],
+          // animations: ["./src/js/animations.js", "./src/css/animations.css"],
         },
         assetFileNames: ({ name }) => {
           if (/\.(woff|woff2)$/.test(name)) {
