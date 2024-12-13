@@ -1,78 +1,35 @@
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry);
-    if (entry.isIntersecting) {
-      entry.target.classList.add("showAnimation");
-    } else {
-      entry.target.classList.remove("showAnimation");
+const createAnimationObserver = (initialClass, animationClass) => {
+  return new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        entry.target.classList.add(initialClass);
+        if (entry.isIntersecting) {
+          entry.target.classList.add(animationClass);
+        }
+      });
+    },
+    {
+      threshold: 0.01,
+      rootMargin: "50px",
     }
-  });
-});
-
-const hiddenElements = document.querySelectorAll(".hiddenAnimation");
-hiddenElements.forEach((element) => {
-  console.log(element);
-  observer.observe(element);
-});
-
-// // animations.js
-const animationConfig = {
-  fadeIn: {
-    threshold: 0.25,
-    rootMargin: "0px",
-    classNames: {
-      initial: "fade-in",
-      visible: "fade-in-visible",
-    },
-  },
-  slideIn: {
-    threshold: 0.25,
-    rootMargin: "0px",
-    classNames: {
-      initial: "slide-in",
-      visible: "slide-in-visible",
-    },
-  },
-  scaleIn: {
-    threshold: 0.25,
-    rootMargin: "0px",
-    classNames: {
-      initial: "scale-in",
-      visible: "scale-in-visible",
-    },
-  },
+  );
 };
 
-// const createAnimationObserver = (element, config) => {
-//   // First add the initial class
-//   console.log(`createAnimationObserver is called of ${element}`);
-//   element.classList.add(config.classNames.initial);
-//   const observer = new IntersectionObserver(
-//     (entries) => {
-//       entries.forEach((entry) => {
-//         if (entry.isIntersecting) {
-//           entry.target.classList.add(config.classNames.visible);
-//         }
-//       });
-//     },
-//     {
-//       threshold: config.threshold,
-//       rootMargin: config.rootMargin,
-//     }
-//   );
+// Get elements
+const sectionTitles = document.querySelectorAll(".section-title");
+const primaryButtons = document.querySelectorAll(
+  ".btn-primary.turquoise-btn.animation-btn, .appointment-btn.animation-btn"
+); // Combined selectors
 
-//   observer.observe(element);
-//   return observer;
-// };
+// Create observers
+const sectionObservers = createAnimationObserver("scale-initial", "scale-animation");
+const buttonObservers = createAnimationObserver("slide-initial", "slide-animation");
 
-// const initializeAnimations = () => {
-//   console.log(`initializeAnimations is called`);
-//   // About section animation
-//   const aboutSection = document.querySelector(".about .icon-boxes");
-//   if (aboutSection) {
-//     console.log(`Hello we will add a slide-in animation`);
-//     createAnimationObserver(aboutSection, animationConfig.slideIn);
-//   }
-// };
+// Observe sections
+sectionTitles.forEach((section) => sectionObservers.observe(section));
 
-// export { initializeAnimations };
+// Observe buttons
+primaryButtons.forEach((button) => {
+  console.log("Found button:", button);
+  buttonObservers.observe(button);
+});

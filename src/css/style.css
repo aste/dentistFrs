@@ -789,7 +789,7 @@ section {
 .contact .contact-form button[type="submit"],
 .appointment .appointment-form button[type="submit"] {
   margin-top: 20px;
-  background: var(--color-dark-blue);
+  background: var(--color-turquoise);
   border: 0;
   padding: 10px 35px;
   color: var(--color-white);
@@ -799,7 +799,7 @@ section {
 
 .contact .contact-form button[type="submit"]:hover,
 .appointment .appointment-form button[type="submit"]:hover {
-  background: var(--color-blue);
+  background: var(--color-light-turquoise);
   scale: 1.1;
 }
 
