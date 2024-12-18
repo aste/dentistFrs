@@ -14,7 +14,7 @@
 .slide-initial {
   opacity: 0;
   transform: translateX(5rem);
-  transition: all 800ms;
+  transition: all 800ms ease-out;
 }
 
 .slide-animation {
