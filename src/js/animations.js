@@ -27,10 +27,6 @@ const primaryButtons = document.querySelectorAll(
 const sectionObservers = createAnimationObserver("scale-initial", "scale-animation");
 const buttonObservers = createAnimationObserver("slide-initial", "slide-animation");
 
-// Observe sections
+// Observe sections & buttons
 sectionTitles.forEach((section) => sectionObservers.observe(section));
-
-// Observe buttons
-primaryButtons.forEach((button) => {
-  buttonObservers.observe(button);
-});
+primaryButtons.forEach((button) => buttonObservers.observe(button));
