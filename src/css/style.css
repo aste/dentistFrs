@@ -892,7 +892,13 @@ section {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
+
+.swiper-slide {
+  height: auto !important;
+}
+
 .testimonials .testimonial-wrap {
+  height: 80%;
   padding-left: 50px;
 }
 
@@ -901,6 +907,9 @@ section {
 }
 
 .testimonials .testimonial-item {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
   box-sizing: content-box;
   border-radius: 8px;
   padding: 30px 30px 30px 60px;
@@ -930,8 +939,6 @@ section {
   font-size: 24px;
   color: var(--color-grey-blue);
   color: var(--color-light-turquoise);
-  /* color: yellow; */
-  /* color: var(--color-turquoise); */
   margin: 0;
 }
 
@@ -956,7 +963,7 @@ section {
 
 .testimonials .testimonial-item p {
   font-style: italic;
-  margin: 15px auto 15px auto;
+  margin: 15px 0 15px 0;
 }
 
 .testimonials .swiper-pagination {
@@ -1002,7 +1009,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* This will ensure the image covers the div and maintains aspect ratio */
+  object-fit: cover;
   transition: all ease-in-out 0.4s;
 }
 
