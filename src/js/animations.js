@@ -5,12 +5,14 @@ const createAnimationObserver = (initialClass, animationClass) => {
         entry.target.classList.add(initialClass);
         if (entry.isIntersecting) {
           entry.target.classList.add(animationClass);
+        } else {
+          entry.target.classList.remove(animationClass);
         }
       });
     },
     {
       threshold: 0.01,
-      rootMargin: "50px",
+      rootMargin: "-50px 0px -20px 0px",
     }
   );
 };
@@ -19,7 +21,7 @@ const createAnimationObserver = (initialClass, animationClass) => {
 const sectionTitles = document.querySelectorAll(".section-title");
 const primaryButtons = document.querySelectorAll(
   ".btn-primary.turquoise-btn.animation-btn, .appointment-btn.animation-btn"
-); // Combined selectors
+);
 
 // Create observers
 const sectionObservers = createAnimationObserver("scale-initial", "scale-animation");
@@ -30,6 +32,5 @@ sectionTitles.forEach((section) => sectionObservers.observe(section));
 
 // Observe buttons
 primaryButtons.forEach((button) => {
-  console.log("Found button:", button);
   buttonObservers.observe(button);
 });

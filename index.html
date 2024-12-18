@@ -56,6 +56,22 @@
     />
 
     <style>
+      :root {
+        --color-white: #ffffff;
+        --color-light-grey: #eeeeee;
+        --color-grey: #595959;
+
+        --color-white-blue: #f0f8fc;
+        --color-grey-blue: #9abacc;
+
+        --color-light-blue: #b9dbef;
+        --color-blue: #7dc8ef;
+        --color-dark-blue: #3e84ae;
+        --color-navy: #00325a;
+
+        --color-turquoise: #1abc9c;
+        --color-light-turquoise: #63dec5;
+      }
       /* Top Bar */
       #topbar {
         background: var(--color-white-blue);
@@ -471,7 +487,7 @@
           </button>
         </nav>
 
-        <a href="#appointment" class="appointment-btn scrollto hiddenAnimation">Bestil Tid</a>
+        <a href="#appointment" class="appointment-btn scrollto btn-primary turquoise-btn animation-btn">Bestil Tid</a>
       </div>
     </header>
     <!-- End Header -->
@@ -486,13 +502,13 @@
             alt="Tandklinikken Frederikssunds Logo og billede af to tandlæger"
             width="735"
             height="202"
-            class="img-fluid main-logo hiddenAnimation"
+            class="img-fluid main-logo"
             loading="eager"
             fetchpriority="high"
           />
         </a>
         <h2>Her kan du føle dig tryg</h2>
-        <a href="#contact" class="btn-get-started scrollto hiddenAnimation">Kontakt Os</a>
+        <a href="#contact" class="btn-get-started scrollto btn-primary turquoise-btn animation-btn">Kontakt Os</a>
       </div>
     </section>
     <!-- End Hero -->
@@ -514,7 +530,7 @@
                   Vi glæder os til at byde dig velkommen.
                 </p>
                 <div class="text-center">
-                  <a href="#appointment" class="more-btn scrollto"
+                  <a href="#appointment" class="more-btn scrollto btn-primary turquoise-btn animation-btn"
                     >Skift Tandlæge<i class="bx"></i
                   ></a>
                 </div>
@@ -585,7 +601,7 @@
             <div class="col-xl-5 col-lg-6 video-box d-flex align-items-end position-relative"></div>
 
             <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column">
-              <div class="section-title hiddenAnimation">
+              <div class="section-title">
                 <h2>Velkommen til Tandklinikken Frederikssund</h2>
                 <p>
                   Din tandpleje er vores passion. I hjertet af Frederikssund, i de lyse og moderne
@@ -966,7 +982,7 @@
               ></textarea>
             </div>
             <div class="text-center">
-              <button type="submit">Bestil Tid</button>
+              <button type="submit" class="btn-primary turquoise-btn animation-btn">Bestil Tid</button>
               <!-- <div class="h-captcha mt-3" data-captcha="true"></div> -->
               <div id="appointment-status"></div>
             </div>
@@ -1077,7 +1093,7 @@
                   <div class="invalid-feedback">Din besked skal være på minimum 15 tegn</div>
                 </div>
                 <div class="text-center">
-                  <button type="submit" class="btn btn-primary">Send Besked</button>
+                  <button type="submit" class="btn btn-primary turquoise-btn animation-btn">Send Besked</button>
                   <!-- <div class="h-captcha mt-3" data-captcha="true"></div> -->
                   <div id="contact-status"></div>
                 </div>
