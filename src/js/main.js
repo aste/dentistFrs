@@ -193,7 +193,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeScrollTo();
   initializeGallery();
   initializeTestimonials();
-  // initializeAnimations();
 
   // Handle hash links on page load
   if (window.location.hash && select(window.location.hash)) {
