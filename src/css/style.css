@@ -63,7 +63,8 @@ h6 {
 }
 
 h2 + p {
-  max-width: 960px;
+  max-width: 640px;
+  text-align: center;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1138,7 +1139,97 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Footer
+# FAQ
+--------------------------------------------------------------*/
+.faq .faq-container .faq-item {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: var(--color-white);
+  position: relative;
+  padding: 12px;
+  margin-bottom: 5px;
+  border: 1px solid color-mix(in srgb, var(--color-dark-blue), transparent 75%);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.faq .faq-container .faq-item:last-child {
+  margin-bottom: 0;
+}
+
+.faq .faq-container .faq-item h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 24px 0 0;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.faq .faq-container .faq-item h3 .num {
+  color: var(--color-dark-blue);
+  padding-right: 5px;
+}
+
+.faq .faq-container .faq-item h3:hover {
+  color: var(--color-dark-blue);
+}
+
+.faq .faq-container .faq-item .faq-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.faq .faq-container .faq-item .faq-content p {
+  color: var(--color-dark-blue);
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.faq .faq-container .faq-item .faq-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 14px;
+  line-height: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.faq .faq-container .faq-item .faq-toggle:hover {
+  color: var(--color-dark-blue);
+}
+
+.faq .faq-container .faq-active {
+  border-color: var(--color-dark-blue);
+  color: var(--contrast-color);
+}
+
+.faq .faq-container .faq-active h3,
+.faq .faq-container .faq-active h3:hover {
+  color: var(--contrast-color);
+}
+
+.faq .faq-container .faq-active .faq-content {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  opacity: 1;
+  padding-top: 10px;
+}
+
+.faq .faq-container .faq-active .faq-toggle {
+  transform: rotate(90deg);
+  color: var(--color-dark-blue);
+}
+
+/*--------------------------------------------------------------
+# Akut
 --------------------------------------------------------------*/
 
 #akut .icon-container {

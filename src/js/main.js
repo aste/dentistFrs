@@ -160,6 +160,14 @@ const initializeMobileNav = () => {
   );
 };
 
+const initializeAccordionToggle = () => {
+  document.querySelectorAll(".faq-item h3, .faq-item .faq-toggle").forEach((faqItem) => {
+    faqItem.addEventListener("click", () => {
+      faqItem.parentNode.classList.toggle("faq-active");
+    });
+  });
+};
+
 const initializeScrollTo = () => {
   on(
     "click",
@@ -193,6 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeScrollTo();
   initializeGallery();
   initializeTestimonials();
+  initializeAccordionToggle();
 
   // Handle hash links on page load
   if (window.location.hash && select(window.location.hash)) {
