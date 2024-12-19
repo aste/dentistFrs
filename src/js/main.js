@@ -161,9 +161,13 @@ const initializeMobileNav = () => {
 };
 
 const initializeAccordionToggle = () => {
-  document.querySelectorAll(".faq-item h3, .faq-item .faq-toggle").forEach((faqItem) => {
-    faqItem.addEventListener("click", () => {
-      faqItem.parentNode.classList.toggle("faq-active");
+  const faqItems = document.querySelectorAll(".faq-item");
+  faqItems.forEach((faqItem) => {
+    const toggleElement = faqItem.querySelector("h3, .faq-toggle");
+    toggleElement.addEventListener("click", () => {
+      const isActive = faqItem.classList.contains("faq-active");
+      faqItems.forEach((item) => item.classList.remove("faq-active"));
+      if (!isActive) faqItem.classList.add("faq-active");
     });
   });
 };
