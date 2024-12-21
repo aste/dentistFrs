@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /assets/
+Disallow: /src/
+Disallow: /dist/
+
+# Allow main content pages
+Allow: /index.html
+Allow: /sitemap.xml
+
+# Crawl delays to prevent server overload
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://tandklinikken-frederikssund.dk/sitemap.xml
