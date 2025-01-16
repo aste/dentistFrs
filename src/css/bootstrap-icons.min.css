@@ -1,5 +1,0 @@
-/*!
- * Bootstrap Icons v1.11.1 (https://icons.getbootstrap.com/)
- * Copyright 2019-2023 The Bootstrap Authors
- * Licensed under MIT (https://github.com/twbs/icons/blob/main/LICENSE)
- */@font-face{font-display:block;font-family:bootstrap-icons;src:url("fonts/bootstrap-icons.woff2?2820a3852bdb9a5832199cc61cec4e65") format("woff2"),url("fonts/bootstrap-icons.woff?2820a3852bdb9a5832199cc61cec4e65") format("woff")}.bi::before,[class*=" bi-"]::before,[class^=bi-]::before{display:inline-block;font-family:bootstrap-icons!important;font-style:normal;font-weight:400!important;font-variant:normal;text-transform:none;line-height:1;vertical-align:-.125em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.bi-arrow-up-short::before{content:"\f145"}.bi-clock::before{content:"\f293"}.bi-envelope::before{content:"\f32f"}.bi-geo-alt::before{content:"\f3e8"}.bi-google::before{content:"\f3f0"}.bi-heart::before{content:"\f417"}.bi-list::before{content:"\f479"}.bi-patch-check::before{content:"\f4b6"}.bi-phone::before{content:"\f4e7"}.bi-star::before{content:"\f588"}.bi-telephone::before{content:"\f5c1"}.bi-x::before{content:"\f62a"}

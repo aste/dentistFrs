@@ -15,7 +15,6 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ["bootstrap", "swiper", "glightbox", "flatpickr", "imask"],
-          // animations: ["./src/js/animations.js", "./src/css/animations.css"],
         },
         assetFileNames: ({ name }) => {
           if (/\.(woff|woff2)$/.test(name)) {
@@ -41,7 +40,6 @@ export default defineConfig({
       compress: {
         drop_console: false,
         drop_debugger: false,
-        // pure_funcs: ["console.log"],
       },
       format: {
         comments: false,

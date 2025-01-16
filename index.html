@@ -16,18 +16,8 @@
     <title>Tandklinikken Frederikssund</title>
 
     <!-- Favicons -->
-    <link rel="icon" href="src/assets/img/favicon-32x32.webp" type="image/webp" />
-    <link rel="manifest" href="src/assets/img/site.webmanifest" />
-
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="src/assets/vendor/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="src/assets/vendor/bootstrap-icons/bootstrap-icons.css" />
-    <link rel="stylesheet" href="src/assets/vendor/glightbox/css/glightbox.min.css" />
-    <link rel="stylesheet" href="src/assets/vendor/swiper/swiper-bundle.min.css" />
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="src/css/style.css" />
-    <noscript><link rel="stylesheet" href="src/css/style.css" /></noscript>
+    <link rel="icon" href="/img/favicon-32x32.webp" type="image/webp" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Preloaded Files & Scripts -->
     <script>
@@ -39,356 +29,21 @@
       preload.fetchpriority = "high";
 
       if (viewport > 1200) {
-        preload.href = "/assets/img/hero-bg.webp";
+        preload.href = "/img/hero-bg.webp";
       } else if (viewport > 768) {
-        preload.href = "/assets/img/hero-bg-1200.webp";
+        preload.href = "/img/hero-bg-1200.webp";
       } else {
-        preload.href = "/assets/img/hero-bg-768.webp";
+        preload.href = "/img/hero-bg-768.webp";
       }
       document.head.appendChild(preload);
     </script>
     <link
       rel="preload"
       as="image"
-      href="src/assets/img/onlytextandlogo.webp"
+      href="/img/onlytextandlogo.webp"
       type="image/webp"
       fetchpriority="high"
     />
-
-    <style>
-      :root {
-        --color-white: #ffffff;
-        --color-light-grey: #eeeeee;
-        --color-grey: #595959;
-
-        --color-white-blue: #f0f8fc;
-        --color-grey-blue: #9abacc;
-
-        --color-light-blue: #b9dbef;
-        --color-blue: #7dc8ef;
-        --color-dark-blue: #3e84ae;
-        --color-navy: #00325a;
-
-        --color-turquoise: #1abc9c;
-        --color-light-turquoise: #63dec5;
-      }
-      /* Top Bar */
-      #topbar {
-        background: var(--color-white-blue);
-        height: 40px;
-        font-size: 14px;
-        z-index: 996;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        transition: all 0.3s ease;
-      }
-
-      #topbar.topbar-scrolled {
-        top: -40px;
-      }
-
-      #topbar .contact-info i {
-        color: var(--color-dark-blue);
-        width: 16px;
-        height: 16px;
-        padding-right: 4px;
-        margin-left: 15px;
-        line-height: 0;
-        display: inline-block;
-      }
-
-      #topbar .contact-info a {
-        color: #00325a;
-        transition: transform 0.3s ease-in-out;
-      }
-
-      #topbar a:hover {
-        color: var(--color-dark-blue);
-        text-decoration: underline var(--color-dark-blue);
-        text-underline-offset: 0.25em;
-      }
-
-      #topbar .social-links a {
-        color: var(--color-navy);
-        padding-left: 15px;
-        display: inline-block;
-        line-height: 1px;
-        transition: all 0.3s ease;
-      }
-
-      #topbar .social-links a:hover {
-        transform: scale(1.2);
-      }
-
-      .trustpilot-icon {
-        height: 1.2em;
-        margin-bottom: 0.1em;
-        width: auto;
-        vertical-align: middle;
-      }
-
-      @media (max-width: 768px) {
-        #topbar .container {
-          flex-wrap: nowrap;
-        }
-
-        #topbar .social-links i,
-        #topbar .social-links img {
-          margin-bottom: 0.5em;
-        }
-
-        #topbar a,
-        #topbar i {
-          font-size: smaller;
-          white-space: nowrap;
-        }
-
-        #topbar .contact-info i {
-          width: 12px;
-          height: 12px;
-        }
-      }
-
-      @media (max-width: 449px) {
-        #topbar .hiddenUnder450 {
-          display: none;
-        }
-      }
-
-      /* Header */
-      #header {
-        background: white;
-        z-index: 997;
-        padding: 8px 0;
-        top: 40px;
-        box-shadow: 0 2px 15px rgba(25, 119, 204, 0.1);
-      }
-
-      #header.header-scrolled {
-        top: 0;
-      }
-
-      #header .logo img {
-        max-width: 100%;
-        max-height: 48px;
-        aspect-ratio: 368 / 101;
-      }
-
-      .navbar {
-        padding: 0;
-      }
-
-      .navbar ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        list-style: none;
-        align-items: center;
-      }
-
-      .appointment-btn {
-        margin-left: 25px;
-        margin-right: 8px;
-        padding: 8px 25px;
-        font-size: 14px;
-        background: var(--color-turquoise);
-        color: var(--color-white);
-        border-radius: 50px;
-        white-space: nowrap;
-        transition: 0.3s;
-        display: inline-block;
-      }
-
-      @media (max-width: 992px) {
-        .navbar ul {
-          display: none;
-        }
-      }
-
-      @media (max-width: 768px) {
-        #header .contact-info .appointment-btn {
-          max-width: 20px;
-        }
-
-        #header .logo img {
-          width: 70%;
-          aspect-ratio: 368 / 101;
-        }
-
-        #header .logo {
-          max-width: 36%;
-        }
-      }
-
-      /* Hero */
-      #hero {
-        height: clamp(360px, 75vh, 800px);
-        background: url("src/assets/img/hero-bg-768.webp") 56% top;
-        margin-top: 60px;
-        margin-bottom: -90px;
-        background-attachment: fixed;
-        width: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-
-      @media (min-width: 769px) and (max-width: 1199px) {
-        #hero {
-          height: clamp(420px, 84vh, 1000px);
-          background: url("src/assets/img/hero-bg-1200.webp") center top;
-          margin-top: 60px;
-          margin-bottom: -120px;
-          background-attachment: fixed;
-          width: 100%;
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
-      }
-
-      @media (min-width: 1200px) {
-        #hero {
-          height: clamp(420px, 84vh, 1200px);
-          background: url("src/assets/img/hero-bg.webp") center top;
-          margin-top: 60px;
-          margin-bottom: -165px;
-          background-attachment: fixed;
-          width: 100%;
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
-      }
-
-      #hero h2 {
-        color: var(--color-navy);
-        margin: 10px 0 0;
-        font-size: 24px;
-        margin-left: 18%;
-      }
-
-      #hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(255, 255, 255, 0.66);
-        z-index: 2;
-      }
-
-      #hero .container {
-        z-index: 3;
-      }
-
-      #hero .container .main-logo {
-        max-width: 50%;
-        aspect-ratio: 735 / 202;
-        margin: 0;
-        padding: 0;
-      }
-
-      #hero .btn-get-started {
-        font-family: "Raleway", sans-serif;
-        font-weight: 500;
-        font-size: 14px;
-        letter-spacing: 1px;
-        display: inline-block;
-        padding: 12px 35px;
-        margin-top: 30px;
-        margin-left: 18%;
-        border-radius: 50px;
-        transition: 0.5s;
-        color: white;
-        background: #1abc9c;
-      }
-
-      @media (max-width: 992px) {
-        #hero .container h2 {
-          font-size: 1rem;
-          margin-top: 0.5rem;
-          margin-bottom: 0.5rem;
-          margin-left: 18%;
-        }
-
-        #hero .container .btn-get-started {
-          margin-top: 1.5rem;
-          font-size: 0.8rem;
-          margin-left: 18%;
-        }
-      }
-
-      @media (max-width: 768px) {
-        #hero .container .main-logo {
-          max-width: 64%;
-        }
-
-        #hero .container h2 {
-          margin-left: 23%;
-        }
-
-        #hero .container .btn-get-started {
-          padding: 10px 20px;
-          margin-top: 1rem;
-          margin-left: 23%;
-        }
-      }
-
-      @media (max-width: 576px) {
-        #hero .container h2 {
-          font-size: 0.8rem;
-        }
-      }
-
-      #hero .btn-get-started:hover {
-        background-color: var(--color-light-turquoise);
-        transform: scale(1.1);
-      }
-
-      /* Accessibility styles */
-      h1[aria-hidden="true"],
-      h2[aria-hidden="true"] {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0;
-      }
-
-      /* Why Us */
-      .top-of-overlay {
-        z-index: 3;
-      }
-
-      .why-us .content h2 {
-        font-weight: 700;
-        font-size: 34px;
-        margin-bottom: 30px;
-      }
-
-      .why-us .content {
-        padding: 30px;
-        background: var(--color-dark-blue);
-        border-radius: 4px;
-        color: var(--color-white);
-      }
-
-      .why-us .content p {
-        text-align: left;
-      }
-
-      .why-us .content .more-btn {
-        display: inline-block;
-        background: var(--color-turquoise);
-        padding: 6px 30px 8px 30px;
-        color: var(--color-white);
-        border-radius: 50px;
-        transition: all ease-in-out 0.4s;
-      }
-    </style>
   </head>
 
   <body>
@@ -436,7 +91,7 @@
             aria-label="Læs anmeldelser af Tandklinikken Frederikssund på Trustpilot"
           >
             <img
-              src="src/assets/img/trustpilot.svg"
+              src="/img/trustpilot.svg"
               alt="Trustpilot"
               class="trustpilot-icon d-none d-sm-block"
               width="20"
@@ -454,7 +109,7 @@
           <a href="#hero" class="scrollto d-flex align-items-center" aria-label="Go to homepage">
             <span class="visually-hidden">Tandklinikken Frederikssund</span>
             <img
-              src="src/assets/img/onlytextandlogo.webp"
+              src="/img/onlytextandlogo.webp"
               alt="Tandklinikken Frederikssund Logo"
               width="368"
               height="101"
@@ -469,7 +124,7 @@
           <ul class="pt-0">
             <div class="navbar-brand-mobile p-3 mb-3 container-fluid">
               <img
-                src="src/assets/img/logodarkblue.webp"
+                src="/img/logodarkblue.webp"
                 alt="Tandklinikken Frederikssund Logo"
                 width="217"
                 height="60"
@@ -509,7 +164,7 @@
         <h1 aria-hidden="true">Tandklinikken Frederikssund</h1>
         <a href="#about" class="logo scrollto">
           <img
-            src="src/assets/img/onlytextandlogo.webp"
+            src="/img/onlytextandlogo.webp"
             alt="Tandklinikken Frederikssunds Logo og billede af to tandlæger"
             width="735"
             height="202"
@@ -705,7 +360,7 @@
                   <a href="https://maps.app.goo.gl/hzhsQapzZEFnN6qM6" target="_blank">
                     <div class="testimonial-item">
                       <img
-                        src="src/assets/img/testimonials/reviewFemale.webp"
+                        src="/img/testimonials/reviewFemale.webp"
                         loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
@@ -730,7 +385,7 @@
                   <a href="https://trstp.lt/PR9uI9Cp0 " target="_blank">
                     <div class="testimonial-item">
                       <img
-                        src="src/assets/img/testimonials/reviewMale.webp"
+                        src="/img/testimonials/reviewMale.webp"
                         loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
@@ -756,7 +411,7 @@
                   <a href="https://maps.app.goo.gl/ssphZww9eg5do99VA" target="_blank">
                     <div class="testimonial-item">
                       <img
-                        src="src/assets/img/testimonials/reviewFemale.webp"
+                        src="/img/testimonials/reviewFemale.webp"
                         loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
@@ -785,7 +440,7 @@
                   <a href="https://maps.app.goo.gl/fSjWjhKEKWG95fwG7" target="_blank">
                     <div class="testimonial-item">
                       <img
-                        src="src/assets/img/testimonials/reviewMale.webp"
+                        src="/img/testimonials/reviewMale.webp"
                         loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
@@ -811,7 +466,7 @@
                   <a href="https://maps.app.goo.gl/YMEHJgG4bujNjA8U8" target="_blank">
                     <div class="testimonial-item">
                       <img
-                        src="src/assets/img/testimonials/reviewFemale.webp"
+                        src="/img/testimonials/reviewFemale.webp"
                         loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
@@ -835,7 +490,7 @@
                   <a href="https://maps.app.goo.gl/cqtMNAMMSzYsNfcz6" target="_blank">
                     <div class="testimonial-item">
                       <img
-                        src="src/assets/img/testimonials/reviewMale.webp"
+                        src="/img/testimonials/reviewMale.webp"
                         loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
@@ -861,7 +516,7 @@
                   <a href="https://maps.app.goo.gl/hNmSHfhgcTgNJqWL6" target="_blank">
                     <div class="testimonial-item">
                       <img
-                        src="src/assets/img/testimonials/reviewFemale.webp"
+                        src="/img/testimonials/reviewFemale.webp"
                         loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
@@ -887,7 +542,7 @@
                   <a href="https://trstp.lt/cR-N8qGMUa" target="_blank">
                     <div class="testimonial-item">
                       <img
-                        src="src/assets/img/testimonials/reviewFemale.webp"
+                        src="/img/testimonials/reviewFemale.webp"
                         loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
@@ -912,7 +567,7 @@
                   <a href="https://trstp.lt/uHXJp64BE" target="_blank">
                     <div class="testimonial-item">
                       <img
-                        src="src/assets/img/testimonials/reviewMale.webp"
+                        src="/img/testimonials/reviewMale.webp"
                         loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
@@ -938,7 +593,7 @@
                   <a href="https://trstp.lt/AdCUDYazbD" target="_blank">
                     <div class="testimonial-item">
                       <img
-                        src="src/assets/img/testimonials/reviewFemale.webp"
+                        src="/img/testimonials/reviewFemale.webp"
                         loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
@@ -965,7 +620,7 @@
                   <a href="https://maps.app.goo.gl/jpsmT34UwBPRtHwS6" target="_blank">
                     <div class="testimonial-item">
                       <img
-                        src="src/assets/img/testimonials/reviewMale.webp"
+                        src="/img/testimonials/reviewMale.webp"
                         loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
@@ -990,7 +645,7 @@
                   <a href="https://trstp.lt/U56QSq6KZ" target="_blank">
                     <div class="testimonial-item">
                       <img
-                        src="src/assets/img/testimonials/reviewMale.webp"
+                        src="/img/testimonials/reviewMale.webp"
                         loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
@@ -1013,7 +668,7 @@
                   <a href="https://maps.app.goo.gl/YgG6bmQr4Ugvj3Wv8" target="_blank">
                     <div class="testimonial-item">
                       <img
-                        src="src/assets/img/testimonials/reviewMale.webp"
+                        src="/img/testimonials/reviewMale.webp"
                         loading="lazy"
                         class="testimonial-img"
                         alt="patientudtalelse"
@@ -1522,9 +1177,9 @@
           <div class="row g-0">
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
-                <a href="src/assets/img/gallery/gallery-1.webp" class="gallery-lightbox">
+                <a href="/img/gallery/gallery-1.webp" class="gallery-lightbox">
                   <img
-                    src="src/assets/img/gallery/gallery-1.webp"
+                    src="/img/gallery/gallery-1.webp"
                     loading="lazy"
                     alt="Klinikken set udefra"
                     class="img-fluid"
@@ -1535,9 +1190,9 @@
 
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
-                <a href="src/assets/img/gallery/gallery-2.webp" class="gallery-lightbox">
+                <a href="/img/gallery/gallery-2.webp" class="gallery-lightbox">
                   <img
-                    src="src/assets/img/gallery/gallery-2.webp"
+                    src="/img/gallery/gallery-2.webp"
                     loading="lazy"
                     alt="Receptionen"
                     class="img-fluid"
@@ -1550,9 +1205,9 @@
 
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
-                <a href="src/assets/img/gallery/gallery-3.webp" class="gallery-lightbox">
+                <a href="/img/gallery/gallery-3.webp" class="gallery-lightbox">
                   <img
-                    src="src/assets/img/gallery/gallery-3.webp"
+                    src="/img/gallery/gallery-3.webp"
                     loading="lazy"
                     alt="Venteværelset"
                     class="img-fluid"
@@ -1565,9 +1220,9 @@
 
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
-                <a href="src/assets/img/gallery/gallery-4.webp" class="gallery-lightbox">
+                <a href="/img/gallery/gallery-4.webp" class="gallery-lightbox">
                   <img
-                    src="src/assets/img/gallery/gallery-4.webp"
+                    src="/img/gallery/gallery-4.webp"
                     loading="lazy"
                     alt="En igangværende tandlæge undersøgelse"
                     class="img-fluid"
@@ -1580,9 +1235,9 @@
 
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
-                <a href="src/assets/img/gallery/gallery-5.webp" class="gallery-lightbox">
+                <a href="/img/gallery/gallery-5.webp" class="gallery-lightbox">
                   <img
-                    src="src/assets/img/gallery/gallery-5.webp"
+                    src="/img/gallery/gallery-5.webp"
                     loading="lazy"
                     alt="Stemningsbillede fra klinikken"
                     class="img-fluid"
@@ -1595,9 +1250,9 @@
 
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
-                <a href="src/assets/img/gallery/gallery-6.webp" class="gallery-lightbox">
+                <a href="/img/gallery/gallery-6.webp" class="gallery-lightbox">
                   <img
-                    src="src/assets/img/gallery/gallery-6.webp"
+                    src="/img/gallery/gallery-6.webp"
                     loading="lazy"
                     alt="Bygningen udefra"
                     class="img-fluid"
@@ -1610,9 +1265,9 @@
 
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
-                <a href="src/assets/img/gallery/gallery-7.webp" class="gallery-lightbox">
+                <a href="/img/gallery/gallery-7.webp" class="gallery-lightbox">
                   <img
-                    src="src/assets/img/gallery/gallery-7.webp"
+                    src="/img/gallery/gallery-7.webp"
                     loading="lazy"
                     alt="Fordelingsgangen i klinikken"
                     class="img-fluid"
@@ -1625,9 +1280,9 @@
 
             <div class="col-lg-3 col-md-4">
               <div class="gallery-item">
-                <a href="src/assets/img/gallery/gallery-8.webp" class="gallery-lightbox">
+                <a href="/img/gallery/gallery-8.webp" class="gallery-lightbox">
                   <img
-                    src="src/assets/img/gallery/gallery-8.webp"
+                    src="/img/gallery/gallery-8.webp"
                     loading="lazy"
                     alt="Stemningsbillede fra klinikken"
                     class="img-fluid"
@@ -1658,7 +1313,7 @@
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="src/assets/img/personale/TandlægeMarc.webp"
+                    src="/img/personale/TandlægeMarc.webp"
                     loading="lazy"
                     class="img-fluid"
                     alt="Tandlæge Marc"
@@ -1678,7 +1333,7 @@
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="src/assets/img/personale/TandlægeAnnette.webp"
+                    src="/img/personale/TandlægeAnnette.webp"
                     loading="lazy"
                     class="img-fluid"
                     alt="Tandlæge Annette"
@@ -1698,7 +1353,7 @@
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="src/assets/img/personale/TandlægeAnna.webp"
+                    src="/img/personale/TandlægeAnna.webp"
                     loading="lazy"
                     class="img-fluid"
                     alt="Tandlæge Anna"
@@ -1718,7 +1373,7 @@
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="src/assets/img/personale/TandlægeCharlotte.webp"
+                    src="/img/personale/TandlægeCharlotte.webp"
                     loading="lazy"
                     class="img-fluid"
                     alt="Tandlæge Charlotte"
@@ -1738,7 +1393,7 @@
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="src/assets/img/personale/TandlægeMajken.webp"
+                    src="/img/personale/TandlægeMajken.webp"
                     loading="lazy"
                     class="img-fluid"
                     alt="Tandlæge Majken"
@@ -1758,7 +1413,7 @@
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="src/assets/img/personale/TandlægeSofie.webp"
+                    src="/img/personale/TandlægeSofie.webp"
                     loading="lazy"
                     class="img-fluid"
                     alt="Tandlæge Sofie"
@@ -1780,7 +1435,7 @@
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="src/assets/img/personale/TandplejerLouise.webp"
+                    src="/img/personale/TandplejerLouise.webp"
                     loading="lazy"
                     class="img-fluid"
                     alt="Tandplejer Louise"
@@ -1800,7 +1455,7 @@
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="src/assets/img/personale/TandplejerStina.webp"
+                    src="/img/personale/TandplejerStina.webp"
                     loading="lazy"
                     class="img-fluid"
                     alt="Tandplejer Stina"
@@ -1822,7 +1477,7 @@
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="src/assets/img/personale/KlinikassistentGitte.webp"
+                    src="/img/personale/KlinikassistentGitte.webp"
                     loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistent Gitte"
@@ -1842,7 +1497,7 @@
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="src/assets/img/personale/KlinikassistentHanne.webp"
+                    src="/img/personale/KlinikassistentHanne.webp"
                     loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistent Hanne"
@@ -1862,7 +1517,7 @@
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="src/assets/img/personale/klinikassistentkatja.webp"
+                    src="/img/personale/klinikassistentkatja.webp"
                     loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistent Katja"
@@ -1882,7 +1537,7 @@
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="src/assets/img/personale/KlinikassistentLine.webp"
+                    src="/img/personale/KlinikassistentLine.webp"
                     loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistent Line"
@@ -1902,7 +1557,7 @@
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="src/assets/img/personale/KlinikassistentRikke.webp"
+                    src="/img/personale/KlinikassistentRikke.webp"
                     loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistent Rikke"
@@ -1922,7 +1577,7 @@
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="src/assets/img/personale/KlinikassistentShuko.webp"
+                    src="/img/personale/KlinikassistentShuko.webp"
                     loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistent Shuko"
@@ -1944,7 +1599,7 @@
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="src/assets/img/personale/AdministratorJesper.webp"
+                    src="/img/personale/AdministratorJesper.webp"
                     loading="lazy"
                     class="img-fluid"
                     alt="Administrator Jesper"
@@ -1964,7 +1619,7 @@
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="src/assets/img/personale/klinikassistentlene.webp"
+                    src="/img/personale/klinikassistentlene.webp"
                     loading="lazy"
                     class="img-fluid"
                     alt="Klinikassistentelev Lene"
@@ -2633,7 +2288,7 @@
     ></a>
 
     <!-- Main JavaScript File -->
-    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="./src/js/main.js"></script>
     <script src="https://web3forms.com/client/script.js" async defer></script>
   </body>
 </html>

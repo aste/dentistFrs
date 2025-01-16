@@ -1,23 +1,25 @@
-// Import Third-party CSS Libraries
-import "flatpickr/dist/flatpickr.min.css";
+// // Import Third-party CSS Libraries
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import "swiper/css";
 import "swiper/css/pagination";
+import "glightbox/dist/css/glightbox.min.css";
+import "flatpickr/dist/flatpickr.min.css";
 
-// Import Third-party JavaScript Libraries
+// // Import Third-party JavaScript Libraries
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import GLightbox from "glightbox";
 import Swiper from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import flatpickr from "flatpickr";
 import { Danish } from "flatpickr/dist/l10n/da.js";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-// Import Local CSS Modules
-import "../css/animations.css";
+// // Import Local CSS Modules
+import "../assets/scss/main.scss";
 
-// Import Local JavaScript Modules
+// // Import Local JavaScript Modules
 import "./appointment-form.js";
 import "./contact-form.js";
-// import { initializeAnimations } from "./animations.js";
 import "./animations.js";
 
 const initializeGallery = () => {
@@ -146,18 +148,6 @@ const initializeMobileNav = () => {
     this.classList.toggle("bi-list");
     this.classList.toggle("bi-x");
   });
-
-  on(
-    "click",
-    ".navbar .dropdown > a",
-    function (e) {
-      if (select("#navbar").classList.contains("navbar-mobile")) {
-        e.preventDefault();
-        this.nextElementSibling.classList.toggle("dropdown-active");
-      }
-    },
-    true
-  );
 };
 
 const initializeAccordionToggle = () => {
