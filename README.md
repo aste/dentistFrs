@@ -3,6 +3,7 @@
 This repository contains the source code for the [Tandklinikken Frederikssund website](https://tandklinikken-frederikssund.dk/).
 
 ## Table of Contents
+
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
@@ -14,6 +15,7 @@ This repository contains the source code for the [Tandklinikken Frederikssund we
 - [License](#license)
 
 ## Features
+
 - Responsive design for various devices.
 - User-friendly navigation.
 - Contact and appointment forms for easy communication.
@@ -22,12 +24,13 @@ This repository contains the source code for the [Tandklinikken Frederikssund we
 - SEO optimization with sitemap and robots.txt.
 
 ## Tech Stack
+
 - **Frontend:** HTML5, SCSS, JavaScript
 - **Bundler:** Vite
 - **Deployment:** Netlify
 
-
 ## Project Structure
+
 ```
 ├─ index.html                  # Main homepage
 ├─ public
@@ -41,17 +44,17 @@ This repository contains the source code for the [Tandklinikken Frederikssund we
 │  ├─ assets
 │  │  └─ scss
 │  │     ├─ _animations.scss
-│  │     ├─ _style.scss        
+│  │     ├─ _style.scss
 │  │     └─ main.scss          # Main stylesheet
 │  └─ js
 │     ├─ animations.js
 │     ├─ appointment-form.js
 │     ├─ contact-form.js
-│     └─ main.js               # JavaScript entry point 
+│     └─ main.js               # JavaScript entry point
 ├─ package-lock.json           # Lockfile for dependencies
 ├─ package.json                # Project metadata and dependencies
 └─ vite.config.js              # Vite configuration
-```              
+```
 
 ## Installation
 
@@ -68,12 +71,15 @@ This repository contains the source code for the [Tandklinikken Frederikssund we
 ## Development
 
 1. **Start the development server:**
+
    ```bash
    npm run dev
    ```
+
    The site will be available at `http://localhost:3000`.
 
 2. **Edit Files:**
+
    - HTML: `index.html`
    - Styles: `styles/`
    - JavaScript: `main.js`, `appointment-form.js`, `contact-form.js`, `animations.js`
@@ -83,9 +89,11 @@ This repository contains the source code for the [Tandklinikken Frederikssund we
 ## Deployment
 
 1. **Build the project for production:**
+
    ```bash
    npm run build
    ```
+
    This will generate optimized files in the `dist/` directory.
 
 2. **Deploy to Netlify:**
@@ -96,19 +104,24 @@ This repository contains the source code for the [Tandklinikken Frederikssund we
 ## Screenshots
 
 ### Mobile Version
+
 ![Homepage](public/img/screenshots/mobile.webp)
 
 ### Vertical Tablet Version
+
 ![Homepage](public/img/screenshots/tablet-vertical.webp)
 
 ### Horizontal Tablet Version
+
 ![Homepage](public/img/screenshots/tablet-horizontal.webp)
 
 ### Desktop Version
+
 ![Homepage](public/img/screenshots/desktop.webp)
 
-### Desktop Version
-![Homepage](public/img/screenshots/desktop.webp)
+### Lighthouse Score
+
+![Lighthouse Score](public/img/screenshots/lighthouse.webp)
 
 ## Contributing
 
