@@ -96,16 +96,19 @@ This repository contains the source code for the [Tandklinikken Frederikssund we
 ## Screenshots
 
 ### Mobile Version
-![Homepage](assets/img/screenshots/mobile.webp)
+![Homepage](public/img/screenshots/mobile.webp)
 
 ### Vertical Tablet Version
-![Homepage](assets/img/screenshots/tablet-vertical.webp)
+![Homepage](public/img/screenshots/tablet-vertical.webp)
 
 ### Horizontal Tablet Version
-![Homepage](assets/img/screenshots/tablet-horizontal.webp)
+![Homepage](public/img/screenshots/tablet-horizontal.webp)
 
 ### Desktop Version
-![Homepage](assets/img/screenshots/desktop.webp)
+![Homepage](public/img/screenshots/desktop.webp)
+
+### Desktop Version
+![Homepage](public/img/screenshots/desktop.webp)
 
 ## Contributing
 
