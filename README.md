@@ -127,5 +127,3 @@ This repository contains the source code for the [Tandklinikken Frederikssund we
 ## License
 
 This project is licensed under a restrictive license. Permission is required before using any part of this codebase. Please contact the repository owner for more details.
-
-
