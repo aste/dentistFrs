@@ -29,14 +29,14 @@ This repository contains the source code for the [Tandklinikken Frederikssund we
 
 ## Project Structure
 ```
-├─ index.html                   # Main homepage
+├─ index.html                  # Main homepage
 ├─ public
-│  ├─ _redirects                # Redirect rules from prior site paths
-│  ├─ img                       # Image assets
-│  ├─ netlify.toml              # Netlify configuration
-│  ├─ robots.txt                # SEO rules for web crawlers
-│  ├─ site.webmanifest          # PWA Manifest
-│  └─ sitemap.xml               # Sitemap for SEO
+│  ├─ _redirects               # Redirect rules from prior site paths
+│  ├─ img                      # Image assets
+│  ├─ netlify.toml             # Netlify configuration
+│  ├─ robots.txt               # SEO rules for web crawlers
+│  ├─ site.webmanifest         # PWA Manifest
+│  └─ sitemap.xml              # Sitemap for SEO
 ├─ src
 │  ├─ assets
 │  │  └─ scss
