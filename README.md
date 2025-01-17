@@ -2,7 +2,7 @@
 
 This repository contains the source code for the [Tandklinikken Frederikssund website](https://tandklinikken-frederikssund.dk/).
 
-[Project Structure](##Project Structure)
+[Project Structure](#Project Structure)
 
 ## Project Structure
 
