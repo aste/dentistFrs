@@ -3,17 +3,15 @@
 --------------------------------------------------------------*/
 
 /* Import Open Sans */
-@use "@fontsource/open-sans/300.css" as *;
-@use "@fontsource/open-sans/400.css" as *;
-@use "@fontsource/open-sans/600.css" as *;
-@use "@fontsource/open-sans/700.css" as *;
+@import "@fontsource/open-sans/400-latin.css";
+@import "@fontsource/open-sans/600-latin.css";
+@import "@fontsource/open-sans/700-latin.css";
 
 /* Import Raleway */
-@use "@fontsource/raleway/300.css" as *;
-@use "@fontsource/raleway/400.css" as *;
-@use "@fontsource/raleway/500.css" as *;
-@use "@fontsource/raleway/600.css" as *;
-@use "@fontsource/raleway/700.css" as *;
+@import "@fontsource/raleway/400-latin.css";
+@import "@fontsource/raleway/500-latin.css";
+@import "@fontsource/raleway/600-latin.css";
+@import "@fontsource/raleway/700-latin.css";
 
 /*--------------------------------------------------------------
 # Colors

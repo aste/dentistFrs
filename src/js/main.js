@@ -153,12 +153,17 @@ const initializeMobileNav = () => {
 const initializeAccordionToggle = () => {
   const faqItems = document.querySelectorAll(".faq-item");
   faqItems.forEach((faqItem) => {
-    const toggleElement = faqItem.querySelector("h3, .faq-toggle");
-    toggleElement.addEventListener("click", () => {
+    const toggleText = faqItem.querySelector("h3");
+    const toggleIcon = faqItem.querySelector("i");
+
+    const toggleAccordion = () => {
       const isActive = faqItem.classList.contains("faq-active");
       faqItems.forEach((item) => item.classList.remove("faq-active"));
       if (!isActive) faqItem.classList.add("faq-active");
-    });
+    };
+
+    if (toggleText) toggleText.addEventListener("click", toggleAccordion);
+    if (toggleIcon) toggleIcon.addEventListener("click", toggleAccordion);
   });
 };
 
