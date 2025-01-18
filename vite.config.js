@@ -16,6 +16,7 @@ export default defineConfig({
         manualChunks: {
           vendor: ["bootstrap", "swiper", "glightbox", "flatpickr", "imask"],
         },
+        hashCharacters: "base36",
         assetFileNames: ({ name }) => {
           if (/\.(woff|woff2)$/.test(name)) {
             return "assets/fonts/[name][extname]";
