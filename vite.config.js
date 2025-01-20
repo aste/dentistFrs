@@ -4,7 +4,7 @@ import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import cssnano from "cssnano";
 
 export default defineConfig({
-  base: "./",
+  base: "/",
   build: {
     outDir: "dist",
     emptyOutDir: true,
