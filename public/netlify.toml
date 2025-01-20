@@ -40,4 +40,6 @@ for = "*.css"
   Content-Type = "text/css"
 
 [[headers]]
-for = "*.
+for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
