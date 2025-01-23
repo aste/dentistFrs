@@ -25,7 +25,7 @@ This repository contains the source code for the [Tandklinikken Frederikssund we
 
 ## Tech Stack
 
-- **Frontend:** HTML5, SCSS, JavaScript
+- **Frontend:** HTML, CSS, JavaScript
 - **Bundler:** Vite
 - **Deployment:** Netlify
 
@@ -42,10 +42,10 @@ This repository contains the source code for the [Tandklinikken Frederikssund we
 │  └─ sitemap.xml              # Sitemap for SEO
 ├─ src
 │  ├─ assets
-│  │  └─ scss
-│  │     ├─ _animations.scss
-│  │     ├─ _style.scss
-│  │     └─ main.scss          # Main stylesheet
+│  │  └─ css
+│  │     ├─ animation.css
+│  │     ├─ style.css
+│  │     └─ main.css          # Main stylesheet
 │  └─ js
 │     ├─ animations.js
 │     ├─ appointment-form.js
