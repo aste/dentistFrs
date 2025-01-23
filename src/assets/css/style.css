@@ -1,17 +1,16 @@
 /*--------------------------------------------------------------
 # Fonts
 --------------------------------------------------------------*/
-
 /* Import Open Sans */
-@import "/assets/fonts/open-sans/latin-400.css";
-@import "/assets/fonts/open-sans/latin-600.css";
-@import "/assets/fonts/open-sans/latin-700.css";
+@import "../fonts/open-sans-latin-400.css";
+@import "../fonts/open-sans-latin-600.css";
+@import "../fonts/open-sans-latin-700.css";
 
 /* Import Raleway */
-@import "/assets/fonts/raleway/latin-400.css";
-@import "/assets/fonts/raleway/latin-500.css";
-@import "/assets/fonts/raleway/latin-600.css";
-@import "/assets/fonts/raleway/latin-700.css";
+@import "../fonts/raleway-latin-400.css";
+@import "../fonts/raleway-latin-500.css";
+@import "../fonts/raleway-latin-600.css";
+@import "../fonts/raleway-latin-700.css";
 
 /*--------------------------------------------------------------
 # Colors

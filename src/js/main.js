@@ -15,7 +15,7 @@ import flatpickr from "flatpickr";
 import { Danish } from "flatpickr/dist/l10n/da.js";
 
 // // Import Local CSS Modules
-import "../assets/scss/main.scss";
+import "../assets/css/main.css";
 
 // // Import Local JavaScript Modules
 import "./appointment-form.js";
