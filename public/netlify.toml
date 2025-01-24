@@ -48,3 +48,8 @@ for = "/assets/fonts/*"
   for = "/*.woff"
   [headers.values]
     Access-Control-Allow-Origin = "*"
+
+[[headers]]
+for = "/*"
+[headers.values]
+X-Robots-Tag = "index, follow"
