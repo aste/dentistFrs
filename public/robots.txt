@@ -1,17 +1,13 @@
 User-agent: *
 Allow: /
-Disallow: /*.js$
-Disallow: /*.css$
-Disallow: /assets/
+
+# Disallow sensitive or unnecessary paths (only if needed)
 Disallow: /src/
-Disallow: /dist/
 
-# Allow main content pages
-Allow: /index.html
-Allow: /sitemap.xml
-
-# Crawl delays to prevent server overload
-Crawl-delay: 10
+# Allow critical files for rendering
+Allow: /dist/
+Allow: /*.js$
+Allow: /*.css$
 
 # Sitemap location
 Sitemap: https://tandklinikken-frederikssund.dk/sitemap.xml
