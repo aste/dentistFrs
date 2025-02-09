@@ -822,6 +822,11 @@ section {
   margin-bottom: 1.5rem;
 }
 
+.about .icon-boxes .icon-box {
+  align-self: center;
+  max-width: 720px;
+}
+
 .about .icon-box p {
   text-align: left;
   margin-bottom: 2rem;
