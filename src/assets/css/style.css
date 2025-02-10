@@ -1182,14 +1182,8 @@ section {
 
 .doctors .member .member-info span.member-edu {
   color: var(--color-light-blue);
-  margin: 0px;
-  padding-bottom: 8px;
-}
-
-.doctors .member .member-info span.member-invis-text {
-  color: var(--color-white);
-  margin: 0px;
-  padding-bottom: 8px;
+  padding-top: 2px;
+  padding-bottom: 9px;
 }
 
 .doctors .member .member-info span.member-edu::after {
