@@ -53,3 +53,14 @@ for = "/assets/fonts/*"
 for = "/*"
 [headers.values]
 X-Robots-Tag = "index, follow"
+
+[[headers]]
+for = "/*"
+[headers.values]
+  Content-Security-Policy = "default-src 'self'; 
+  script-src 'self' https://cdn.jsdelivr.net https://unpkg.com;
+  connect-src 'self' https://api.web3forms.com;
+  font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+  img-src 'self' data:;
+  object-src 'none';"
