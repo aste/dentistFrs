@@ -6,19 +6,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const message = document.getElementById("contact-message");
 
   nameInput.addEventListener("input", () => {
-    if (nameInput.validity.tooShort) {
-      nameInput.setCustomValidity("Indtast venligst dit fulde navn");
-    } else {
-      nameInput.setCustomValidity("");
-    }
+      if (nameInput.validity.tooShort) {
+        nameInput.setCustomValidity("Indtast venligst dit fulde navn");
+      } else {
+        nameInput.setCustomValidity("");
+      }
   });
 
   emailInput.addEventListener("input", () => {
-    if (emailInput.validity.patternMismatch) {
-      emailInput.setCustomValidity("Indtast din email");
-    } else {
-      emailInput.setCustomValidity("");
-    }
+      if (emailInput.validity.patternMismatch) {
+        emailInput.setCustomValidity("Indtast din email");
+      } else {
+        emailInput.setCustomValidity("");
+      }
   });
 
   message.addEventListener("input", () => {

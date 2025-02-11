@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Format phone and CPR number
   IMask(phoneInput, {
     mask: "+{45} 00 00 00 00",
   });
