@@ -559,7 +559,7 @@ h2[aria-hidden="true"] {
 --------------------------------------------------------------*/
 #hero {
   height: clamp(360px, 75vh, 800px);
-  background: url("/img/hero-bg-768.webp") 56% top;
+  background: url("/img/hero-bg-768.webp") 50% top;
   margin-top: 60px;
   margin-bottom: -90px;
   background-attachment: scroll;
