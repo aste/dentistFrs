@@ -562,7 +562,7 @@ h2[aria-hidden="true"] {
   background: url("/img/hero-bg-768.webp") 56% top;
   margin-top: 60px;
   margin-bottom: -90px;
-  background-attachment: fixed;
+  background-attachment: scroll;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
