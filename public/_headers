@@ -1,0 +1,34 @@
+/*
+  Content-Security-Policy: default-src 'self';
+  script-src 'self' 'strict-dynamic' https: http:;
+  connect-src 'self' https://api.web3forms.com;
+  font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+  img-src 'self' data:;
+  object-src 'none';
+  base-uri 'self';
+  form-action 'self';
+  X-Robots-Tag: index, follow
+
+/*.html
+  Content-Type: text/html; charset=UTF-8
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: application/javascript
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: text/css
+
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff
+  Access-Control-Allow-Origin: "*"
