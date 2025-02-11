@@ -15,12 +15,4 @@ status = 200
 [[headers]]
 for = "/*"
 [headers.values]
-  Content-Security-Policy = "default-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';" 
-  script-src 'self' 'strict-dynamic' https: http:;
-  connect-src 'self' https://api.web3forms.com;
-  font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-  img-src 'self' data:;
-  object-src 'none';
-  base-uri 'self';
-  form-action 'self';"
+  Content-Security-Policy = "object-src 'none'; base-uri 'self'; form-action 'self';"
