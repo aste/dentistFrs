@@ -723,6 +723,7 @@
                   id="name"
                   placeholder="* Navn"
                   minlength="5"
+                  autocomplete="name"
                   required
                 />
                 <div class="invalid-feedback">Indtast dit fulde navn</div>
@@ -735,6 +736,7 @@
                   id="email"
                   placeholder="* Email"
                   pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                  autocomplete="email"
                   required
                   oninput="this.value = this.value.toLowerCase()"
                 />
@@ -748,6 +750,7 @@
                   id="phone"
                   placeholder="* Telefonnummer"
                   pattern="^((\(?\+45\)?)?)(\s?\d{2}\s?\d{2}\s?\d{2}\s?\d{2})$"
+                  autocomplete="tel"
                   required
                 />
                 <div class="invalid-feedback">Indtast et dansk telefonnummer</div>
@@ -760,6 +763,7 @@
                   id="cpr"
                   placeholder="* CPR-nummer (krypteres)"
                   pattern="^((((0[1-9]|[12][0-9]|3[01])(0[13578]|10|12)(\d{2}))|(([0][1-9]|[12][0-9]|30)(0[469]|11)(\d{2}))|((0[1-9]|1[0-9]|2[0-8])(02)(\d{2}))|((29)(02)(00))|((29)(02)([2468][048]))|((29)(02)([13579][26])))[-]\d{4})$"
+                  autocomplete="off"
                   required
                 />
                 <div class="invalid-feedback">Indtast et gyldigt CPR-nummer</div>
@@ -773,6 +777,7 @@
                   class="form-control datepicker"
                   id="date"
                   placeholder="Foretrukne Dato"
+                  autocomplete="off"
                 />
               </div>
               <div class="col-md-3 form-group mt-3">
@@ -938,6 +943,7 @@
                       id="contact-name"
                       placeholder="* Navn"
                       minlength="5"
+                      autocomplete="name"
                       required
                     />
                     <div class="invalid-feedback">Indtast dit fulde navn</div>
@@ -950,6 +956,7 @@
                       id="contact-email"
                       placeholder="* Email"
                       pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                      autocomplete="email"
                       required
                     />
                     <div class="invalid-feedback">Indtast din email</div>
@@ -963,6 +970,7 @@
                     placeholder="* Besked"
                     id="contact-message"
                     minlength="15"
+                    autocomplete="off"
                     required
                   ></textarea>
                   <div class="invalid-feedback">Din besked skal være på minimum 15 tegn</div>
