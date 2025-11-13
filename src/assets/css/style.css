@@ -1556,14 +1556,9 @@ section {
 }
 
 #vejledninger h5 {
-  color: var(--color-dark-blue);
+  color: var(--color-navy);
   margin: 2rem 0 0.5rem 0;
   font-size: 1.1rem;
-}
-
-#vejledninger h5 {
-  color: var(--color-dark-blue);
-  margin: 2rem 0 0.5rem 0;
 }
 
 #vejledninger h5:first-of-type {
@@ -1594,9 +1589,8 @@ section {
   padding-bottom: 8px;
 }
 
-#vejledninger,
-[id^="vejledning-"] {
-  scroll-margin-top: 72px;
+#vejledninger [id^="vejledning-"] {
+  scroll-margin-top: 120px;
 }
 /*--------------------------------------------------------------
 # Footer
