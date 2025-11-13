@@ -86,22 +86,16 @@ h2[aria-hidden="true"] {
 /*--------------------------------------------------------------
 # Modal
 --------------------------------------------------------------*/
-#privatlivspolitik .modal-dialog,
-#before-operation .modal-dialog,
-#after-operation .modal-dialog {
+#privatlivspolitik .modal-dialog {
   max-width: 620px;
 }
 
-#privatlivspolitik p,
-#before-operation p,
-#after-operation p {
+#privatlivspolitik p {
   color: var(--color-navy);
   margin: 0rem 0 2rem 0;
 }
 
-#privatlivspolitik h5,
-#before-operation h5,
-#after-operation h5 {
+#privatlivspolitik h5 {
   color: var(--color-dark-blue);
   margin-bottom: 0;
 }
@@ -1442,7 +1436,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# FAQ
+# FAQ & Info
 --------------------------------------------------------------*/
 .faq .faq-container .faq-item {
   max-width: 960px;
@@ -1514,7 +1508,6 @@ section {
   color: var(--contrast-color);
 }
 
-.faq .faq-container .faq-active h3,
 .faq .faq-container .faq-active h3:hover {
   color: var(--contrast-color);
 }
@@ -1551,18 +1544,64 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Vejledninger
+--------------------------------------------------------------*/
+
+#vejledninger p {
+  color: var(--color-navy);
+  margin: 0 0.5rem 1rem 0.5rem;
+}
+
+#vejledninger h5 {
+  color: var(--color-dark-blue);
+  margin: 2rem 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+#vejledninger h5 {
+  color: var(--color-dark-blue);
+  margin: 2rem 0 0.5rem 0;
+}
+
+#vejledninger h5:first-of-type {
+  margin: 1rem 0 0.5rem 0;
+}
+
+#vejledninger li {
+  margin: 0 0 0.2rem 0;
+}
+
+#vejledninger.faq .faq-container .faq-item .faq-content {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease-in-out, opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+}
+
+#vejledninger.faq .faq-container .faq-active .faq-content {
+  max-height: 2000px;
+  visibility: visible;
+  opacity: 1;
+  padding-top: 10px;
+}
+
+#vejledninger.faq .faq-container .faq-item .faq-body {
+  padding-bottom: 8px;
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
   color: var(--color-navy);
   font-size: 14px;
-  background: var(--color-white-blue);
 }
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: var(--color-white);
-  box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+  background: var(--color-white-blue);
 }
 
 #footer .footer-top .footer-contact {
