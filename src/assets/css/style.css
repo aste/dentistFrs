@@ -1547,9 +1547,12 @@ section {
 # Vejledninger
 --------------------------------------------------------------*/
 
-#vejledninger p {
-  color: var(--color-navy);
-  margin: 0 0.5rem 1rem 0.5rem;
+#vejledninger .faq-body p {
+  margin: 0 .5rem 1rem;
+}
+
+#vejledninger .container .section-title p {
+  text-align: center;
 }
 
 #vejledninger h5 {
