@@ -1588,13 +1588,13 @@ section {
 #vejledninger.faq .faq-container .faq-item .faq-body {
   padding-bottom: 8px;
 }
-/* #vejledninger {
+#vejledninger.faq .faq-container .faq-item {
   scroll-margin-top: 80px;
-} */
+}
+#vejledninger {
+  scroll-margin-top: 80px;
+}
 
-/* #vejledninger [id^="vejledning-"] {
-  scroll-margin-top: 1200px;
-} */
 /*--------------------------------------------------------------
 # Anmeldelser
 --------------------------------------------------------------*/

@@ -204,7 +204,9 @@ const openAccordionFromHash = () => {
   faqItem.classList.add("faq-active");
 
   if (hash.startsWith("#vejledning-")) {
-    scrollto("#vejledninger");
+    setTimeout(() => {
+      scrollto("#vejledninger");
+    }, 400);
   }
 };
 
@@ -223,5 +225,4 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeAccordionToggle();
 
   openAccordionFromHash();
-  // window.addEventListener("hashchange", openAccordionFromHash);
 });
