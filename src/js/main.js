@@ -195,20 +195,21 @@ const openAccordionFromHash = () => {
   const target = document.querySelector(hash);
   if (!target) return;
 
-  // Find det tilhørende .faq-item (enten er target selv det, eller også ligger det indeni)
   const faqItem = target.classList.contains("faq-item") ? target : target.closest(".faq-item");
 
   if (!faqItem) return;
 
-  // Luk alle andre
   document.querySelectorAll(".faq-item").forEach((item) => item.classList.remove("faq-active"));
 
-  // Åbn den rigtige
   faqItem.classList.add("faq-active");
+
+  if (hash.startsWith("#vejledning-")) {
+    scrollto("#vejledninger");
+  }
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Initialize Flatpickr with Danish locale
+  // Initialize Flatpickr
   flatpickr.localize(Danish);
   flatpickr("#date", { locale: "da" });
 
@@ -221,10 +222,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeTestimonials();
   initializeAccordionToggle();
 
-  // Handle hash links on page load
-  // if (window.location.hash && select(window.location.hash)) {
-  //   scrollto(window.location.hash);
-  // }
   openAccordionFromHash();
-  window.addEventListener("hashchange", openAccordionFromHash);
+  // window.addEventListener("hashchange", openAccordionFromHash);
 });

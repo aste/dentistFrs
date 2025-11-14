@@ -1588,10 +1588,70 @@ section {
 #vejledninger.faq .faq-container .faq-item .faq-body {
   padding-bottom: 8px;
 }
+/* #vejledninger {
+  scroll-margin-top: 80px;
+} */
 
-#vejledninger [id^="vejledning-"] {
-  scroll-margin-top: 120px;
+/* #vejledninger [id^="vejledning-"] {
+  scroll-margin-top: 1200px;
+} */
+/*--------------------------------------------------------------
+# Anmeldelser
+--------------------------------------------------------------*/
+.review-section {
+  padding: 60px 0;
+
+  .section-title p {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
+
+.review-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.review-btn {
+  display: inline-block;
+  text-align: center;
+  padding: 0.9rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#anmeld .btn {
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease,
+    color 0.25s ease;
+  border-radius: 1rem;
+}
+
+#anmeld .btn-primary {
+  background-color: var(--color-turquoise);
+  border-color: var(--color-turquoise);
+}
+
+#anmeld .btn-outline-primary {
+  color: var(--color-turquoise);
+  border-color: var(--color-turquoise);
+}
+
+#anmeld .btn-outline-primary:hover,
+#anmeld .btn-primary:hover {
+  background-color: var(--color-light-turquoise);
+  border-color: var(--color-light-turquoise);
+  color: var(--color-white);
+  transform: scale(1.05);
+}
+
+#anmeld {
+  scroll-margin-top: 48px;
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -1602,7 +1662,7 @@ section {
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: var(--color-white-blue);
+  background: var(--color-white);
 }
 
 #footer .footer-top .footer-contact {
@@ -1667,28 +1727,6 @@ section {
   line-height: 1;
 }
 
-#footer .footer-top .footer-links ul a:hover {
-  text-decoration: none;
-  color: var(--color-dark-blue);
-}
-
-#footer .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: var(--color-dark-blue);
-  color: var(--color-white);
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
-
-#footer .social-links a:hover {
-  background: var(--color-blue);
-  color: var(--color-white);
-  text-decoration: none;
+#footer {
+  background-color: var(--color-white-blue);
 }
