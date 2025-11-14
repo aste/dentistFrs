@@ -1638,6 +1638,7 @@ section {
 #anmeld .btn-outline-primary {
   color: var(--color-turquoise);
   border-color: var(--color-turquoise);
+  margin-bottom: 2rem;
 }
 
 #anmeld .btn-outline-primary:hover,
