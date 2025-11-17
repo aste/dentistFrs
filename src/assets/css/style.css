@@ -1011,6 +1011,13 @@ section {
   background-color: var(--color-white);
   color: var(--color-grey);
 }
+
+
+.pricegrid table td:nth-child(2),
+.pricegrid table td:nth-child(3) {
+  text-align: right;
+}
+
 .table {
   font-size: smaller;
   border-radius: 10px;
@@ -1547,26 +1554,47 @@ section {
 # Vejledninger
 --------------------------------------------------------------*/
 
-#vejledninger .faq-body p {
-  margin: 0 0.5rem 1rem;
+#vejledninger {
+  scroll-margin-top: 80px;
 }
 
 #vejledninger .container .section-title p {
   text-align: center;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-#vejledninger h5 {
+#vejledninger .faq-body p,
+#vejledninger li {
+  margin: 0 auto 1rem auto;
+  max-width: 700px;
+  font-size: 0.98rem;
+  line-height: 1.6;
   color: var(--color-navy);
-  margin: 2rem 0 0.5rem 0;
-  font-size: 1.1rem;
 }
 
-#vejledninger h5:first-of-type {
-  margin: 1rem 0 0.5rem 0;
+#vejledninger ul {
+  max-width: 700px;
+  margin: 0 auto 1.5rem auto;
+  padding-left: 1.2rem;
 }
 
 #vejledninger li {
-  margin: 0 0 0.2rem 0;
+  margin-bottom: 0.1rem;
+}
+
+#vejledninger h5 {
+  color: var(--color-dark-blue);
+  margin: 2rem auto 0.75rem auto;
+  font-size: 1.1rem;
+  max-width: 700px;
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--color-turquoise);
+}
+
+#vejledninger h5:first-of-type {
+  margin-top: 1.25rem;
 }
 
 #vejledninger.faq .faq-container .faq-item .faq-content {
@@ -1575,11 +1603,14 @@ section {
   overflow: hidden;
   visibility: hidden;
   opacity: 0;
-  transition: max-height 0.35s ease-in-out, opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+  transition:
+    max-height 0.35s ease-in-out,
+    opacity 0.25s ease-in-out,
+    visibility 0.25s ease-in-out;
 }
 
 #vejledninger.faq .faq-container .faq-active .faq-content {
-  max-height: 2000px;
+  max-height: 8000px;
   visibility: visible;
   opacity: 1;
   padding-top: 10px;
@@ -1588,12 +1619,25 @@ section {
 #vejledninger.faq .faq-container .faq-item .faq-body {
   padding-bottom: 8px;
 }
+
 #vejledninger.faq .faq-container .faq-item {
   scroll-margin-top: 80px;
 }
-#vejledninger {
-  scroll-margin-top: 80px;
+
+@media (max-width: 992px) {
+  #vejledninger .faq-body p,
+  #vejledninger li {
+    max-width: 94%;
+    font-size: 0.94rem;
+  }
+
+  #vejledninger h5 {
+    max-width: 100%;
+    font-size: 1.05rem;
+    border-left-width: 2px;
+  }
 }
+
 
 /*--------------------------------------------------------------
 # Anmeldelser
