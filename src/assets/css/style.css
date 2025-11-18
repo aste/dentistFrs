@@ -1567,8 +1567,8 @@ section {
 }
 
 #vejledninger .guideline-emoji {
-  font-size: 1rem;
-  margin-top: 0.2rem;
+  font-size: 0.75rem;
+  margin-top: 0.35rem;
   flex: 0 0 auto;
   margin-right: 1rem;
 }
