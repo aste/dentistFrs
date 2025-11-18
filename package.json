@@ -9,6 +9,9 @@
     "preview": "vite preview",
     "start": "vite build && vite preview --host"
   },
+  "engines": {
+    "node": "22.x"
+  },
   "dependencies": {
     "@fontsource/open-sans": "^5.1.1",
     "@fontsource/raleway": "^5.1.1",

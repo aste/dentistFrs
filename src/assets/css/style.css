@@ -86,22 +86,16 @@ h2[aria-hidden="true"] {
 /*--------------------------------------------------------------
 # Modal
 --------------------------------------------------------------*/
-#privatlivspolitik .modal-dialog,
-#before-operation .modal-dialog,
-#after-operation .modal-dialog {
+#privatlivspolitik .modal-dialog {
   max-width: 620px;
 }
 
-#privatlivspolitik p,
-#before-operation p,
-#after-operation p {
+#privatlivspolitik p {
   color: var(--color-navy);
   margin: 0rem 0 2rem 0;
 }
 
-#privatlivspolitik h5,
-#before-operation h5,
-#after-operation h5 {
+#privatlivspolitik h5 {
   color: var(--color-dark-blue);
   margin-bottom: 0;
 }
@@ -1013,10 +1007,17 @@ section {
   background-color: var(--color-navy);
   color: white;
 }
+
 .table tbody td {
   background-color: var(--color-white);
   color: var(--color-grey);
 }
+
+.pricegrid table td:nth-child(2),
+.pricegrid table td:nth-child(3) {
+  text-align: right;
+}
+
 .table {
   font-size: smaller;
   border-radius: 10px;
@@ -1308,7 +1309,7 @@ section {
   overflow: hidden;
   border-right: 3px solid var(--color-white);
   border-bottom: 3px solid var(--color-white);
-  padding-top: 66.66%; /* For 16:9 Aspect Ratio */
+  padding-top: 66.66%;
 }
 
 .gallery .gallery-item img {
@@ -1324,6 +1325,15 @@ section {
 .gallery .gallery-item:hover img {
   transform: scale(1.1);
 }
+
+.gallery-focus-top-top {
+  object-position: 50% 16%;
+}
+
+.gallery-focus-top {
+  object-position: 50% 32%;
+}
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
@@ -1442,7 +1452,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# FAQ
+# FAQ & Info
 --------------------------------------------------------------*/
 .faq .faq-container .faq-item {
   max-width: 960px;
@@ -1514,7 +1524,6 @@ section {
   color: var(--contrast-color);
 }
 
-.faq .faq-container .faq-active h3,
 .faq .faq-container .faq-active h3:hover {
   color: var(--contrast-color);
 }
@@ -1551,18 +1560,180 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Vejledninger
+--------------------------------------------------------------*/
+#vejledninger {
+  scroll-margin-top: 80px;
+}
+
+#vejledninger .guideline-emoji {
+  font-size: 0.75rem;
+  margin-top: 0.35rem;
+  flex: 0 0 auto;
+  margin-right: 0.75rem;
+}
+
+#vejledninger .guideline-divider {
+  flex: 0 0 3px;
+  background: var(--color-turquoise);
+  border-radius: 999px;
+  margin-right: 0.75rem;
+  align-self: stretch;
+}
+
+#vejledninger .guideline-heading h5 {
+  font-size: 1.1rem;
+  margin: 0.2rem 0 0.25rem 0;
+  color: var(--color-dark-blue);
+}
+
+#vejledninger .guideline-heading:first-of-type {
+  margin-top: 1.5rem;
+}
+
+#vejledninger .container .section-title p {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+#vejledninger .faq-body p,
+#vejledninger li {
+  margin: 0 auto 0.75rem auto;
+  max-width: 700px;
+  font-size: 1rem;
+  color: var(--color-navy);
+}
+
+#vejledninger ul {
+  max-width: 700px;
+  margin: 0 auto 1.5rem auto;
+  padding-left: 1.2rem;
+}
+
+#vejledninger li {
+  margin-bottom: 0.1rem;
+}
+
+#vejledninger .guideline-heading {
+  display: flex;
+  align-items: flex-start;
+  max-width: 700px;
+  margin: 2.5rem auto 0.5rem auto;
+}
+
+#vejledninger.faq .faq-container .faq-item .faq-content {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease-in-out, opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+}
+
+#vejledninger.faq .faq-container .faq-active .faq-content {
+  max-height: 8000px;
+  visibility: visible;
+  opacity: 1;
+  padding-top: 10px;
+}
+
+#vejledninger.faq .faq-container .faq-item .faq-body {
+  padding-bottom: 8px;
+}
+
+#vejledninger.faq .faq-container .faq-item {
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 992px) {
+  #vejledninger .guideline-heading,
+  #vejledninger .faq-body p,
+  #vejledninger li {
+    max-width: 94%;
+  }
+  #vejledninger .faq-body p,
+  #vejledninger li {
+    font-size: 0.94rem;
+  }
+
+  #vejledninger h5 {
+    max-width: 100%;
+    font-size: 1.05rem;
+    border-left-width: 2px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Anmeldelser
+--------------------------------------------------------------*/
+.review-section {
+  padding: 60px 0;
+
+  .section-title p {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.review-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.review-btn {
+  display: inline-block;
+  text-align: center;
+  padding: 0.9rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#anmeld .btn {
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease,
+    color 0.25s ease;
+  border-radius: 1rem;
+}
+
+#anmeld .btn-primary {
+  background-color: var(--color-turquoise);
+  border-color: var(--color-turquoise);
+}
+
+#anmeld .btn-outline-primary {
+  color: var(--color-turquoise);
+  border-color: var(--color-turquoise);
+  margin-bottom: 2rem;
+}
+
+#anmeld .btn-outline-primary:hover,
+#anmeld .btn-primary:hover {
+  background-color: var(--color-light-turquoise);
+  border-color: var(--color-light-turquoise);
+  color: var(--color-white);
+  transform: scale(1.05);
+}
+
+#anmeld {
+  scroll-margin-top: 48px;
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
   color: var(--color-navy);
   font-size: 14px;
-  background: var(--color-white-blue);
 }
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
   background: var(--color-white);
-  box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
 }
 
 #footer .footer-top .footer-contact {
@@ -1627,28 +1798,6 @@ section {
   line-height: 1;
 }
 
-#footer .footer-top .footer-links ul a:hover {
-  text-decoration: none;
-  color: var(--color-dark-blue);
-}
-
-#footer .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: var(--color-dark-blue);
-  color: var(--color-white);
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
-
-#footer .social-links a:hover {
-  background: var(--color-blue);
-  color: var(--color-white);
-  text-decoration: none;
+#footer {
+  background-color: var(--color-white-blue);
 }

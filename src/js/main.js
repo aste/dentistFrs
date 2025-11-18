@@ -188,8 +188,30 @@ const initializeScrollTo = () => {
   );
 };
 
+const openAccordionFromHash = () => {
+  const hash = window.location.hash;
+  if (!hash) return;
+
+  const target = document.querySelector(hash);
+  if (!target) return;
+
+  const faqItem = target.classList.contains("faq-item") ? target : target.closest(".faq-item");
+
+  if (!faqItem) return;
+
+  document.querySelectorAll(".faq-item").forEach((item) => item.classList.remove("faq-active"));
+
+  faqItem.classList.add("faq-active");
+
+  if (hash.startsWith("#vejledning-")) {
+    setTimeout(() => {
+      scrollto("#vejledninger");
+    }, 400);
+  }
+};
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Initialize Flatpickr with Danish locale
+  // Initialize Flatpickr
   flatpickr.localize(Danish);
   flatpickr("#date", { locale: "da" });
 
@@ -202,8 +224,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeTestimonials();
   initializeAccordionToggle();
 
-  // Handle hash links on page load
-  if (window.location.hash && select(window.location.hash)) {
-    scrollto(window.location.hash);
-  }
+  openAccordionFromHash();
 });

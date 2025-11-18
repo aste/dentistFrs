@@ -20,7 +20,7 @@ const createAnimationObserver = (initialClass, animationClass) => {
 // Get elements
 const sectionTitles = document.querySelectorAll(".section-title");
 const primaryButtons = document.querySelectorAll(
-  ".btn-primary.turquoise-btn.animation-btn, .appointment-btn.animation-btn"
+  ".btn-primary.turquoise-btn.animation-btn, .appointment-btn.animation-btn, .review-btn.animation-btn"
 );
 
 // Create observers
