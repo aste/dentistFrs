@@ -1309,7 +1309,7 @@ section {
   overflow: hidden;
   border-right: 3px solid var(--color-white);
   border-bottom: 3px solid var(--color-white);
-  padding-top: 66.66%; /* For 16:9 Aspect Ratio */
+  padding-top: 66.66%;
 }
 
 .gallery .gallery-item img {
@@ -1325,6 +1325,15 @@ section {
 .gallery .gallery-item:hover img {
   transform: scale(1.1);
 }
+
+.gallery-focus-top-top {
+  object-position: 50% 16%;
+}
+
+.gallery-focus-top {
+  object-position: 50% 32%;
+}
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
@@ -1571,7 +1580,6 @@ section {
   margin-right: 0.75rem;
   align-self: stretch;
 }
-
 
 #vejledninger .guideline-heading h5 {
   font-size: 1.1rem;
