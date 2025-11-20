@@ -1452,7 +1452,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# FAQ & Info
+# FAQ
 --------------------------------------------------------------*/
 .faq .faq-container .faq-item {
   max-width: 960px;
@@ -1537,6 +1537,46 @@ section {
 
 .faq .faq-container .faq-active .faq-toggle {
   transform: rotate(90deg);
+  color: var(--color-dark-blue);
+}
+
+/*--------------------------------------------------------------
+# Nyheder
+--------------------------------------------------------------*/
+
+.testimonials .testimonial-item.news p {
+  margin: 0.75rem 0 0;
+  font-style: normal;
+}
+
+.testimonials .testimonial-item.news {
+  display: flex;
+  flex-direction: column;
+  min-height: 160px;
+}
+
+.testimonials .testimonial-item.news h3 {
+  margin: 0;
+}
+
+.testimonials .testimonial-item.news .slide-separator {
+  height: 1px;
+  flex: 0 0 1px;
+  width: 100%;
+  background-color: var(--color-turquoise);
+  margin: 0.5rem 0 0rem;
+}
+
+.testimonials .testimonial-item.news .news-read-more {
+  color: var(--color-turquoise);
+  cursor: pointer;
+  font-style: italic;
+}
+
+.testimonials .testimonial-item.news .news-read-more:hover {
+  color: var(--color-light-turquoise);
+}
+.testimonials .testimonial-item.news:hover {
   color: var(--color-dark-blue);
 }
 
