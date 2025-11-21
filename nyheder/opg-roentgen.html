@@ -26,23 +26,6 @@
     <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Preloaded Files & Scripts -->
-    <script>
-      const viewport = window.innerWidth;
-      const preload = document.createElement("link");
-      preload.rel = "preload";
-      preload.as = "image";
-      preload.type = "image/webp";
-      preload.fetchpriority = "high";
-      if (viewport > 1200) {
-        preload.href = "/img/hero-bg.webp";
-      } else if (viewport > 768) {
-        preload.href = "/img/hero-bg-1200.webp";
-      } else {
-        preload.href = "/img/hero-bg-768.webp";
-      }
-      document.head.appendChild(preload);
-    </script>
-
     <link
       rel="preload"
       as="image"
@@ -53,17 +36,129 @@
   </head>
 
   <body>
+    <!-- ======= Topbar ======= -->
 
+    <div id="topbar" class="d-flex fixed-top">
+      <div class="container d-flex justify-content-between">
+        <div class="d-flex contact-info d-flex align-items-center">
+          <a href="mailto:info@tandklinikken-frederikssund.dk" target="_blank">
+            <i class="bi bi-envelope pe-0 ms-0" style="width: 16px; height: 16px"></i>
+            info@tandklinikken-frederikssund.dk
+          </a>
+          <a href="tel:47 31 04 42">
+            <i class="bi bi-telephone ms-3 pe-0" style="width: 16px; height: 16px"></i>
+            <span>47 31 04 42</span>
+          </a>
+          <a
+            href="https://maps.app.goo.gl/FwnERW5XAwo3J58V7"
+            target="_blank"
+            class="google"
+            aria-label="Find Tandklinikken Frederikssund via Google Maps"
+          >
+            <i class="bi bi-geo-alt ms-3 pe-0" style="width: 16px; height: 16px"></i>
+            <span class="ms-0 d-sm-inline hiddenUnder450">Færgeparken 23</span
+            ><span class="d-none d-md-inline">,</span
+            ><span class="d-none d-md-inline"> Frederikssund</span>
+          </a>
+          <span>
+            <i class="bi bi-clock ms-3 pe-0 d-none d-lg-inline"></i>
+            <span class="d-none d-lg-inline mb-1">8.30-17.00, fre 8.30-15.00</span>
+          </span>
+        </div>
+        <div class="d-flex social-links align-items-center">
+          <a
+            href="https://maps.app.goo.gl/FwnERW5XAwo3J58V7"
+            target="_blank"
+            class="google"
+            aria-label="Læs anmeldelser af Tandklinikken Frederikssund hos Google"
+          >
+            <i class="bi bi-google d-none d-sm-block" width="20"></i>
+          </a>
+          <a
+            href="https://dk.trustpilot.com/review/www.tandklinikken-frederikssund.dk"
+            class="icon-link"
+            target="_blank"
+            aria-label="Læs anmeldelser af Tandklinikken Frederikssund på Trustpilot"
+          >
+            <img
+              src="/img/trustpilot.svg"
+              alt="Trustpilot"
+              class="trustpilot-icon d-none d-sm-block"
+              width="20"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- End Topbar  -->
 
-    <!-- ======= Main & Article ======= -->
+    <!-- ======= Header ======= -->
+
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center">
+        <h2 class="logo me-auto">
+          <a href="/" class="scrollto d-flex align-items-center" aria-label="Go to homepage">
+            <span class="visually-hidden">Tandklinikken Frederikssund</span>
+            <img
+              src="/img/onlytextandlogo.webp"
+              alt="Tandklinikken Frederikssund Logo"
+              width="368"
+              height="101"
+              class="img-fluid logo-img"
+              loading="eager"
+              fetchpriority="high"
+            />
+          </a>
+        </h2>
+
+        <nav id="navbar" class="navbar order-last order-lg-0 rounded">
+          <ul class="pt-0">
+            <div class="navbar-brand-mobile p-3 mb-3 container-fluid">
+              <img
+                src="/img/logodarkblue.webp"
+                alt="Tandklinikken Frederikssund Logo"
+                width="217"
+                height="60"
+                class="img-fluid logo-img"
+                loading="lazy"
+              />
+            </div>
+            <li><a class="nav-link scrollto active" href="/">Forside</a></li>
+            <li><a class="nav-link scrollto" href="/#about">Om Os</a></li>
+            <li><a class="nav-link scrollto" href="/#contact">Kontakt</a></li>
+            <li><a class="nav-link scrollto" href="/#akut">Akut</a></li>
+            <li><a class="nav-link scrollto" href="/#faq">FAQ</a></li>
+            <li><a class="nav-link scrollto" href="/#services">Priser</a></li>
+            <li><a class="nav-link scrollto" href="/#nyheder">Nyheder</a></li>
+            <li><a class="nav-link scrollto" href="/#vejledninger">Vejledninger</a></li>
+            <li><a class="nav-link scrollto" href="/#doctors">Personalet</a></li>
+          </ul>
+          <button
+            class="mobile-nav-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            type="button"
+          >
+            <i class="bi bi-list" aria-hidden="true"></i>
+          </button>
+        </nav>
+
+        <a href="/#appointment" class="appointment-btn scrollto btn-primary turquoise-btn"
+          >Bestil Tid</a
+        >
+      </div>
+    </header>
+
+    <!-- End Header  -->
+
+    <!-- ======= Main ======= -->
     <main id="main">
-      <!-- Change this section for new articles -->
-
+      <!-- Article - Change this section for new articles -->
       <section class="news-article section-bg">
         <div class="container">
           <div class="section-title">
             <h2>Vi får OPG-røntgen i klinikken</h2>
-            <p class="news-meta">Nyhed · 2024</p>
+            <p class="news-meta">Nyhed · 2025</p>
           </div>
 
           <article class="news-article-body">
@@ -118,15 +213,15 @@
               Vi glæder os til at byde dig velkommen til en endnu mere komplet tandbehandling, hvor
               både undersøgelse og behandling kan samles ét sted.
             </p>
+            <p class="mt-5">
+              <a href="/#nyheder" class="">← Tilbage til forsiden</a>
+            </p>
           </article>
-
-          <p class="mt-4">
-            <a href="/" class="underlined">← Tilbage til forsiden</a>
-          </p>
         </div>
       </section>
+      <!-- End Article -->
     </main>
-    <!-- End Main & Article -->
+    <!-- End Main -->
 
     <!-- ======= Footer ======= -->
     <footer id="footer" role="contentinfo">
@@ -151,38 +246,23 @@
               <h4>Links</h4>
               <ul>
                 <li>
-                  <i class="bx bx-chevron-right"></i> <a class="scrollto" href="#hero">Forside</a>
+                  <i class="bx bx-chevron-right"></i> <a class="scrollto" href="/">Forside</a>
                 </li>
                 <li>
                   <i class="bx bx-chevron-right"></i>
-                  <a class="scrollto" href="#why-us">Ny Patient</a>
+                  <a class="scrollto" href="/#why-us">Ny Patient</a>
                 </li>
                 <li>
                   <i class="bx bx-chevron-right"></i>
-                  <a class="scrollto" href="#appointment">Bestil Tid</a>
+                  <a class="scrollto" href="/#appointment">Bestil Tid</a>
                 </li>
                 <li>
                   <i class="bx bx-chevron-right"></i>
-                  <a class="scrollto" href="#akut">Akut Behandling</a>
+                  <a class="scrollto" href="/#akut">Akut Behandling</a>
                 </li>
                 <li>
                   <i class="bx bx-chevron-right"></i>
-                  <a class="scrollto" href="#why-us">Åbningstider</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-lg-2 col-md-6 footer-links">
-              <h4>Information</h4>
-              <ul>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a
-                    href="#privatlivspolitik"
-                    data-bs-toggle="modal"
-                    data-bs-target="#privatlivspolitik"
-                    >Privatlivspolitik</a
-                  >
+                  <a class="scrollto" href="/#why-us">Åbningstider</a>
                 </li>
               </ul>
             </div>
