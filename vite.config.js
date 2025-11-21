@@ -11,7 +11,12 @@ export default defineConfig({
     assetsDir: "assets",
     cssCodeSplit: false,
     rollupOptions: {
-      input: resolve(__dirname, "index.html"),
+      input: {
+        main: resolve(__dirname, "index.html"),
+        opg: resolve(__dirname, "nyheder/opg-roentgen.html"),
+        blegning: resolve(__dirname, "nyheder/tandblegning-priser.html"),
+        hjemmeside: resolve(__dirname, "nyheder/ny-hjemmeside.html"),
+      },
       output: {
         manualChunks: {
           vendor: ["bootstrap", "swiper", "glightbox", "flatpickr", "imask"],

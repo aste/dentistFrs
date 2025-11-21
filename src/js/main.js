@@ -206,7 +206,7 @@ const openAccordionFromHash = () => {
   if (hash.startsWith("#vejledning-")) {
     setTimeout(() => {
       scrollto("#vejledninger");
-    }, 400);
+    }, 200);
   }
 };
 
@@ -225,4 +225,12 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeAccordionToggle();
 
   openAccordionFromHash();
+  
+  window.addEventListener("load", () => {
+    if (window.location.hash && select(window.location.hash)) {
+      setTimeout(() => {
+        scrollto(window.location.hash);
+      }, 50);
+    }
+  });
 });

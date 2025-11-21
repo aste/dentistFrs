@@ -284,10 +284,15 @@ h2[aria-hidden="true"] {
   position: relative;
 }
 
+.navbar > ul > li:first-of-type {
+  position: relative;
+  white-space: nowrap;
+  padding: 0.5rem 0 0.5rem 2rem;
+}
 .navbar > ul > li {
   position: relative;
   white-space: nowrap;
-  padding: 8px 0 8px 20px;
+  padding: 0.5rem 0 0.5rem 2rem;
 }
 
 .navbar a {
@@ -296,9 +301,9 @@ h2[aria-hidden="true"] {
   justify-content: space-between;
   color: var(--color-navy);
   white-space: nowrap;
-  font-size: 14px;
+  font-size: 0.875rem;
   transition: 0.3s;
-  padding: 5px 2px;
+  padding: 0.25rem 0.125rem;
 }
 
 .navbar a:hover {
@@ -375,6 +380,14 @@ h2[aria-hidden="true"] {
   }
 }
 
+@media (max-width: 1200px) {
+  .navbar > ul > li {
+    position: relative;
+    white-space: nowrap;
+    padding: 0.5rem 0 0.5rem 0.9375rem;
+  }
+}
+
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
     left: -90%;
@@ -417,6 +430,11 @@ h2[aria-hidden="true"] {
 @media (max-width: 992px) {
   .navbar ul {
     display: none;
+  }
+  .navbar > ul > li:first-of-type {
+    position: relative;
+    white-space: nowrap;
+    padding: 0.5rem 0 0.5rem 0.5rem;
   }
 }
 
@@ -725,6 +743,19 @@ section {
 
 .section-title p {
   margin-bottom: 1.5rem;
+}
+
+#about,
+#appointment,
+#why-us,
+#contact,
+#akut,
+#faq,
+#services,
+#nyheder,
+#vejledninger,
+#doctors {
+  scroll-margin-top: 100px;
 }
 
 /*--------------------------------------------------------------
@@ -1840,4 +1871,25 @@ section {
 
 #footer {
   background-color: var(--color-white-blue);
+}
+
+/*--------------------------------------------------------------
+# News Articles
+--------------------------------------------------------------*/
+.news-article .section-title {
+  margin-top: 8rem;
+}
+.news-article-body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.news-article-body li {
+  margin-top: 0.75rem;
+}
+
+.news-meta {
+  font-size: 0.9rem;
+  opacity: 0.6;
 }
