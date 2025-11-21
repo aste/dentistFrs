@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+import { globSync } from "glob";
 import cssnano from "cssnano";
 
 export default defineConfig({
@@ -13,9 +14,12 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        opg: resolve(__dirname, "nyheder/opg-roentgen.html"),
-        blegning: resolve(__dirname, "nyheder/tandblegning-priser.html"),
-        hjemmeside: resolve(__dirname, "nyheder/ny-hjemmeside.html"),
+        ...Object.fromEntries(
+          globSync("nyheder/*.html").map((file) => [
+            file.replace(/\.html$/, "").replace(/\//g, "_"),
+            resolve(__dirname, file),
+          ])
+        ),
       },
       output: {
         manualChunks: {
