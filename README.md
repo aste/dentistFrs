@@ -1,145 +1,117 @@
-# Tandklinikken Frederikssund Website
+# Tandklinikken Frederikssund — README
 
-This repository contains the source code for the [Tandklinikken Frederikssund website](https://tandklinikken-frederikssund.dk/).
+This repository contains the source code for **Tandklinikken Frederikssund**’s website. The site is built with HTML, CSS, JavaScript, and Vite, and deployed on Netlify. It includes optimized assets, form handling, accessibility improvements, and several interactive components.
 
 ## Table of Contents
 
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Development](#development)
-- [Deployment](#deployment)
-- [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
+* [Features](#features)
+* [Tech Stack](#tech-stack)
+* [Project Structure](#project-structure)
+* [Development](#development)
+* [Production Build](#production-build)
+* [Deployment](#deployment)
+* [Screenshots](#screenshots)
+* [License](#license)
 
 ## Features
 
-- Responsive design for various devices.
-- User-friendly navigation.
-- Contact and appointment forms for easy communication.
-- Informative sections about services and team members.
-- Smooth animations and interactive UI elements.
-- SEO optimization with sitemap and robots.txt.
+* Responsive design for all devices
+* Smooth animations using IntersectionObserver
+* Accessible navigation and ARIA markup
+* Optimized image loading with dynamic preloading
+* GLightbox image gallery
+* Testimonials slider using Swiper.js
+* FAQ accordion system
+* Smooth scrolling and mobile navigation
+* Contact form with validation and Web3Forms integration
+* Appointment form with IMask (phone/CPR) and Flatpickr date picker
+* Structured SEO: meta tags, sitemap, robots.txt
 
 ## Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Bundler:** Vite
-- **Deployment:** Netlify
+* HTML, CSS, JavaScript
+* Vite
+* Bootstrap 5 + Bootstrap Icons
+* Swiper.js
+* GLightbox
+* Flatpickr
+* IMask.js
+* Netlify
+* Web3Forms
 
 ## Project Structure
 
 ```
-├─ index.html                  # Main homepage
-├─ public
-│  ├─ _redirects               # Redirect rules from prior site paths
-│  ├─ img                      # Image assets
-│  ├─ netlify.toml             # Netlify configuration
-│  ├─ robots.txt               # SEO rules for web crawlers
-│  ├─ site.webmanifest         # PWA Manifest
-│  └─ sitemap.xml              # Sitemap for SEO
-├─ src
-│  ├─ assets
-│  │  └─ css
-│  │     ├─ animation.css
-│  │     ├─ style.css
-│  │     └─ main.css          # Main stylesheet
-│  └─ js
-│     ├─ animations.js
-│     ├─ appointment-form.js
-│     ├─ contact-form.js
-│     └─ main.js               # JavaScript entry point
-├─ package-lock.json           # Lockfile for dependencies
-├─ package.json                # Project metadata and dependencies
-└─ vite.config.js              # Vite configuration
+├─ index.html
+├─ nyheder/                    # News article pages
+├─ public/
+│  ├─ _redirects
+│  ├─ img/
+│  ├─ robots.txt
+│  ├─ site.webmanifest
+│  └─ sitemap.xml
+├─ src/
+│  ├─ assets/css/
+│  └─ js/
+├─ package.json
+├─ package-lock.json
+└─ vite.config.js
 ```
-
-## Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/aste/dentistFrs.git
-   cd dentistFrs
-   ```
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
 
 ## Development
 
-1. **Start the development server:**
+Install dependencies and run the development server:
 
-   ```bash
-   npm run dev
-   ```
+```
+npm install
+npm run dev
+```
 
-   The site will be available at `http://localhost:3000`.
+Files to edit:
 
-2. **Edit Files:**
+* HTML: `index.html`, `nyheder/*.html`
+* CSS: `src/assets/css/`
+* JavaScript: `src/js/`
 
-   - HTML: `index.html`
-   - Styles: `styles/`
-   - JavaScript: `main.js`, `appointment-form.js`, `contact-form.js`, `animations.js`
+## Production Build
 
-3. **Live Reload:** Changes will automatically reload in the browser.
+```
+npm run build
+```
+
+Output is generated in the `dist/` directory.
 
 ## Deployment
 
-1. **Build the project for production:**
+Deploy via Netlify using:
 
-   ```bash
-   npm run build
-   ```
+* Build: `npm run build`
+* Publish directory: `dist/`
 
-   This will generate optimized files in the `dist/` directory.
-
-2. **Deploy to Netlify:**
-   - Connect the repository to Netlify.
-   - Set the build command to `npm run build`.
-   - Set the publish directory to `dist/`.
+Netlify reads `_redirects`, `_headers`, and `netlify.toml` automatically.
 
 ## Screenshots
 
 ### Mobile Version
 
-![Homepage](public/img/screenshots/mobile.webp)
+![Mobile](public/img/screenshots/mobile.webp)
 
 ### Vertical Tablet Version
 
-![Homepage](public/img/screenshots/tablet-vertical.webp)
+![Tablet Vertical](public/img/screenshots/tablet-vertical.webp)
 
 ### Horizontal Tablet Version
 
-![Homepage](public/img/screenshots/tablet-horizontal.webp)
+![Tablet Horizontal](public/img/screenshots/tablet-horizontal.webp)
 
 ### Desktop Version
 
-![Homepage](public/img/screenshots/desktop.webp)
+![Desktop](public/img/screenshots/desktop.webp)
 
 ### Lighthouse Score
 
-![Lighthouse Score](public/img/screenshots/lighthouse.webp)
-
-## Contributing
-
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature/YourFeatureName
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m 'Add some feature'
-   ```
-4. Push to the branch:
-   ```bash
-   git push origin feature/YourFeatureName
-   ```
-5. Open a pull request.
+![Lighthouse](public/img/screenshots/lighthouse.webp)
 
 ## License
 
-This project is licensed under a restrictive license. Permission is required before using any part of this codebase. Please contact the repository owner for more details.
+This project is under a restrictive license. Permission is required before using or reusing code or assets.

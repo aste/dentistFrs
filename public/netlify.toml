@@ -3,16 +3,16 @@
   publish = "dist"
 
 [[redirects]]
-from = "/assets/*"
-to = "/assets/:splat"
-status = 200
+  from = "/nyheder/*"
+  to = "/nyheder/:splat"
+  status = 200
 
 [[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [[headers]]
-for = "/*"
-[headers.values]
-  Content-Security-Policy = "object-src 'none'; base-uri 'self'; form-action 'self';"
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com;"

@@ -1,17 +1,26 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+import { globSync } from "glob";
 import cssnano from "cssnano";
 
 export default defineConfig({
-  base: "./", // relative URL path, ensures the paths work correctly in previews and production
+  base: "/",
   build: {
     outDir: "dist",
     emptyOutDir: true,
     assetsDir: "assets",
     cssCodeSplit: false,
     rollupOptions: {
-      input: resolve(__dirname, "index.html"),
+      input: {
+        main: resolve(__dirname, "index.html"),
+        ...Object.fromEntries(
+          globSync("nyheder/*.html").map((file) => [
+            file.replace(/\.html$/, "").replace(/\//g, "_"),
+            resolve(__dirname, file),
+          ])
+        ),
+      },
       output: {
         manualChunks: {
           vendor: ["bootstrap", "swiper", "glightbox", "flatpickr", "imask"],

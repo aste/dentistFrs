@@ -1,13 +1,8 @@
 User-agent: *
 Allow: /
 
-# Disallow sensitive or unnecessary paths (only if needed)
+# Block only dev/internal folders if they ever become public
 Disallow: /src/
+Disallow: /dist/
 
-# Allow critical files for rendering
-Allow: /dist/
-Allow: /*.js$
-Allow: /*.css$
-
-# Sitemap location
 Sitemap: https://tandklinikken-frederikssund.dk/sitemap.xml
