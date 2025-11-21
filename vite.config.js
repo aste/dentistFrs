@@ -5,7 +5,7 @@ import { globSync } from "glob";
 import cssnano from "cssnano";
 
 export default defineConfig({
-  base: "./", // relative URL path, ensures the paths work correctly in previews and production
+  base: "/",
   build: {
     outDir: "dist",
     emptyOutDir: true,
