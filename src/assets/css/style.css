@@ -1428,6 +1428,11 @@ section {
   color: var(--color-white);
 }
 
+.opening-hours-asterisk {
+  font-size: 0.8rem;
+  color: var(--color-navy);
+}
+
 .contact .appointment-form {
   width: 100%;
 }
