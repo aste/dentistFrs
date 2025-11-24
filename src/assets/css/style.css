@@ -1827,7 +1827,6 @@ section {
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: var(--color-white);
 }
 
 #footer .footer-top .footer-contact {
@@ -1892,8 +1891,18 @@ section {
   line-height: 1;
 }
 
-#footer {
+.footer-bottom-wrapper {
+  background-color: var(--color-white);
+  width: 100%;
+}
+
+.footer-top.article {
+  background-color: var(--color-white);
+  width: 100%;
+}
+.footer-bottom-wrapper.article {
   background-color: var(--color-white-blue);
+  width: 100%;
 }
 
 /*--------------------------------------------------------------
