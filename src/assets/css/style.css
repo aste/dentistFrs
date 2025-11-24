@@ -284,10 +284,15 @@ h2[aria-hidden="true"] {
   position: relative;
 }
 
+.navbar > ul > li:first-of-type {
+  position: relative;
+  white-space: nowrap;
+  padding: 0.5rem 0 0.5rem 2rem;
+}
 .navbar > ul > li {
   position: relative;
   white-space: nowrap;
-  padding: 8px 0 8px 20px;
+  padding: 0.5rem 0 0.5rem 2rem;
 }
 
 .navbar a {
@@ -296,9 +301,9 @@ h2[aria-hidden="true"] {
   justify-content: space-between;
   color: var(--color-navy);
   white-space: nowrap;
-  font-size: 14px;
+  font-size: 0.875rem;
   transition: 0.3s;
-  padding: 5px 2px;
+  padding: 0.25rem 0.125rem;
 }
 
 .navbar a:hover {
@@ -375,6 +380,14 @@ h2[aria-hidden="true"] {
   }
 }
 
+@media (max-width: 1200px) {
+  .navbar > ul > li {
+    position: relative;
+    white-space: nowrap;
+    padding: 0.5rem 0 0.5rem 0.9375rem;
+  }
+}
+
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
     left: -90%;
@@ -417,6 +430,11 @@ h2[aria-hidden="true"] {
 @media (max-width: 992px) {
   .navbar ul {
     display: none;
+  }
+  .navbar > ul > li:first-of-type {
+    position: relative;
+    white-space: nowrap;
+    padding: 0.5rem 0 0.5rem 0.5rem;
   }
 }
 
@@ -725,6 +743,19 @@ section {
 
 .section-title p {
   margin-bottom: 1.5rem;
+}
+
+#about,
+#appointment,
+#why-us,
+#contact,
+#akut,
+#faq,
+#services,
+#nyheder,
+#vejledninger,
+#doctors {
+  scroll-margin-top: 100px;
 }
 
 /*--------------------------------------------------------------
@@ -1207,16 +1238,15 @@ section {
 }
 
 .testimonials .testimonial-wrap {
-  height: 80%;
+  height: 70%;
   padding-left: 50px;
 }
 
 .testimonials .testimonials-slider {
-  overflow: hidden;
 }
 
 .testimonials .testimonial-item {
-  height: 80%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   box-sizing: content-box;
@@ -1228,9 +1258,15 @@ section {
   position: relative;
   background: var(--color-white);
 }
+.testimonials .testimonial-item p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 90px;
+  width: 80px;
   border-radius: 10px;
   border: 6px solid var(--color-white);
   position: absolute;
@@ -1297,6 +1333,12 @@ section {
   .testimonials .testimonial-item .testimonial-img {
     position: static;
     left: auto;
+  }
+}
+
+@media (max-width: 449px) {
+  .testimonials .testimonial-item {
+    height: 18rem;
   }
 }
 
@@ -1386,6 +1428,11 @@ section {
   color: var(--color-white);
 }
 
+.opening-hours-asterisk {
+  font-size: 0.8rem;
+  color: var(--color-navy);
+}
+
 .contact .appointment-form {
   width: 100%;
 }
@@ -1452,7 +1499,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# FAQ & Info
+# FAQ
 --------------------------------------------------------------*/
 .faq .faq-container .faq-item {
   max-width: 960px;
@@ -1538,6 +1585,58 @@ section {
 .faq .faq-container .faq-active .faq-toggle {
   transform: rotate(90deg);
   color: var(--color-dark-blue);
+}
+
+/*--------------------------------------------------------------
+# Nyheder
+--------------------------------------------------------------*/
+
+.testimonials .testimonial-item.news p {
+  margin: 0.75rem 0 0;
+  font-style: normal;
+}
+
+.testimonials .testimonial-item.news {
+  display: flex;
+  flex-direction: column;
+  min-height: 160px;
+}
+
+.testimonials .testimonial-item.news h3 {
+  margin: 0;
+}
+
+.testimonials .testimonial-item.news .slide-separator {
+  height: 1px;
+  flex: 0 0 1px;
+  width: 100%;
+  background-color: var(--color-turquoise);
+  margin: 0.5rem 0 0rem;
+}
+
+.testimonials .testimonial-item.news .news-read-more {
+  color: var(--color-turquoise);
+  cursor: pointer;
+  font-style: italic;
+}
+
+.testimonials .testimonial-item.news .news-read-more:hover {
+  color: var(--color-light-turquoise);
+}
+.testimonials .testimonial-item.news:hover {
+  color: var(--color-dark-blue);
+}
+
+@media (max-width: 449px) {
+  .testimonials .testimonial-item.news {
+    height: 16rem;
+  }
+  .testimonials .testimonial-item.news p {
+    display: block;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+    overflow: hidden;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1733,7 +1832,6 @@ section {
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: var(--color-white);
 }
 
 #footer .footer-top .footer-contact {
@@ -1798,6 +1896,37 @@ section {
   line-height: 1;
 }
 
-#footer {
+.footer-bottom-wrapper {
+  background-color: var(--color-white);
+  width: 100%;
+}
+
+.footer-top.article {
+  background-color: var(--color-white);
+  width: 100%;
+}
+.footer-bottom-wrapper.article {
   background-color: var(--color-white-blue);
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# News Articles
+--------------------------------------------------------------*/
+.news-article .section-title {
+  margin-top: 8rem;
+}
+.news-article-body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.news-article-body li {
+  margin-top: 0.75rem;
+}
+
+.news-meta {
+  font-size: 0.9rem;
+  opacity: 0.6;
 }
