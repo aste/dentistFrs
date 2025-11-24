@@ -1238,16 +1238,15 @@ section {
 }
 
 .testimonials .testimonial-wrap {
-  height: 80%;
+  height: 70%;
   padding-left: 50px;
 }
 
 .testimonials .testimonials-slider {
-  overflow: hidden;
 }
 
 .testimonials .testimonial-item {
-  height: 80%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   box-sizing: content-box;
@@ -1259,9 +1258,15 @@ section {
   position: relative;
   background: var(--color-white);
 }
+.testimonials .testimonial-item p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 90px;
+  width: 80px;
   border-radius: 10px;
   border: 6px solid var(--color-white);
   position: absolute;
@@ -1328,6 +1333,12 @@ section {
   .testimonials .testimonial-item .testimonial-img {
     position: static;
     left: auto;
+  }
+}
+
+@media (max-width: 449px) {
+  .testimonials .testimonial-item {
+    height: 18rem;
   }
 }
 
@@ -1609,6 +1620,18 @@ section {
 }
 .testimonials .testimonial-item.news:hover {
   color: var(--color-dark-blue);
+}
+
+@media (max-width: 449px) {
+  .testimonials .testimonial-item.news {
+    height: 16rem;
+  }
+  .testimonials .testimonial-item.news p {
+    display: block;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+    overflow: hidden;
+  }
 }
 
 /*--------------------------------------------------------------
