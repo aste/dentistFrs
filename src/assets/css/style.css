@@ -1431,6 +1431,8 @@ section {
 .opening-hours-asterisk {
   font-size: 0.8rem;
   color: var(--color-navy);
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .contact .appointment-form {
