@@ -569,6 +569,14 @@ h2[aria-hidden="true"] {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+.hero-seo-image {
+  position: absolute;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
 #hero {
   height: clamp(360px, 75vh, 800px);
   background: url("/img/hero-bg-768.webp") 50% top;
