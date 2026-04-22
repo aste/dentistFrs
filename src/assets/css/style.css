@@ -1109,7 +1109,7 @@ section {
 .appointment .appointment-form textarea,
 .contact .contact-form select,
 .appointment .appointment-form select {
-  border-radius: 0;
+  border-radius: 8px;
   box-shadow: none;
   font-size: 14px;
   padding: 10px !important;
