@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -35,18 +35,18 @@
     <!-- Preloaded Files & Scripts -->
     <script>
       const viewport = window.innerWidth;
-      const preload = document.createElement("link");
-      preload.rel = "preload";
-      preload.as = "image";
-      preload.type = "image/webp";
-      preload.fetchpriority = "high";
+      const preload = document.createElement('link');
+      preload.rel = 'preload';
+      preload.as = 'image';
+      preload.type = 'image/webp';
+      preload.fetchpriority = 'high';
 
       if (viewport > 1200) {
-        preload.href = "/img/hero-bg.webp";
+        preload.href = '/img/hero-bg.webp';
       } else if (viewport > 768) {
-        preload.href = "/img/hero-bg-1200.webp";
+        preload.href = '/img/hero-bg-1200.webp';
       } else {
-        preload.href = "/img/hero-bg-768.webp";
+        preload.href = '/img/hero-bg-768.webp';
       }
       document.head.appendChild(preload);
     </script>
@@ -856,7 +856,7 @@
                   <option value="Chafiq, Tandlæge">Chafiq, Tandlæge</option>
                   <option value="Charlotte, Tandlæge">Charlotte, Tandlæge</option>
                   <option value="Katrin, Tandlæge">Katrin, Tandlæge</option>
-                  <option value="Sofie D., Tandlæge">Sofie D., Tandlæge</option>
+                  <option value="Sofie, Tandlæge">Sofie, Tandlæge</option>
                   <option value="Louise, Tandplejer">Louise, Tandplejer</option>
                   <option value="Stina, Tandplejer">Stina, Tandplejer</option>
                 </select>
@@ -1371,6 +1371,30 @@
                     </td>
                     <td>250 kr.</td>
                     <td>250 kr.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="4" class="table-group-title">Røntgenbilleder</td>
+                  </tr>
+                  <tr>
+                    <td>Almindelig røntgenbillede</td>
+                    <td>??? kr.</td>
+                    <td>??? kr.</td>
+                  </tr>
+                  <tr>
+                    <td>Panoramarøntgen</td>
+                    <td>899 kr.</td>
+                    <td>899 kr.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="4" class="table-group-title">Konsultation</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Second opinion – faglig vurdering og rådgivning. Kontakt klinikken for
+                      tidsbestilling.
+                    </td>
+                    <td></td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -2101,13 +2125,13 @@
                     src="/img/personale/TandlægeSofieD.webp"
                     loading="lazy"
                     class="img-fluid"
-                    alt="Tandlæge Sofie D."
+                    alt="Tandlæge Sofie"
                     width="150"
                     height="150"
                   />
                 </div>
                 <div class="member-info">
-                  <h3>Sofie D.</h3>
+                  <h3>Sofie</h3>
                   <span>Tandlæge</span>
                   <span class="member-edu">Københavns Universitet, 2024</span>
                 </div>
