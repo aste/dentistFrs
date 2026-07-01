@@ -28,7 +28,7 @@
     "@fullhuman/postcss-purgecss": "^7.0.2",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
-    "postcss": "^8.5.1",
+    "postcss": "^8.5.16",
     "rollup": "^4.59.0",
     "sass": "^1.63.0",
     "sharp": "^0.33.5",
