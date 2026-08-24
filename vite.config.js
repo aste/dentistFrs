@@ -90,17 +90,7 @@ export default defineConfig({
       logStats: true,
       svg: {
         multipass: true,
-        plugins: [
-          {
-            name: "preset-default",
-            params: {
-              overrides: {
-                removeViewBox: false,
-                removeEmptyAttrs: false,
-              },
-            },
-          },
-        ],
+        plugins: ["preset-default"],
       },
       png: {
         quality: 80,
