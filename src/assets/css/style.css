@@ -1168,10 +1168,16 @@ section {
 .doctors .member .pic {
   overflow: hidden;
   width: 150px;
+  min-width: 150px;
+  height: 150px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.doctors .member .pic.staff-photo-placeholder {
+  background-color: #d9dee2;
 }
 
 .doctors .member .pic img {
@@ -1235,6 +1241,11 @@ section {
   background-color: var(--color-light-blue);
   width: 80%;
   margin: 2rem auto 0.5rem;
+}
+
+#faq-undersoegelse-pris,
+#pris-tandimplantat {
+  scroll-margin-top: 140px;
 }
 
 /*--------------------------------------------------------------
