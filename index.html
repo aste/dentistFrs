@@ -963,7 +963,7 @@
             <input type="hidden" name="access_key" value="8a604d2b-2062-4d55-8b5f-a324cd9390fe" />
             <input type="checkbox" name="botcheck" id="" style="display: none" />
             <input type="hidden" name="subject" id="subject" value="Tidsbestilling" />
-            <input type="hidden" name="replyto" id="replyto appointmentReply" value="" />
+            <input type="hidden" name="replyto" id="appointment-replyto" value="" />
             <input type="hidden" name="from_name" value="Hjemmesiden" />
 
             <div class="row">
@@ -1033,7 +1033,7 @@
                 />
               </div>
               <div class="col-md-3 form-group mt-3">
-                <label for="tidspunkt" class="visually-hidden">Foretrukne Tidspunkt</label>
+                <label for="preferred_time" class="visually-hidden">Foretrukne Tidspunkt</label>
                 <select
                   name="Foretrukne Tidspunkt"
                   id="preferred_time"
@@ -1048,13 +1048,13 @@
                   <option value="Formiddag fra kl. 10.00 til 12.00">
                     Formiddag fra kl. 10.00 til 12.00
                   </option>
-                  <option value="Tidlig Eftermiddag fra kl. 12.00 til 15.00">
-                    Eftermiddag fra kl. 12.00 til 15.00
+                  <option value="Eftermiddag fra kl. 12.00">
+                    Eftermiddag fra kl. 12.00
                   </option>
                 </select>
               </div>
               <div class="col-md-3 form-group mt-3">
-                <label for="behandling" class="visually-hidden">Behandling</label>
+                <label for="treatment" class="visually-hidden">Behandling</label>
                 <select
                   name="Behandling"
                   id="treatment"
@@ -1075,7 +1075,7 @@
                 </select>
               </div>
               <div class="col-md-3 form-group mt-3">
-                <label for="behandler" class="visually-hidden">Behandler</label>
+                <label for="doctor" class="visually-hidden">Behandler</label>
                 <select
                   name="Foretrukne behandler"
                   id="doctor"
@@ -1084,10 +1084,11 @@
                 >
                   <option value="Ingen behandler valgt">Behandler</option>
                   <option value="Ingen præferencer">Ingen præferencer</option>
-                  <option value="Marc, Tandlæge">Marc, Tandlæge</option>
                   <option value="Chafiq, Tandlæge">Chafiq, Tandlæge</option>
                   <option value="Charlotte, Tandlæge">Charlotte, Tandlæge</option>
                   <option value="Katrin, Tandlæge">Katrin, Tandlæge</option>
+                  <option value="Majdi, Tandlæge">Majdi, Tandlæge</option>
+                  <option value="Nael, Tandlæge">Nael, Tandlæge</option>
                   <option value="Sofie, Tandlæge">Sofie, Tandlæge</option>
                   <option value="Louise, Tandplejer">Louise, Tandplejer</option>
                   <option value="Stina, Tandplejer">Stina, Tandplejer</option>
@@ -1104,11 +1105,21 @@
               ></textarea>
             </div>
             <div class="text-center">
-              <button type="submit" class="btn-primary turquoise-btn animation-btn">
+              <button
+                type="submit"
+                id="appointment-submit"
+                class="btn-primary turquoise-btn animation-btn"
+              >
                 Bestil Tid
               </button>
               <!-- <div class="h-captcha mt-3" data-captcha="true"></div> -->
-              <div id="appointment-status"></div>
+              <div
+                id="appointment-status"
+                class="mt-3"
+                role="status"
+                aria-live="polite"
+                tabindex="-1"
+              ></div>
             </div>
           </form>
         </div>
@@ -3437,6 +3448,44 @@
               sundhedslovgivningen. Du kan finde nærmere oplysninger om Styrelsen for
               Patientsikkerhed på www.stps.dk
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="appointment-success-modal"
+      tabindex="-1"
+      aria-labelledby="appointment-success-title"
+      aria-describedby="appointment-success-message"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="appointment-success-title">Tak for din bookinganmodning</h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Luk"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p id="appointment-success-message">
+              Din bookinganmodning er modtaget. Din aftale er først endelig, når klinikken har
+              bekræftet den. Vi vender tilbage hurtigst muligt.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary turquoise-btn"
+              data-bs-dismiss="modal"
+            >
+              Luk
+            </button>
           </div>
         </div>
       </div>
