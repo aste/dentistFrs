@@ -1,10 +1,5 @@
 # Client follow-ups
 
-## Required content inputs
-
-- Obtain the client-approved title and full body for the new article before creating its page, homepage preview, implant link, and sitemap entry.
-- Obtain replacement/new portraits for Jesper, Jamie, Majdi, Mehret, and Nael before adding the four new photographed profiles or replacing Jesper's existing image. Source files must be suitable for centered, undistorted 255 x 255 WebP exports.
-
 ## CPR handling
 
 The current public booking form sends the full CPR number through Web3Forms to email. Do not describe this setup as verified or "bulletproof" until the clinic has reviewed processor agreements, international transfers, mailbox security, retention, access control, and incident handling.
