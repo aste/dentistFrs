@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build:netlify"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22.12.0"
+
+# Keep Netlify from rewriting Vite's generated .html links after the build.
+[build.processing.html]
+  pretty_urls = false
