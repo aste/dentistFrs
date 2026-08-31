@@ -1191,7 +1191,7 @@
                 />
                 <input type="checkbox" name="botcheck" id="" style="display: none" />
                 <input type="hidden" name="subject" id="subject" value="Besked" />
-                <input type="hidden" name="replyto" id="replyto contactReply" value="" />
+                <input type="hidden" name="replyto" id="contact-replyto" value="" />
                 <input type="hidden" name="from_name" value="Hjemmesiden" />
 
                 <div class="row">
@@ -1236,31 +1236,51 @@
                   <div class="invalid-feedback">Din besked skal være på minimum 15 tegn</div>
                 </div>
                 <div class="text-center">
-                  <button type="submit" class="btn btn-primary turquoise-btn animation-btn">
+                  <button
+                    type="submit"
+                    id="contact-submit"
+                    class="btn btn-primary turquoise-btn animation-btn"
+                  >
                     Send Besked
                   </button>
                   <!-- <div class="h-captcha mt-3" data-captcha="true"></div> -->
-                  <div id="contact-status"></div>
+                  <div id="contact-status" tabindex="-1"></div>
                 </div>
               </form>
             </div>
           </div>
         </div>
 
-        <div class="mt-5 pb-0 mb-0 section-bg">
-          <iframe
-            style="border: 0; width: 100%; height: 350px"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3809.3462818017033!2d12.05144796015549!3d55.843129569133566!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46526923b6353445%3A0xb5a3b02ddffe0115!2sTandklinikken%20Frederikssund!5e0!3m2!1sen!2sdk!4v1703966601233!5m2!1sen!2sdk"
-            frameborder="0"
-            allowfullscreen
-            title="Kort der viser Tandklinikken Frederikssunds placering på Færgeparken 23, 3600 Frederikssund"
-            aria-label="Kort der viser Tandklinikken Frederikssunds placering på Færgeparken 23, 3600 Frederikssund"
-            style="border: 0"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+        <div
+          id="google-maps-consent"
+          class="google-map-consent mt-5 pb-0 mb-0 section-bg"
+          data-map-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3809.3462818017033!2d12.05144796015549!3d55.843129569133566!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46526923b6353445%3A0xb5a3b02ddffe0115!2sTandklinikken%20Frederikssund!5e0!3m2!1sen!2sdk!4v1703966601233!5m2!1sen!2sdk"
+        >
+          <div
+            class="google-map-placeholder"
+            role="region"
+            aria-labelledby="google-map-placeholder-title"
           >
-            ></iframe
-          >
+            <i class="bi bi-geo-alt" aria-hidden="true"></i>
+            <h3 id="google-map-placeholder-title">Find klinikken</h3>
+            <p>
+              Google Maps er deaktiveret, indtil du giver samtykke til at Google kan anvende cookies
+              og modtage oplysninger om dit besøg.
+            </p>
+            <p><strong>Færgeparken 23, 3600 Frederikssund</strong></p>
+            <div class="google-map-actions">
+              <button type="button" class="btn btn-primary turquoise-btn" data-google-maps-accept>
+                Indlæs Google Maps
+              </button>
+              <a
+                class="btn btn-primary turquoise-btn"
+                href="https://maps.app.goo.gl/FwnERW5XAwo3J58V7"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Åbn i Google Maps</a
+              >
+            </div>
+          </div>
         </div>
       </section>
       <!-- End Contact Section -->
@@ -1579,7 +1599,7 @@
                   <tr>
                     <td>Indsættelse af tandimplantat i kæbebenet uden kæbehuleløft</td>
                     <td>20.000 kr.</td>
-                    <td>21.000 kr.</td>
+                    <td></td>
                   </tr>
 
                   <tr>
@@ -1655,6 +1675,24 @@
           <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
             <div class="swiper-wrapper">
               <!-- ======= Insert News Article Previews Here ======= -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                  <a href="/nyheder/taender-med-omtanke.html" class="news-link">
+                    <div class="testimonial-item news">
+                      <h3>Tænder med omtanke</h3>
+                      <div class="slide-separator"></div>
+
+                      <p class="news-excerpt">
+                        Når vi vælger materialer og samarbejdspartnere til klinikken, ser vi ikke kun
+                        på pris og leveringstid. Vi lægger også vægt på kvalitet, gennemsigtighed og
+                        ansvarlighed over for både mennesker og miljø
+                        <span class="news-read-more">...læs resten af artiklen</span>
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
 
               <div class="swiper-slide">
                 <div class="testimonial-wrap">
@@ -2395,26 +2433,6 @@
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="/img/personale/TandlægeSofieD.webp"
-                    loading="lazy"
-                    class="img-fluid"
-                    alt="Tandlæge Sofie"
-                    width="150"
-                    height="150"
-                  />
-                </div>
-                <div class="member-info">
-                  <h3>Sofie</h3>
-                  <span>Tandlæge</span>
-                  <span class="member-edu">Københavns Universitet, 2024</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 mt-4">
-              <div class="member d-flex align-items-start">
-                <div class="pic">
-                  <img
                     src="/img/personale/TandlægeMajdi.webp"
                     loading="lazy"
                     class="img-fluid"
@@ -2445,6 +2463,26 @@
                 </div>
                 <div class="member-info">
                   <h3>Nael</h3>
+                  <span>Tandlæge</span>
+                  <span class="member-edu">Københavns Universitet, 2024</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mt-4">
+              <div class="member d-flex align-items-start">
+                <div class="pic">
+                  <img
+                    src="/img/personale/TandlægeSofieD.webp"
+                    loading="lazy"
+                    class="img-fluid"
+                    alt="Tandlæge Sofie"
+                    width="150"
+                    height="150"
+                  />
+                </div>
+                <div class="member-info">
+                  <h3>Sofie</h3>
                   <span>Tandlæge</span>
                   <span class="member-edu">Københavns Universitet, 2024</span>
                 </div>
@@ -2519,6 +2557,26 @@
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
+                    src="/img/personale/KlinikassistentJamie.webp"
+                    loading="lazy"
+                    class="img-fluid"
+                    alt="Klinikassistent Jamie"
+                    width="150"
+                    height="150"
+                  />
+                </div>
+                <div class="member-info">
+                  <h3>Jamie</h3>
+                  <span>Klinikassistent</span>
+                  <span class="member-edu"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mt-4">
+              <div class="member d-flex align-items-start">
+                <div class="pic">
+                  <img
                     src="/img/personale/KlinikassistentKatja.webp"
                     loading="lazy"
                     class="img-fluid"
@@ -2529,6 +2587,57 @@
                 </div>
                 <div class="member-info">
                   <h3>Katja</h3>
+                  <span>Klinikassistent</span>
+                  <span class="member-edu"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mt-4">
+              <div class="member d-flex align-items-start">
+                <div class="pic">
+                  <img
+                    src="/img/personale/KlinikassistentElevLene.webp"
+                    loading="lazy"
+                    class="img-fluid"
+                    alt="Klinikassistentelev Lene"
+                    width="150"
+                    height="150"
+                  />
+                </div>
+                <div class="member-info">
+                  <h3>Lene</h3>
+                  <span>Klinikassistentelev</span>
+                  <span class="member-edu"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mt-4">
+              <div class="member d-flex align-items-start">
+                <div class="pic">
+                  <img
+                    src="/img/personale/KlinikassistentElevMehret.webp"
+                    loading="lazy"
+                    class="img-fluid"
+                    alt="Klinikassistentelev Mehret"
+                    width="150"
+                    height="150"
+                  />
+                </div>
+                <div class="member-info">
+                  <h3>Mehret</h3>
+                  <span>Klinikassistentelev</span>
+                  <span class="member-edu"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 mt-4">
+              <div class="member d-flex align-items-start">
+                <div class="pic staff-photo-placeholder" aria-hidden="true"></div>
+                <div class="member-info">
+                  <h3>Nadia</h3>
                   <span>Klinikassistent</span>
                   <span class="member-edu"></span>
                 </div>
@@ -2595,57 +2704,6 @@
               </div>
             </div>
 
-            <div class="col-lg-6 mt-4">
-              <div class="member d-flex align-items-start">
-                <div class="pic">
-                  <img
-                    src="/img/personale/KlinikassistentElevMehret.webp"
-                    loading="lazy"
-                    class="img-fluid"
-                    alt="Klinikassistentelev Mehret"
-                    width="150"
-                    height="150"
-                  />
-                </div>
-                <div class="member-info">
-                  <h3>Mehret</h3>
-                  <span>Klinikassistentelev</span>
-                  <span class="member-edu"></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 mt-4">
-              <div class="member d-flex align-items-start">
-                <div class="pic">
-                  <img
-                    src="/img/personale/KlinikassistentJamie.webp"
-                    loading="lazy"
-                    class="img-fluid"
-                    alt="Klinikassistent Jamie"
-                    width="150"
-                    height="150"
-                  />
-                </div>
-                <div class="member-info">
-                  <h3>Jamie</h3>
-                  <span>Klinikassistent</span>
-                  <span class="member-edu"></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 mt-4">
-              <div class="member d-flex align-items-start">
-                <div class="pic staff-photo-placeholder" aria-hidden="true"></div>
-                <div class="member-info">
-                  <h3>Nadia</h3>
-                  <span>Klinikassistent</span>
-                  <span class="member-edu"></span>
-                </div>
-              </div>
-            </div>
-
             <div class="employee-separator"></div>
 
             <div class="col-lg-6 mt-4">
@@ -2663,26 +2721,6 @@
                 <div class="member-info">
                   <h3>Jesper</h3>
                   <span>Administrator</span>
-                  <span class="member-edu"></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 mt-4">
-              <div class="member d-flex align-items-start">
-                <div class="pic">
-                  <img
-                    src="/img/personale/KlinikassistentElevLene.webp"
-                    loading="lazy"
-                    class="img-fluid"
-                    alt="Klinikassistentelev Lene"
-                    width="150"
-                    height="150"
-                  />
-                </div>
-                <div class="member-info">
-                  <h3>Lene</h3>
-                  <span>Klinikassistentelev</span>
                   <span class="member-edu"></span>
                 </div>
               </div>
@@ -3339,9 +3377,19 @@
               </ul>
             </div>
 
-            <div class="col-lg-2 col-md-2 col-4 footer-links">
+            <div class="col-lg-2 col-md-2 col-4 footer-links" data-footer-information>
               <h4>Information</h4>
               <ul>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <button
+                    type="button"
+                    class="footer-modal-link"
+                    data-practical-information-trigger
+                  >
+                    Praktiske oplysninger
+                  </button>
+                </li>
                 <li>
                   <i class="bx bx-chevron-right"></i>
                   <a
@@ -3350,6 +3398,12 @@
                     data-bs-target="#privatlivspolitik"
                     >Privatlivspolitik</a
                   >
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <button type="button" class="footer-modal-link" data-cookie-settings-trigger>
+                    Cookieindstillinger
+                  </button>
                 </li>
               </ul>
             </div>
@@ -3486,7 +3540,7 @@
     </div>
 
     <div
-      class="modal fade"
+      class="modal fade policy-modal"
       id="privatlivspolitik"
       tabindex="-1"
       aria-labelledby="textPopupLabel"
@@ -3599,6 +3653,43 @@
         </div>
       </div>
     </div>
+
+    <div
+      class="modal fade"
+      id="contact-success-modal"
+      tabindex="-1"
+      aria-labelledby="contact-success-title"
+      aria-describedby="contact-success-message"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="contact-success-title">Tak for din besked</h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Luk"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p id="contact-success-message">
+              Din besked er modtaget. Vi vender tilbage snarest muligt.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary turquoise-btn"
+              data-bs-dismiss="modal"
+            >
+              Luk
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- End Modal -->
     <a href="#hero" class="back-to-top scrollto d-flex align-items-center justify-content-center"
       ><i class="bi bi-arrow-up-short"></i
@@ -3606,6 +3697,5 @@
 
     <!-- Main JavaScript File -->
     <script type="module" src="./src/js/main.js"></script>
-    <script src="https://web3forms.com/client/script.js" async defer></script>
   </body>
 </html>

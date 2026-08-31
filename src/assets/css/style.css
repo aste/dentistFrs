@@ -86,18 +86,26 @@ h2[aria-hidden="true"] {
 /*--------------------------------------------------------------
 # Modal
 --------------------------------------------------------------*/
-#privatlivspolitik .modal-dialog {
+.policy-modal .modal-dialog {
   max-width: 620px;
 }
 
-#privatlivspolitik p {
+.policy-modal .modal-body p {
   color: var(--color-navy);
-  margin: 0rem 0 2rem 0;
+  margin: 0 0 0.75rem;
 }
 
-#privatlivspolitik h5 {
-  color: var(--color-dark-blue);
+.policy-modal .modal-body p:last-child {
   margin-bottom: 0;
+}
+
+.policy-modal .modal-body h4,
+.policy-modal .modal-body h5 {
+  color: var(--color-dark-blue);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
 }
 /*--------------------------------------------------------------
 # Back to top button
@@ -1020,6 +1028,22 @@ section {
   margin-bottom: 0;
 }
 
+.policy-modal .modal-body section {
+  padding: 15px 0;
+}
+
+#practical-information-modal .modal-body > p {
+  margin-bottom: 1rem;
+}
+
+#practical-information-modal .modal-body section p {
+  margin-bottom: 0.75rem;
+}
+
+#practical-information-modal .modal-body section:last-child p {
+  margin-bottom: 0;
+}
+
 .services .icon-box:hover {
   background: var(--color-dark-blue);
   border-color: var(--color-dark-blue);
@@ -1177,7 +1201,7 @@ section {
 }
 
 .doctors .member .pic.staff-photo-placeholder {
-  background-color: #d9dee2;
+  background-color: #efefef;
 }
 
 .doctors .member .pic img {
@@ -1452,6 +1476,84 @@ section {
   color: var(--color-navy);
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.google-map-consent {
+  min-height: 350px;
+}
+
+.google-map-placeholder {
+  min-height: 350px;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #efefef;
+  color: var(--color-navy);
+}
+
+.google-map-placeholder > .bi {
+  margin-bottom: 0.75rem;
+  font-size: 2.5rem;
+  color: var(--color-dark-blue);
+}
+
+.google-map-placeholder p {
+  max-width: 700px;
+}
+
+.google-map-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.btn.turquoise-btn {
+  --bs-btn-color: var(--color-white);
+  --bs-btn-bg: var(--color-turquoise);
+  --bs-btn-border-color: var(--color-turquoise);
+  --bs-btn-hover-color: var(--color-white);
+  --bs-btn-hover-bg: var(--color-light-turquoise);
+  --bs-btn-hover-border-color: var(--color-light-turquoise);
+  --bs-btn-focus-shadow-rgb: 26, 188, 156;
+  --bs-btn-active-color: var(--color-white);
+  --bs-btn-active-bg: var(--color-light-turquoise);
+  --bs-btn-active-border-color: var(--color-light-turquoise);
+  background-color: var(--color-turquoise);
+  border-color: var(--color-turquoise);
+  color: var(--color-white);
+  transition: all 0.3s;
+}
+
+.btn.turquoise-btn:hover,
+.btn.turquoise-btn:focus-visible,
+.btn.turquoise-btn:active {
+  background-color: var(--color-light-turquoise);
+  border-color: var(--color-light-turquoise);
+  color: var(--color-white);
+}
+
+.btn.turquoise-btn:hover,
+.btn.turquoise-btn:focus-visible {
+  scale: 1.1;
+}
+
+.google-map-frame {
+  display: block;
+  width: 100%;
+  height: 350px;
+  border: 0;
+}
+
+.cookie-settings-status {
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  background: #efefef;
+  color: var(--color-navy);
+  font-weight: 600;
 }
 
 .contact .appointment-form {
@@ -1910,11 +2012,29 @@ section {
   padding-top: 0;
 }
 
-#footer .footer-top .footer-links ul a {
+#footer .footer-top .footer-links ul a,
+#footer .footer-top .footer-links ul .cookie-settings-link,
+#footer .footer-top .footer-links ul .footer-modal-link {
   color: var(--color-grey);
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
+}
+
+#footer .footer-top .footer-links ul .cookie-settings-link,
+#footer .footer-top .footer-links ul .footer-modal-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+}
+
+#footer .footer-top .footer-links ul a:hover,
+#footer .footer-top .footer-links ul .cookie-settings-link:hover,
+#footer .footer-top .footer-links ul .footer-modal-link:hover {
+  color: var(--color-dark-blue);
+  text-decoration: underline;
 }
 
 .footer-bottom-wrapper {
