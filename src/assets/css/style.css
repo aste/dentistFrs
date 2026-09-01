@@ -1358,9 +1358,25 @@ section {
 }
 
 @media (max-width: 768px) {
+  .testimonials .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  .testimonials .swiper-slide,
+  .testimonials .testimonial-wrap,
+  .testimonials .testimonial-wrap > a {
+    display: flex;
+  }
+
   .testimonials .testimonial-wrap {
     height: auto;
     padding-left: 0;
+    width: 100%;
+  }
+
+  .testimonials .testimonial-wrap > a,
+  .testimonials .testimonial-item {
+    flex: 1;
   }
 
   .testimonials .testimonials-slider {
