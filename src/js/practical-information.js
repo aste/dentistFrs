@@ -76,7 +76,7 @@ const createPracticalInformationModal = () => {
                 Udvalgte priser fremgår af vores <a href="/#services">prisliste</a>. Hvis den
                 samlede behandling forventes at koste mere end 2.500 kr., tilbyder vi et skriftligt
                 prisoverslag, inden behandlingen påbegyndes. Hvis behandlingen ændres væsentligt,
-                informerer vi dig og tilbyder et revideret prisoverslag.
+                informerer vi dig og laver gerne et revideret prisoverslag.
               </p>
             </section>
 
