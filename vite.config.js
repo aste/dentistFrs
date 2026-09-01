@@ -22,8 +22,17 @@ export default defineConfig({
         ),
       },
       output: {
-        manualChunks: {
-          vendor: ["bootstrap", "swiper", "glightbox", "flatpickr", "imask"],
+        manualChunks(id) {
+          const vendorPackages = ["bootstrap", "swiper", "glightbox", "flatpickr", "imask"];
+          const normalizedId = id.replaceAll("\\\\", "/");
+
+          if (
+            vendorPackages.some((packageName) =>
+              normalizedId.includes(`/node_modules/${packageName}/`)
+            )
+          ) {
+            return "vendor";
+          }
         },
         hashCharacters: "base36",
         assetFileNames: ({ name }) => {
@@ -90,17 +99,7 @@ export default defineConfig({
       logStats: true,
       svg: {
         multipass: true,
-        plugins: [
-          {
-            name: "preset-default",
-            params: {
-              overrides: {
-                removeViewBox: false,
-                removeEmptyAttrs: false,
-              },
-            },
-          },
-        ],
+        plugins: ["preset-default"],
       },
       png: {
         quality: 80,

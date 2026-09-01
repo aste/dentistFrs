@@ -1,108 +1,115 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const alertParent = document.getElementById("contact-status");
+import { Modal } from "bootstrap";
+
+document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contact-form");
+  if (!form) return;
+
+  const status = document.getElementById("contact-status");
   const nameInput = document.getElementById("contact-name");
   const emailInput = document.getElementById("contact-email");
-  const message = document.getElementById("contact-message");
+  const messageInput = document.getElementById("contact-message");
+  const replyToInput = document.getElementById("contact-replyto");
+  const submitButton = document.getElementById("contact-submit");
+  const successModalElement = document.getElementById("contact-success-modal");
+  const successModal = Modal.getOrCreateInstance(successModalElement);
+  const submitButtonLabel = submitButton.textContent.trim();
 
   nameInput.addEventListener("input", () => {
-      if (nameInput.validity.tooShort) {
-        nameInput.setCustomValidity("Indtast venligst dit fulde navn");
-      } else {
-        nameInput.setCustomValidity("");
-      }
+    nameInput.setCustomValidity(nameInput.validity.tooShort ? "Indtast venligst dit fulde navn" : "");
   });
 
   emailInput.addEventListener("input", () => {
-      if (emailInput.validity.patternMismatch) {
-        emailInput.setCustomValidity("Indtast din email");
-      } else {
-        emailInput.setCustomValidity("");
-      }
+    emailInput.setCustomValidity(emailInput.validity.patternMismatch ? "Indtast din email" : "");
   });
 
-  message.addEventListener("input", () => {
-    if (message.validity.tooShort) {
-      message.setCustomValidity("Din besked skal være på minimum 15 tegn");
+  messageInput.addEventListener("input", () => {
+    messageInput.setCustomValidity(
+      messageInput.validity.tooShort ? "Din besked skal være på minimum 15 tegn" : ""
+    );
+  });
+
+  const setBusy = (isBusy) => {
+    submitButton.disabled = isBusy;
+    submitButton.textContent = isBusy ? "Sender..." : submitButtonLabel;
+
+    if (isBusy) {
+      form.setAttribute("aria-busy", "true");
     } else {
-      message.setCustomValidity("");
+      form.removeAttribute("aria-busy");
+    }
+  };
+
+  const showStatus = (message, isError = false) => {
+    status.textContent = message;
+    status.className = message ? (isError ? "alert alert-danger mt-3" : "mt-3") : "";
+
+    if (message) {
+      status.setAttribute("role", isError ? "alert" : "status");
+    } else {
+      status.removeAttribute("role");
+    }
+  };
+
+  const submitContactForm = async () => {
+    setBusy(true);
+    showStatus("Vent venligst. Din besked sendes.");
+    replyToInput.value = emailInput.value;
+
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(object),
+      });
+
+      const responseBody = await response.json();
+      if (!response.ok || responseBody.success === false) {
+        throw new Error(responseBody.message || "Beskeden kunne ikke sendes");
+      }
+
+      form.reset();
+      form.classList.remove("was-validated");
+      showStatus("");
+      form.removeAttribute("aria-busy");
+      submitButton.textContent = submitButtonLabel;
+      successModal.show();
+    } catch (error) {
+      console.error("Contact submission failed", error);
+      setBusy(false);
+      showStatus(
+        "Der opstod en fejl. Prøv venligst igen. Kontakt os på info@tandklinikken-frederikssund.dk eller 47 31 04 42, hvis fejlen fortsætter.",
+        true
+      );
+      status.focus({ preventScroll: true });
+    }
+  };
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!form.checkValidity()) {
+      event.stopPropagation();
+      form.classList.add("was-validated");
+      return;
+    }
+
+    if (!submitButton.disabled) {
+      submitContactForm();
     }
   });
 
-  // Add bootstrap validation styles
-  (() => {
-    "use strict";
-    window.addEventListener(
-      "load",
-      () => {
-        let forms = document.getElementsByClassName("contact-form needs-validation");
-        let validation = Array.prototype.filter.call(forms, (form) => {
-          form.addEventListener(
-            "submit",
-            (event) => {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              } else {
-                event.preventDefault();
-                submitContactForm();
-              }
-              form.classList.add("was-validated");
-            },
-            false
-          );
-        });
-      },
-      false
-    );
-  })();
+  successModalElement.addEventListener("shown.bs.modal", () => {
+    successModalElement.querySelector("[data-bs-dismiss='modal']").focus();
+  });
 
-  const submitContactForm = () => {
-    const formData = new FormData(form);
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    let replyto = document.getElementsByClassName("contactReply");
-    replyto.value = `${emailInput.value}`;
-
-    let alertStatus = document.createElement("div");
-    alertStatus.classList.add("mt-3");
-    alertStatus.innerHTML = "Vent venligst.";
-
-    alertParent.appendChild(alertStatus);
-
-    fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    })
-      .then(async (response) => {
-        let json = await response.json();
-        if (response.status == 200) {
-          alertStatus.innerHTML = "Din besked er sendt. Vi vender tilbage snarest muligt.";
-        } else {
-          console.log(response);
-          console.log(json.message);
-          alertStatus.innerHTML = "Der opstod en fejl. Prøv venligst igen.";
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-        alertStatus.innerHTML = "Der opstod en fejl. Prøv venligst igen.";
-      })
-      .then(() => {
-        form.reset();
-        form.classList.remove("was-validated");
-        const invalidFeedbacks = form.querySelectorAll(".invalid-feedback");
-        invalidFeedbacks.forEach((feedback) => (feedback.style.display = "none"));
-        setTimeout(() => {
-          while (alertParent.hasChildNodes()) {
-            alertParent.removeChild(alertParent.firstChild);
-          }
-        }, 8000);
-      });
-  };
+  successModalElement.addEventListener("hidden.bs.modal", () => {
+    setBusy(false);
+    submitButton.focus();
+  });
 });

@@ -1,12 +1,18 @@
 import IMask from "imask";
+import { Modal } from "bootstrap";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const alertParent = document.getElementById("appointment-status");
+  const status = document.getElementById("appointment-status");
   const form = document.getElementById("appointment-form");
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");
   const phoneInput = document.getElementById("phone");
   const cprInput = document.getElementById("cpr");
+  const replyToInput = document.getElementById("appointment-replyto");
+  const submitButton = document.getElementById("appointment-submit");
+  const successModalElement = document.getElementById("appointment-success-modal");
+  const successModal = Modal.getOrCreateInstance(successModalElement);
+  const submitButtonLabel = submitButton.textContent.trim();
 
   nameInput.addEventListener("input", () => {
     if (nameInput.validity.tooShort) {
@@ -44,87 +50,88 @@ document.addEventListener("DOMContentLoaded", function () {
     mask: "+{45} 00 00 00 00",
   });
 
-  IMask(cpr, {
+  IMask(cprInput, {
     mask: "000000-0000",
   });
 
-  // Add bootstrap validation styles
-  (() => {
-    "use strict";
-    window.addEventListener(
-      "load",
-      () => {
-        let forms = document.getElementsByClassName("appointment-form needs-validation");
-        let validation = Array.prototype.filter.call(forms, (form) => {
-          form.addEventListener(
-            "submit",
-            (event) => {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              } else {
-                event.preventDefault();
-                submitAppointmentForm();
-              }
-              form.classList.add("was-validated");
-            },
-            false
-          );
-        });
-      },
-      false
-    );
-  })();
+  const setBusy = (isBusy) => {
+    submitButton.disabled = isBusy;
+    submitButton.textContent = isBusy ? "Sender..." : submitButtonLabel;
 
-  const submitAppointmentForm = () => {
+    if (isBusy) {
+      form.setAttribute("aria-busy", "true");
+    } else {
+      form.removeAttribute("aria-busy");
+    }
+  };
+
+  const showStatus = (message, isError = false) => {
+    status.textContent = message;
+    status.className = isError ? "alert alert-danger mt-3" : "mt-3";
+    status.setAttribute("role", isError ? "alert" : "status");
+  };
+
+  const submitAppointmentForm = async () => {
+    setBusy(true);
+    showStatus("Vent venligst. Din bookinganmodning sendes.");
+    replyToInput.value = emailInput.value;
+
     const formData = new FormData(form);
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    let replyto = document.getElementsByClassName("appointmentReply");
-    replyto.value = `${emailInput.value}`;
-
-    let alertStatus = document.createElement("div");
-    alertStatus.classList.add("mt-3");
-    alertStatus.innerHTML = "Vent venligst.";
-
-    alertParent.appendChild(alertStatus);
-
-    fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    })
-      .then(async (response) => {
-        let json = await response.json();
-        if (response.status == 200) {
-          alertStatus.innerHTML =
-            "Din booking anmodning er modtaget. </br> Vi vender tilbage med en endelig bekræftelse på din aftale hurtigst muligt.";
-        } else {
-          console.log(response);
-          console.log(json.message);
-          alertStatus.innerHTML =
-            "Der opstod en fejl. Prøv venligst igen. </br> Kontakt os via info@tandklinikken-frederikssund.dk eller </br> på 47 31 04 42, hvis fejlen fortsætter.";
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-        alertStatus.innerHTML =
-          "Der opstod en fejl. Prøv venligst igen. </br> Kontakt os via info@tandklinikken-frederikssund.dk eller </br> på 47 31 04 42, hvis fejlen fortsætter.";
-      })
-      .then(() => {
-        form.reset();
-        form.classList.remove("was-validated");
-        const invalidFeedbacks = form.querySelectorAll(".invalid-feedback");
-        invalidFeedbacks.forEach((feedback) => (feedback.style.display = "none"));
-        setTimeout(() => {
-          while (alertParent.hasChildNodes()) {
-            alertParent.removeChild(alertParent.firstChild);
-          }
-        }, 8000);
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
       });
+
+      const responseBody = await response.json();
+      if (!response.ok || responseBody.success === false) {
+        throw new Error(responseBody.message || "Bookinganmodningen kunne ikke sendes");
+      }
+
+      form.reset();
+      form.classList.remove("was-validated");
+      showStatus("");
+      form.removeAttribute("aria-busy");
+      submitButton.textContent = submitButtonLabel;
+      successModal.show();
+    } catch (error) {
+      console.error("Booking submission failed", error);
+      setBusy(false);
+      showStatus(
+        "Der opstod en fejl. Prøv venligst igen. Kontakt os på info@tandklinikken-frederikssund.dk eller 47 31 04 42, hvis fejlen fortsætter.",
+        true
+      );
+      status.focus({ preventScroll: true });
+    }
   };
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!form.checkValidity()) {
+      event.stopPropagation();
+      form.classList.add("was-validated");
+      return;
+    }
+
+    if (!submitButton.disabled) {
+      submitAppointmentForm();
+    }
+  });
+
+  successModalElement.addEventListener("shown.bs.modal", () => {
+    successModalElement.querySelector("[data-bs-dismiss='modal']").focus();
+  });
+
+  successModalElement.addEventListener("hidden.bs.modal", () => {
+    setBusy(false);
+    submitButton.focus();
+  });
 });

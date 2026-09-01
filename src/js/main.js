@@ -21,6 +21,9 @@ import "../assets/css/main.css";
 import "./appointment-form.js";
 import "./contact-form.js";
 import "./animations.js";
+import "./practical-information.js";
+import "./privacy-policy.js";
+import "./google-maps-consent.js";
 
 const initializeGallery = () => {
   const galleryItems = document.querySelectorAll(".gallery-item");
@@ -97,14 +100,19 @@ const on = (type, el, listener, all = false) => {
   }
 };
 
-const scrollto = (el) => {
+const scrollto = (el, behavior = "smooth") => {
   const header = select("#header");
-  const offset = header?.offsetHeight || 0;
-  const elementPos = select(el)?.offsetTop || 0;
+  const topbar = select("#topbar");
+  const offset = (header?.offsetHeight || 0) + (topbar?.offsetHeight || 0);
+  const element = select(el);
+
+  if (!element) return;
+
+  const elementPos = element.getBoundingClientRect().top + window.scrollY;
 
   window.scrollTo({
     top: elementPos - offset,
-    behavior: "smooth",
+    behavior,
   });
 };
 
@@ -229,8 +237,14 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("load", () => {
     if (window.location.hash && select(window.location.hash)) {
       setTimeout(() => {
-        scrollto(window.location.hash);
+        scrollto(window.location.hash, "auto");
       }, 50);
+
+      // Dynamic components can still alter the page height shortly after load.
+      // Correct the fragment position again once that layout work has settled.
+      setTimeout(() => {
+        scrollto(window.location.hash, "auto");
+      }, 1000);
     }
   });
 });

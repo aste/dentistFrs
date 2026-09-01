@@ -15,4 +15,4 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com;"
+    Content-Security-Policy = "object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; frame-src https://www.google.com;"
